@@ -15,8 +15,6 @@ Including another URLconf
 """
 from django.urls import include
 
-from .import Staff_views
-
 
 from .import views
 from django.contrib import admin
@@ -30,21 +28,20 @@ urlpatterns = [
     path('admin', admin.site.urls),
     path('base', views.Base, name='base'),
     path('home', Hod_views.Home, name='home'),
-    path('foncier_home', Staff_views.Home, name='foncier_home'),
+    # path('foncier_home', Staff_views.Home, name='foncier_home'),
     # profile
-    path('login', views.LOGIN, name='login'),
+    path('', views.LOGIN, name='login'),
     path('doLogout', views.doLogout, name='logout'),
     path('doLogin', views.doLogin, name='doLogin'),
     path('profile', views.PROFILE, name='profile'),
     path('Profile/update', views.PROFILE_UPDATE, name='profile_update'),
 
     # url home
-    path('', include('home.urls')),
-    path('das/', include('das.urls')),
-    path('foncier/', include('foncier.urls')),
-    path('peche/', include('peche.urls')),
+    path('home', include('home.urls')),
     path('education/', include('education.urls')),
+
     path('sante/', include('sante.urls')),
+
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

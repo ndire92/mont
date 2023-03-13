@@ -4,162 +4,171 @@ from django import forms
 
 
 class equi(ModelForm):
-    EquiNombreCasesDesTouPetits = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreGarderie = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreMaternelle = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    NombrePrescolaireTotal = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructurePrescolaireDisposantCantinesScolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesDeClasseAvecUnLocalNormalPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesDeClasseSituationAbrisProvisoirePrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesTotalPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructurePrescolaireDisposantDeCloturePrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructurePrescolairesDisposantElectricitePrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreTotalLatrinesFonctionnellesPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFonctionnellesGarconsPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFonctionnellesFillesPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesPrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePontsEauCourantePrescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEnfantsBeneficieDeparasitageMTN_Prescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEnfantsBeneficieDeparasitageFER_Prescolaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructureElementaireDisposantCantinesScolaires = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesDeClassePrimaireAvecUnLocalNormal = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesClassePrimaireEnSituationAbrisProvisoire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesTotalPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructureElementaireDisposantCloture = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiTotalLatrinesFonctionnellesPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFonctionnellesGarconsPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFonctionnellesFillesPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcolePubliquesAyantElectricitePrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEauCourantePrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesStructutesPubliquesPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesStructurePriveesPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesStructurePubliquePrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesStructurePubliquePrivees = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesDeClasseAvecUnLocalNormalPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesClassePrimaireEnSituationAbrisProvisoirePrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesTotalEtablissementPrimairePublic = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreGroupePedagogiquesPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreClassesPhysiquesPrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcolesEquipeeSalleInformatiquePrimaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcolesPrimaireDisposantConnexionInternet = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructureDisposantCatineScolaireMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesDeClasseAvecLocalNormalMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesClasseSituationAbrisProvisoireMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesTotalMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructuresElementaireDisposantClotureMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiTotalLatrinesFonctionnellesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFonctionnellesGarconsMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFonctionnellesFillesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcolesPubliquesAyantElectriciteMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEauCouranteMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesStructurePubliquesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesStructurePriveesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesStructurePubliquesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesStructurePriveesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesClasseAvecUnLocalNormalMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreGroupePedagogiquesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreClassesPhysiquesMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcolesEquipeeSalleInformatiqueMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcoleDisposantConnexionInternetMG = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructureDisposantCatineScolaireSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesClasseAvecUnLocalNormalSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesClasseSituationAbrisProvisoireSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesTotalSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreStructuresSecondaireDisposantCloture = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiTotalLatrinesFonctionnellesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesGarconsFonctionnellesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiLatrinesFillesFonctionellesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcolePubliquesAyantElectriciteSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEauCouranteSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesStructurePubliquesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombrePlacesAssisesStructutesPriveesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesStructurePubliquesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreElevesStructurePriveeSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesDeClasseAvecunLocalNormalSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreSallesTotalSecondairePublic = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreGroupesPedagogiquesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreClassePhysiquesSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquiNombreEcoleEquipeeSalleInformatiqueSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
-    EquipementNombreEcoleDisposantConnexionInternetSecondaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '    ', 'style': 'width: 900px;', 'class': 'form-control'}))
+    CodeDistrict = forms.CharField(label='Code District', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+
+    NomDistrict = forms.CharField(label='Nom District', widget=forms.TextInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreCasesDesTtPetits = forms.CharField(label='Nombre de cases des tout-petit', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreGarderie = forms.CharField(label='Nombre de garderie', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreMaternelle = forms.CharField(label='Nombre de maternelle', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePrescoTt = forms.CharField(label='Nombre de Prescolaire Total', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructPrescoDisposantCantinSclre = forms.CharField(label='Nombre de structures préscolaires disposant de cantines scolaires ', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSCLocalNormalPresco = forms.CharField(label='ombre de salles de classe avec un local normal', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSCSituationAbrisProvsrPresco = forms.CharField(label='Nombre de salles de classe en situation d abris provisoire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSallesTtPresco = forms.CharField(label='Nombre de salles total', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructPrescoAyantClotur = forms.CharField(label='Nombre de structures préscolaires disposant de cloture', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructPrescoAyantElectricit = forms.CharField(label='Nombre de structures préscolaires disposant délectricité', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreToTLatrinFonctionel = forms.CharField(label='Nombre Total de latrines fonctionnelles', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinFonctionelGrcons = forms.CharField(label='Latrines fonctionnelles / Garçon', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinFonctionnelFilles = forms.CharField(label='Latrines fonctionnelles / Fille', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlacesAssises = forms.CharField(label='Nombre de places assises', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElevPresco = forms.CharField(label='nombre d élèves presco', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePontEauCournt = forms.CharField(label='Nombre de points d eau courante', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEnftBeneficDeparasitgMTN = forms.CharField(label='Nombre d enfants ayant bénéficiés de déparasitage MTN', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEnftBeneficieDeparasitgFER = forms.CharField(label='Nombre d enfants ayant bénéficiés de déparasitage FER', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructElmntaireAyantCantinScolair = forms.CharField(label='Nombre de structures  disposant de cantines scolaires', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSCPrimAvecLocalNormal = forms.CharField(label='Nombre de salles de classe avec un local normal', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSCPrimSituationAbriProvisoir = forms.CharField(label='Nombre de salles de classe en situation d abris provisoire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSallesTTPrim = forms.CharField(label='Nombre de salles total', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructurAyantCloturPrim = forms.CharField(label='Nombre de structures de lélémentaire disposant de cloture', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    TTLatrineFonctionnelPrim = forms.CharField(label='Total latrines fonctionnelles', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinFonctionnelGrconsPrim = forms.CharField(label='Latrines fonctionnelles / Garçon', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinsFonctionnelFilles = forms.CharField(label='Latrines fonctionnelles / Fille', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolPublicAyantElectricite = forms.CharField(label='Nombre décoles publiques ayant de l éléctricité', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEauCourantePrim = forms.CharField(label='Nombre de points d eau courante', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlacAssisStructurPublic = forms.CharField(label='Nombre de places assises dans les structures publiques', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlacAssisStructurPrive = forms.CharField(label='Nombre de places assises dans les structures privées', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvStructurPublicPrimair = forms.CharField(label='Nombre d élèves dans les structures publiques', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvStructurPublicPrive = forms.CharField(label='Nombre d élèves dans les structures privées', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassAvecLocalNormal = forms.CharField(label='Nombre de salles de classe avec un local normal:Etablissement primaire public', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassPrimrSituatAbriProvisoir = forms.CharField(label='Nombre de salles de classe en situation dabris provisoire(Etablissement primaire public)', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleTotEtablisPrimPublic = forms.CharField(label='Nombre de salles total(Etablissement primaire public', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreGrpPedagogicPrim = forms.CharField(label='Nombre de groupes pédagogiques ', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreClassePhysicPrim = forms.CharField(label='Nombre de classes physiques', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolEquipeSalleITPrim = forms.CharField(label='Nombre d écoles équipées en salle informatique', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolPrimAyantConexionNet = forms.CharField(label='Nombre d écoles disposant d une connexion internet', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructreAyantCatinScolreMG = forms.CharField(label='Nombre de structures  disposant de cantines scolaires', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassAcLocalNormalMG = forms.CharField(label='Nombre de salles de classe avec un local normal', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassSituatAbriProvisoirMG = forms.CharField(label='Nombre de salles de classe en situation d abris provisoire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleTotalMG = forms.CharField(label='Nombre de salles total moyen general', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructurElmntreAyantCloturMG = forms.CharField(label='Nombre de structures de lélémentaire disposant de cloture MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    TotLatrinFonctionnelMG = forms.CharField(label='Total latrines fonctionnelles MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinFonctionnelGrconsMG = forms.CharField(label='Latrines fonctionnelles / Garçon MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinFonctionnelFilleMG = forms.CharField(label='Latrines fonctionnelles / Fille MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolPublicAyantElectMG = forms.CharField(label='Nombre décoles publiques ayant de l éléctricité MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEauCouranteMG = forms.CharField(label='Nombre de points deau courante', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlaceAssisStructurPublicMG = forms.CharField(label='Nombre de places assises dans les structures publiques MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlacAssiseStructurPrivMG = forms.CharField(label='Nombre de places assises dans les structures privées MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvStructurPublicMG = forms.CharField(label='Nombre délèves dans les structures publiques MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElevStructurPrivMG = forms.CharField(label='Nombre délèves dans les structures privées MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassAvcLocalNormalMG = forms.CharField(label='Nombre de salles de classe avec un local normal(Etablissement primaire public)', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreGrpPedagogicMG = forms.CharField(label='Nombre de groupes pédagogiques', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreClassPhysicMG = forms.CharField(label='Nombre de classes physiques', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolEquipSalleTIMG = forms.CharField(label='Nombre d écoles équipées en salle informatique MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolAyantConnexionInetMG = forms.CharField(label='Nombre d écoles disposant dune connexion internet MG', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructurAyantCatinScolreSe = forms.CharField(label='Nombre de structures  disposant de cantines scolaires secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassAvecLocalNormalSecd = forms.CharField(label='Nombre de salles de classe avec un local normal secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleClassSituatAbriProvisScndre = forms.CharField(label='Nombre de salles de classe en situation dabris provisoire secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSallesTTSecondaire = forms.CharField(label='Nombre de salles total secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreStructurScndrAyantClotur = forms.CharField(label='Nombre de structures de lélémentaire disposant de cloture secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    TTLatrinFonctionnelScndr = forms.CharField(label='Total latrines fonctionnelles secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinGrconFonctionelScndr = forms.CharField(label='Latrines fonctionnelles / Garçon du secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    LatrinFillesFonctionelScndr = forms.CharField(label='Latrines fonctionnelles / Fille du secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolPublicAyantElectScndr = forms.CharField(label='Nombre d écoles publiques ayant de léléctricité du secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEauCourantScndr = forms.CharField(label='Nombre de points deau courante du secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlacAssisStructPublicScndr = forms.CharField(label='Nombre de places assises dans les structures publiques secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbrePlacAssisStructPrivScndr = forms.CharField(label='Nombre de places assises dans les structures privées secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvStructPublicScndr = forms.CharField(label='Nombre délèves dans les structures publiques secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvStructPrivScndr = forms.CharField(label='Nombre délèves dans les structures privées', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleDeClassAvcLocalNormalScndr = forms.CharField(label='Nombre de salles de classe avec un local normal(Etablissement primaire public)', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreSalleTTScndrPublic = forms.CharField(label='Nombre de salles total(Etablissement secondaire public', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreGrpPedagogicScndr = forms.CharField(label='Nombre de groupes pédagogiques secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreClassPhysicScndr = forms.CharField(label='Nombre de classes physiques secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolEquipSalleITScndr = forms.CharField(label='Nombre décoles équipées en salle informatique', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEcolAyantConexionNetScndr = forms.CharField(label='Nombre décoles disposant dune connexion internet', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    date = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
+    date_modification = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
 
     class Meta:
 

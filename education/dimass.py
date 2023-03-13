@@ -4,438 +4,308 @@ from django import forms
 
 
 class acc(ModelForm):
-
-    CodeCommune = forms.CharField(widget=forms.NumberInput(
+    CodeDistrict = forms.CharField(label='Code District', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    CodeDomaine = forms.CharField(widget=forms.NumberInput(
+    NomDistrict = forms.CharField(label='Nom District', widget=forms.TextInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    CodeTemps = forms.CharField(widget=forms.NumberInput(
+    PrescoEnsGrcns3et5ans = forms.CharField(label='Ensemble des garçons âgés entre 3 et 5 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEnsembleGarconsEntre3et5ans = forms.CharField(widget=forms.NumberInput(
+    PrescoEnsFilles3et5ans = forms.CharField(label='Ensemble des filles âgées entre 3 et 5 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEnsembleFillesEntre3et5ans = forms.CharField(widget=forms.NumberInput(
+    PrescoEnsFilesEtGrcnsAge3Et5ans = forms.CharField(label='Ensemble des filles et des garçons âgés entre 3 et 5 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEnsembleFillesEtGarconsAgeEntre3Et5ans = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectGrcnsInscritsPresco = forms.CharField(label='Effectif des garçons inscrits au prescolaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifGarconsInscritsPrescolaire = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectFilleInscritPresco = forms.CharField(label='Effectif des filles inscrites au prescolaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifFilleInscritPrescolaire = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectTTInscritPresco = forms.CharField(label='Effectif total des élèves inscrits au prescolaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifTotalInscritPrescolaire = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectPS = forms.CharField(label='Effectifs du préscolaire, petite section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifPrescolairePetiteSection = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectMS = forms.CharField(label='Effectifs du préscolaire, moyenne section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffcetifPresccolaireMoyenSection = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectGS = forms.CharField(label='Effectifs du préscolaire, grande section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifPrescolaireGrandeSection = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectTotal = forms.CharField(label=' Effectifs du préscolaire, Total ', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffcetifPresccolaireTotal = forms.CharField(widget=forms.NumberInput(
+    PrescoNbreGrcnsFillesEnPS = forms.CharField(label='Nombre de garçons (de filles) en petite section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreGarconsFillesEnPetiteSection = forms.CharField(widget=forms.NumberInput(
+    PrescoNbreGrcnsFillesEnMS = forms.CharField(label='Nombre de garçons (de filles) en moyenne section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreGarconsFillesEnMoyenneSection = forms.CharField(widget=forms.NumberInput(
+    PrescoNbreGrcnsFillesEnGS = forms.CharField(label='Nombre de garçons (de filles) en grande section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreGarconsFillesEnGrandeSection = forms.CharField(widget=forms.NumberInput(
+    PrescoNbreFillesPrescoTotal = forms.CharField(label='Nombre de filles au prescolaire (Total)', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AccessPrescoNombreFillesPrescolaireTotal = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectTTInscritPreslrePublic = forms.CharField(label='Effectifs total des élèves inscrits au prescolaire dans le public', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifTotalInscritPrescolairePublic = forms.CharField(widget=forms.NumberInput(
+    PrescoEffecTTElvInscritsPrescoStructComm = forms.CharField(label='Effectifs total des élèves inscrits au prescolaire dans les structures communautaires/associatives', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectitTotalElevesInscritsPrescolaireStructureCommunautaires = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifTotalElevesInscritPrecolairePrive = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectTTElvInscritPrecoPrive = forms.CharField(label='Effectifs total des élèves inscrits au prescolaire dans le privé', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifTotalElevesFillesInscritPrecolairePrive = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifTotalElevesFillesIncritDansLesStructureCommunautaires = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifTotalElevesFillesInscritsAuPrescolaireStructureCommunautaire = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreTotalNouveauxInscritsPetiteSection = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectifTTElvFillesInscritPrecoPrive = forms.CharField(label='Effectifs total des élèves inscrits au prescolaire public (filles)', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreTotalNouveauxInscritsMoyenneSection = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectifTTFillesIncritStructComm = forms.CharField(label='Effectifs total des élèves inscrits au prescolaire dans les structures communautaires/associatives (filles)', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AccessPrescoNombreTotalNouveauxInscritGrandeSection = forms.CharField(widget=forms.NumberInput(
+    PrescoEffectifTTFillesAuPrescoStructComm = forms.CharField(label='Effectifs total des élèves inscrits au prescolaire dans le privé (filles)', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreStructurePrescolairePublic = forms.CharField(widget=forms.NumberInput(
+    PrescoNbreTTNvxInscritsPS = forms.CharField(label='Nombre total de nouveaux inscrits en petite section quel que soit leur âge', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreStructurePrescolairePrive = forms.CharField(widget=forms.NumberInput(
+    PrescoNbreTTNvxInscritsMS = forms.CharField(label='Nombre total de nouveaux inscrits en moyenne section quel que soit leur âge', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreStructurePrescolaireCommunautaire = forms.CharField(widget=forms.NumberInput(
+    NbreTTNvxInscritGS = forms.CharField(label='Nombre total de nouveaux inscrits en grande section quel que soit leur âge', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifElevesPrescolaireAyantPieceEtatCivilPetiteSection = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifElevesPrescolaireAyantPieceEtatCivilMoyenneSection = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifPrecolaireAyantPieceEtatCivilGrandeSection = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoEffectifEnfantsPrescolaireFrancoArabe = forms.CharField(widget=forms.NumberInput(
+    NbreStructurePrescoPublic = forms.CharField(label='Nombre de structures préscolaires du public', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessPrescoNombreDaaraModerne = forms.CharField(widget=forms.NumberInput(
+    NbreStructurePrescolairePrive = forms.CharField(label='Nombre de structures préscolaires du privé', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AccessPrescoNombreDaaraMiseAJour = forms.CharField(widget=forms.NumberInput(
+    NbreStructurePrescolaireComm = forms.CharField(label='Nombre de structures préscolaires communautaires', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreGarconsDe6A11ans = forms.CharField(widget=forms.NumberInput(
+    EfectlevesPrescolAyantPieceEtatCivilPS = forms.CharField(label='Effectifs délèves du prescolaire nayant pas une pièce détat civil en Petite Section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreFillesDe6A11ans = forms.CharField(widget=forms.NumberInput(
+    EfectElvesPrescolAyantPiecEtatCivilMS = forms.CharField(label='Effectifs délèves du prescolaire nayant pas une pièce détat civil en moyenne section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessElNombreEnfantsDe6A11ans = forms.CharField(widget=forms.NumberInput(
+    EfectPrecolAyantPieceEtatCivilGS = forms.CharField(label='Effectifs délèves du prescolaire nayant pas une pièce détat civil en grande section', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreEleveElementaire = forms.CharField(widget=forms.NumberInput(
+    EfectEnfantsPrescolFrancoArabe = forms.CharField(label='Effectifs des enfants du prescolaire franco-arabe', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElNombreGarconsElementaire = forms.CharField(widget=forms.NumberInput(
+    NbreDaaraModerne = forms.CharField(label='Nombre de Daara modernes', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreFillesElementaire = forms.CharField(widget=forms.NumberInput(
+    NbreDaaraMiseAJour = forms.CharField(label='Nombre de Daara mise à niveau', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsElementairePrive = forms.CharField(widget=forms.NumberInput(
+    ElNbreGarconsDe6A11ans = forms.CharField(label='Nombre de garçons de la tranche de 6 à 11 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsElementairePublic = forms.CharField(widget=forms.NumberInput(
+    ElNbreFillesDe6A11ans = forms.CharField(label='Nombre de filles de la tranche de 6 à 11 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsElementaireStructuresCommunautaires = forms.CharField(widget=forms.NumberInput(
+    ElNbreEnfantsDe6A11ans = forms.CharField(label='Nombre denfants de la tranche de 6 à 11 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElEffectifsElevesElementaireSituationHandicap = forms.CharField(widget=forms.NumberInput(
+    ElNbreEleveElmtaire = forms.CharField(label='Nombre délèves dans lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsFillesElementaireSituationHandicap = forms.CharField(widget=forms.NumberInput(
+    ElNbreGarconsElmtaire = forms.CharField(label='Nombre de garçons dans lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifGarconsElementaireSituationHandicap = forms.CharField(widget=forms.NumberInput(
+    ElNbreFillesElmtaire = forms.CharField(label='Nombre de filles dans lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifTotalElevesElementaire = forms.CharField(widget=forms.NumberInput(
+    ElEfectsElmtairePrive = forms.CharField(label='Effectifs de lélémentaire dans le privé', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifTotalElevesPasPieceEtatCivil = forms.CharField(widget=forms.NumberInput(
+    ElEfectsElmtairePublic = forms.CharField(label='Effectifs de lélémentaire dans le public', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElEffectifTotalElevesCI = forms.CharField(widget=forms.NumberInput(
+    ElEfectPrimStructComm = forms.CharField(label='Effectifs de lélémentaire dans les structures communautaires', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectilTotalElevesCM2 = forms.CharField(widget=forms.NumberInput(
+    ElEfectsElvesPrimSituationHandicap = forms.CharField(label='Effectifs des élèves en situation de handicap total', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsEnfantsElementaireFrancoArabe = forms.CharField(widget=forms.NumberInput(
+    ElEfectFillesPrimSituationHandicap = forms.CharField(label='Effectifs des élèves en situation de handicap filles', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsElementaireRedoublantsTotal = forms.CharField(widget=forms.NumberInput(
+    ElEfectGarcsPrimSituationHandicap = forms.CharField(label='Effectifs des élèves en situation de handicap Garcons', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsElementaireRedoublantsFilles = forms.CharField(widget=forms.NumberInput(
+    ElEffectifTTElevesElementaire = forms.CharField(label='Effectif total des élèves de lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElEffectifsElementaireRedoublantGarcons = forms.CharField(widget=forms.NumberInput(
+    ElEfectTTElvesPasPieceEtatCivil = forms.CharField(label='Effectif total des élèves ne disposant pas de pièce détat civil', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsCI = forms.CharField(widget=forms.NumberInput(
+    ElEfectTTElevesCI = forms.CharField(label='Effectif total des élèves de CI', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsCP = forms.CharField(widget=forms.NumberInput(
+    ElEfectlTTElevesCM2 = forms.CharField(label='Effectif total des élèves de CM2', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsCE1 = forms.CharField(widget=forms.NumberInput(
+    ElEfectEnftsPrimFrancoArabe = forms.CharField(label='Effectifs des enfants de lélémentaire franco-arabe', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsCE2 = forms.CharField(widget=forms.NumberInput(
+    ElEfectPrimRedoublantsTotal = forms.CharField(label='Effectifs de lélémentaire - redoublants total', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElEffectifsCM1 = forms.CharField(widget=forms.NumberInput(
+    ElEfectPrimRedblantsFilles = forms.CharField(label='Effectifs de lélémentaire - redoublants filles', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifsCM2 = forms.CharField(widget=forms.NumberInput(
+    ElEfectPrimRedblantGrcons = forms.CharField(label='Effectifs de lélémentaire - redoublants Garcons', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreRedoublantCI = forms.CharField(widget=forms.NumberInput(
+    ElEffectifsCI = forms.CharField(label='Effectifs  CI', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreRedoublantCP = forms.CharField(widget=forms.NumberInput(
+    ElEffectifsCP = forms.CharField(label='Effectifs  CP', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreRedoublantsCE1 = forms.CharField(widget=forms.NumberInput(
+    ElEffectifsCE1 = forms.CharField(label='Effectifs  CE1', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElNombreRedoublantsCE2 = forms.CharField(widget=forms.NumberInput(
+    ElEffectifsCE2 = forms.CharField(label='Effectifs  CE2', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreRedoublantsCM1 = forms.CharField(widget=forms.NumberInput(
+    ElEffectifsCM1 = forms.CharField(label='Effectifs  CM1', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreRedoublantsCM2 = forms.CharField(widget=forms.NumberInput(
+    ElEffectifsCM2 = forms.CharField(label='Effectifs  CM2', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifTotalInscritElementaire = forms.CharField(widget=forms.NumberInput(
+    ElNbreRedoublantCI = forms.CharField(label='Nombre Redoublants CI', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElEffectifGarconsInscritsElementaire = forms.CharField(widget=forms.NumberInput(
+    ElNbreRedoublantCP = forms.CharField(label='Nombre Redoublants  CP', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    AcessElEffectifFillesIncritesElementaire = forms.CharField(widget=forms.NumberInput(
+    ElNbreRedoublantsCE1 = forms.CharField(label='Nombre Redoublants  CE1', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreElevesSituationHandicap = forms.CharField(widget=forms.NumberInput(
+    ElNbreRedoublantsCE2 = forms.CharField(label='Nombre Redoublants  CE2', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreTotalElevesElementaire = forms.CharField(widget=forms.NumberInput(
+    ElNbreRedoublantsCM1 = forms.CharField(label='Nombre Redoublants  CM1', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElPopulationOfficiellementScolarisableJeunes6_11ans = forms.CharField(widget=forms.NumberInput(
+    ElNbreRedoublantsCM2 = forms.CharField(label='Nombre Redoublants  CM2', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElPopulationOfficiellementScolarisableGarcons6_11ans = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElPopulationOfficiellementScolarisableFilles6_11ans = forms.CharField(widget=forms.NumberInput(
+    ElEfectTotalInscritElmtaire = forms.CharField(label='Effectif total inscrit à lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreElevesQuittantEtablissementPourHorsCommune = forms.CharField(widget=forms.NumberInput(
+    ElEfectGrconsInscritElmtaire = forms.CharField(label='Effectif garçons inscrits à lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreElevesProvenanceEtablissementSeSituantDansUneAutreCommune = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreEcoleElementairePubliques = forms.CharField(widget=forms.NumberInput(
+    ElEfectFillesIncritElmtaire = forms.CharField(label='Effectif filles inscrites à lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessElNombreEcolesElementairePrivees = forms.CharField(widget=forms.NumberInput(
+    ElNbreElvesSituationHandicap = forms.CharField(label='Nombre délèves en situation dhandicap', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEnsembleGarconsEntre12Et15ans = forms.CharField(widget=forms.NumberInput(
+    ElNbreTleElevesElmtaire = forms.CharField(label='Nombre total délèves à lélémentaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEnsembleFillesEntre12Et15ans = forms.CharField(widget=forms.NumberInput(
+    ElPopOfciellemntScolarbleJnes6_11ans = forms.CharField(label='Population officiellement scolarisable à lélémentaire (population des jeunes de la tranche 6-11 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    ElPopOficielemntScolarbleGrcons6_11ans = forms.CharField(label='Population des garçons officiellement scolarisable à lélémentaire (population des jeunes de la tranche 6-11 ans )', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesFilles = forms.CharField(widget=forms.NumberInput(
+    ElPopOficielemntScolarbleFilles6_11ans = forms.CharField(label='Population des filles officiellement scolarisable à lélémentaire(population des jeunes de la tranche 6-11 ans)', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesGarcons = forms.CharField(widget=forms.NumberInput(
+    ElNbreElvesQuittEtablisPourHorsComm = forms.CharField(label='Nombre délèves quittant un établissement de la commune pour un autre se sitant hors de la commune', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifsMoyenGeneralPublic = forms.CharField(widget=forms.NumberInput(
+    ElNbreElvesProvncEtablisSituantAutrComm = forms.CharField(label='Nombre délèves en provenance dun établissement se situant dans une autre commune', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifMoyenGeneralPrive = forms.CharField(widget=forms.NumberInput(
+    ElNbreEcolElmntairePublic = forms.CharField(label='Nombre décoles élémentaires publiques', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGRedoublantsTotalMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    ElNbreEcolElmntairePrive = forms.CharField(label='Nombre décoles élémentaires privées', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGRedoublantsFillesMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    MGEnsbleGrconsEntre12Et15ans = forms.CharField(label='Ensemble des garçons âgés entre 12 et 15 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGRedoublantsGarconsMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    MGEnsFillesEntre12Et15ans = forms.CharField(label='Ensemble des filles âgées entre 12 et 15 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifsInscritMoyenGeneralFrancoArabe = forms.CharField(widget=forms.NumberInput(
+    MGNbreElvesMG = forms.CharField(label='Nombre délèves Moyen Général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifsMoyenGeneral6eme = forms.CharField(widget=forms.NumberInput(
+    MGNbreElvesFilles = forms.CharField(label='Nombre délèves Filles', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifsMoyenGeneral5eme = forms.CharField(widget=forms.NumberInput(
+    MGNbreElvesGrcons = forms.CharField(label='Nombre délèves Garcons', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifMoyenGeneral4e = forms.CharField(widget=forms.NumberInput(
+    MGEfectsMGPublic = forms.CharField(label='Effectifs du moyen général public', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifMoyenGeneral3e = forms.CharField(widget=forms.NumberInput(
+    MGEfectifMGPrive = forms.CharField(label='Effectifs du moyen général privé', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreRedoublants6e = forms.CharField(widget=forms.NumberInput(
+    MGRedblantsTotal = forms.CharField(label='Redoublants total moyen général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreRedoublants5e = forms.CharField(widget=forms.NumberInput(
+    RedblantsFillesMG = forms.CharField(label='Redoublants filles moyen général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreRedoublants4e = forms.CharField(widget=forms.NumberInput(
+    RedblantsGrconsMG = forms.CharField(label='Redoublants Garcons moyen général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreRedoublants3e = forms.CharField(widget=forms.NumberInput(
+    EfectsInscritMGFrancoArabe = forms.CharField(label='Effectifs inscrits au moyen général franco-arabe', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGEffectifTotalIncritMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    EffectifsMG6eme = forms.CharField(label='effectifs du moyen général 6e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGPopulationJeunesTranche12_15ans = forms.CharField(widget=forms.NumberInput(
+    EffectifsMG5eme = forms.CharField(label='effectifs du moyen général 5e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesEffectivementInscrit6eme1erFois = forms.CharField(widget=forms.NumberInput(
+    EffectifMG4e = forms.CharField(label='effectifs du moyen général 4e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreNouveauxInscritFilles6eme = forms.CharField(widget=forms.NumberInput(
+    EffectifMG3e = forms.CharField(label='effectifs du moyen général 3e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreTotalNouveauxInscrit6eme = forms.CharField(widget=forms.NumberInput(
+    NbreRedoublants6e = forms.CharField(label='Nombre de redoublants 6e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreNouveauxInscrits6emePublic = forms.CharField(widget=forms.NumberInput(
+    NbreRedoublants5e = forms.CharField(label='Nombre de redoublants 5e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesSituationHandicapMG = forms.CharField(widget=forms.NumberInput(
+    NbreRedoublants4e = forms.CharField(label='Nombre de redoublants 4e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreTotalElevesMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    NbreRedoublants3e = forms.CharField(label='Nombre de redoublants 3e', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesMarieeCoursAnneeMG = forms.CharField(widget=forms.NumberInput(
+    EfectTotalIncritMG = forms.CharField(label='Effectif total inscrit au moyen général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreElevesFillesVictimesGrossesseMG = forms.CharField(widget=forms.NumberInput(
+    PopJeunesTranche12_15ans = forms.CharField(label='Population officiellement scolarisable à lélémentaire (population des jeunes de la tranche 12-15 ans )', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreFillesVictimesViolencesSexuellesMG = forms.CharField(widget=forms.NumberInput(
+    NbreElevsEfectivmntInscrit6em1erFs = forms.CharField(label='Nombre délèves effectivement inscrits en 6e pour la première fois, sans distinction dâge', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombresGarconsVictimesViolencesSexuellesMG = forms.CharField(widget=forms.NumberInput(
+    NbreNouvxInscritFilles6eme = forms.CharField(label='Nombre de nouveaux inscrits-filles en 6em', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreFillesOrphelinsMG = forms.CharField(widget=forms.NumberInput(
+    NbreTotlNouvxInscrit6eme = forms.CharField(label='Nombre total de nouveaux inscrits en 6em', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreTotalFilleMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    NbreNouvxInscrit6emePublic = forms.CharField(label='Nombre de nouveaux inscrits en 6e dans les établissements publics', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AccessMGNombreGarconsOrphelinsMoyenGeneral = forms.CharField(widget=forms.NumberInput(
+    NbreElvSituationHandicapMG = forms.CharField(label='Nombre délèves en situation dhandicap', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeGarconsAge16_18ans = forms.CharField(widget=forms.NumberInput(
+    NbreTotElvMoyGenral = forms.CharField(label='Nombre total délèves MG', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeFillesAgee16_18ans = forms.CharField(widget=forms.NumberInput(
+    NbreElvesMarieCrsAnnMG = forms.CharField(label='Nombre délèves filles mariées en cours dannée', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEnsFillesGarconsAgee16_18ans = forms.CharField(widget=forms.NumberInput(
+    NbreElvFillesVictimGrosseMG = forms.CharField(label='Nombre délèves filles victimes de grosses durant lannée', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreEleveSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreFilleVictimViolencSexuelMG = forms.CharField(label='Nombres Filles victimes de violences sexuelles par établissement', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreGarconsSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreGrconsVictimViolencSexuelMG = forms.CharField(label='Nombres Garcons victimes de violences sexuelles par établissement', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreFillesSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreFillesOrphelinMG = forms.CharField(label='Nombre Filles orphelins par établissement', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifsSecondairePublic = forms.CharField(widget=forms.NumberInput(
+    NbreTotFilleMG = forms.CharField(label='Nombre total de fille au Moyen General', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifsSecondairePrive = forms.CharField(widget=forms.NumberInput(
+    NbreGrconsOrphelinMG = forms.CharField(label='Nombre Garcons orphelins par établissement', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifsSecondaireCommunautaire = forms.CharField(widget=forms.NumberInput(
+    GrconsAge16_18ans = forms.CharField(label='Ensemble des garçons âgés entre 16 et 18 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeRedoublantsTotalSecondaireGeneral = forms.CharField(widget=forms.NumberInput(
+    FillesAge16_18ans = forms.CharField(label='Ensemble des filles âgées entre 16 et 18 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeRedoublantsFillesSecondaireGeneral = forms.CharField(widget=forms.NumberInput(
+    EnsFillesGrconsAge16_18ans = forms.CharField(label='Ensemble des filles et des garçons âgés entre 16 et 18 ans', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeRedoublantsGarconsSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreElvScdaire = forms.CharField(label='nombre délève dans le secondaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifs2nd = forms.CharField(widget=forms.NumberInput(
+    NbreGrconsScdaire = forms.CharField(label='nombre de garçons dans le secondaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifs1er = forms.CharField(widget=forms.NumberInput(
+    NbreFillesScdaire = forms.CharField(label='nombre de filles dans le secondaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifsTerminale = forms.CharField(widget=forms.NumberInput(
+    EfectScdairePublic = forms.CharField(label='Effectifs du secondaire public', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreRedoublants2nd = forms.CharField(widget=forms.NumberInput(
+    EfectScdairePrive = forms.CharField(label='Effectifs du secondaire prive', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreRedoublants1er = forms.CharField(widget=forms.NumberInput(
+    EfectScdaireCommun = forms.CharField(label='Effectifs du secondaire communautaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreRedoublantsTerminale = forms.CharField(widget=forms.NumberInput(
+    RedblantsTotScdaireGnral = forms.CharField(label='Redoublants total secondaire général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeEffectifTotalInscritSecondaire = forms.CharField(widget=forms.NumberInput(
+    RedblantsFillesScdaireGnral = forms.CharField(label='Redoublants filles secondaire général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSePopulationJeunesTranche16_18ans = forms.CharField(widget=forms.NumberInput(
+    RedblantsGrconScdaire = forms.CharField(label='Redoublants Garcons secondaire général', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreElevesSituationHandicapSecondaire = forms.CharField(widget=forms.NumberInput(
+    Effectifs2nd = forms.CharField(label='effectifs 2nd', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreTotalElevesSecondaire = forms.CharField(widget=forms.NumberInput(
+    Effectifs1er = forms.CharField(label='effectifs 1er', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreFillesMarieeEnCoursAnneeSecondaire = forms.CharField(widget=forms.NumberInput(
+    EffectifsTle = forms.CharField(label='effectifs Terminale', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreElevesFillesVictimesGrossesseSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreRedblants2nd = forms.CharField(label='Nombre de redoublants en 2nd', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreElevesVictimesViolencesSexuellesEtablissement = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombresFillesVictimesViolencesSexuellesSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreRedblants1er = forms.CharField(label='Nombre de redoublants en 1er', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreGarconsVictimesViolencesSexuellesSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreRedblantsTle = forms.CharField(label='Nombre de redoublants en Terminale', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreElevesOrphelinsSecondaire = forms.CharField(widget=forms.NumberInput(
+    EfectTotInscritScdaire = forms.CharField(label='Effectif total inscrit au secondaire', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreFillesOrphelinsSecondaire = forms.CharField(widget=forms.NumberInput(
+    PopJeunesTranch16_18ans = forms.CharField(label='Population officiellement scolarisable au secondaire (population des jeunes de la tranche 16-18 ans )', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreGarconsOrphelinsSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreElvSituationHandicapScnd = forms.CharField(label='Nombre délèves en situation dhandicap ', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
-
-    AcessSeNombreElevesSansPieceEtatCivilSecondaire = forms.CharField(widget=forms.NumberInput(
+    NbreTotElvesSecndaire = forms.CharField(label='Nombre total délèves au secondaire', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreFilleMarieEnCourAnScdaire = forms.CharField(label='Nombre délèves filles mariées en cours dannée', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvFilleVictimGrosessScndre = forms.CharField(label='Nombre délèves filles victimes de grosses durant lannée ', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvsVictimViolencSexuelEtablis = forms.CharField(label='Nombres délèves victimes de violences sexuelles par établissement', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreFilleVictimViolencSexuelScdre = forms.CharField(label='Nombres filles victimes de violences sexuelles par établissement', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreGrconVictimViolencSexuelScdair = forms.CharField(label='Nombres garcons victimes de violences sexuelles par établissement', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvsOrphelinScndaire = forms.CharField(label='Nombre délèves orphelins établissement', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreFilleOrphelinScndaire = forms.CharField(label='Nombre Filles orphelins par établissement', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreGrconsOrphelinScndaire = forms.CharField(label='Nombre Garcons orphelins par établissement', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreElvSanPieceEtatCivilScndaire = forms.CharField(label='Nombre délèves nayant pas une pièce détat civil', widget=forms.NumberInput(
         attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    date = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
+    date_modification = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
 
     class Meta:
         model = DimEduc_Access

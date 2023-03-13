@@ -1,137 +1,28 @@
-{% extends 'layout/base.html'%}
 
+
+{% extends 'pages/base.html' %}
 {% load static %}
 
-
-
-    <title>{% block title%}tab{%endblock%}</title>
- </script>
-</head>
-
-
-<body >
-    <header>
-        {% include 'layout/partial/header.html' %}
-    </header>
-
-    {% block body  %}
-
-
-
- <!-- Content Start -->
-        <div style= "padding:0%">
-            <!-- Navbar Start -->
-
-            <!-- Navbar End -->
-
-
-
-    <!-- JavaScript Libraries -->
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src=" {% static 'lib/easing/easing.min.js '%}"></script>
-    <script src=" {% static 'lib/waypoints/waypoints.min.js '%}"></script>
-    <script src=" {% static 'lib/owlcarousel/owl.carousel.min.js '%}"></script>
-    <script src=" {% static 'lib/tempusdominus/js/moment.min.js '%}"></script>
-    <script src=" {% static 'lib/tempusdominus/js/moment-timezone.min.js '%}"></script>
-    <script src=" {% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js '%}"></script>
-
-    <!-- Template Javascript -->
-    <!-- script src=" {% static 'js/main.js '%}"></script-->
-
-<!-- diagramme-->
-{% include 'layout/partial/chart.html'%}
-<body>
-
-    <div class="sidebar"style=" margin-top:0px">
-
-        <div class="dropdown">
-          <button class="mainmenubtn">Agriculture</button>
-          <div class="dropdown-child">
-
-            <a href="{% url 'das:dimagroassu' %}">AgroAssurance</a>
-            <a href="{% url 'das:dimagrocul' %}">AgroCulture</a>
-            <a href="{% url 'das:dimagrofin' %}">AgroFinance</a>
-            <a href="{% url 'das:dimagroorg' %}">AgroOrganisation</a>
-            <a href="{% url 'das:dimagroprod' %}">AgroProduction</a>
-
-           </div>
-        </div>
-        <div class="dropdown">
-          <button class="mainmenubtn">Foncier</button>
-          <div class="dropdown-child">
-
-            <a href="{% url 'fonse:DimFoncierGouvernanc' %}">FoncierGouvernanc</a>
-            <a href="{% url 'fonse:DimGeographie' %}">Geographie</a>
-            <!--a href="{% url 'fonse:FactFoncier' %}">Foncier</a-->
-
-           </div>
-        </div>
-
-        <div class="dropdown">
-          <button class="mainmenubtn">Peche</button>
-          <div class="dropdown-child">
-
-            <a href="{% url 'peche:dimpecart' %}">PecheArtisan</a>
-            <a href="{% url 'peche:dimpecass' %}">PecheAssure</a>
-            <a href="{% url 'peche:dimpecfin' %}">PecheFinance</a>
-            <a href="{% url 'peche:dimpecec' %}">PecheCommerce</a>
-
-           </div>
-        </div>
-
-
-
-
-         <div class="dropdown">
-          <button class="mainmenubtn">Education</button>
-          <div class="dropdown-child">
-
-
-            <a href="{% url 'educations:DimEqui' %}">Equipements</a>
-            <a href="{% url 'educations:DimGou' %}">Gouvernance</a>
-            <a href="{% url 'educations:DimPer' %}">Perfomance</a>
-            <a href="{% url 'educations:Dimp' %}">Personnel</a>
-             <a href="{% url 'educations:dimEduc_Access' %}">Access education</a>
-
-           </div>
-
-
-
-             </div>
-              <div class="dropdown">
-          <button class="mainmenubtn">Sante</button>
-          <div class="dropdown-child">
-
-            <a href="{% url 'sante:PlanificationFamiliale' %}">PlanificationFamiliale</a>
-           </div>
-        </div>
-          </div>
-
-
-
-
-     </div>
-    </div>
-
-        <div > </div >
-
-                        <div class="content" style =" margin:0 auto;
-     max-width: 700px;">
-                                <section class="hero is-dark is-fullheight">
+{% block content %}
+<div class="page-wrapper">
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="card">
+            <div class="card-body">
+            </div>
+         </div>
+      </div> <section class="hero is-dark is-fullheight">
                                   <div class="hero-body">
-                                    <div class="container">
+                                     <div class="container" style =" padding-left: 250px;">
                                       <div class="columns is-centered">
 
                                         <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                                               <div class="bg-light rounded h-100 p-4">
                                               <div class="card card-body">
                                             <h5>Voulez-vous supprimer cette enregistrement</h5>
-                                          <form action="{% url 'educations:delete' item.id %}" method="Post">
+                                          <form action="{% url 'education:de_acc' item.id %}" method="Post">
                                                   {% csrf_token %}
-                                                 <a class="btn btn-warning" href="{% url 'educations:DimEqui'%}">Annuler</a>
+                                                 <a class="btn btn-warning" href="{% url 'education:dim_Access' %}">Annuler</a>
                                                     <input class="btn btn-danger" type="submit" name="Supprimer">
                                           </form>
                                        </div>
@@ -140,163 +31,9 @@
                                       </div>
                                     </div>
                                   </div>
-                                </section>
-                               <div style =" margin: 0 auto;
-     max-width: 700px;">
-
-                                </div>
-                        </div>
-
-
-
- <style>
-  body {
-    margin: 0;
-    font-family: "Lato", sans-serif;
-  }
-
-.sidebar {
-  margin-top:0px;
-  padding-top:70px;
-  width: 200px;
-  background-color: #258baf;
-  position: fixed;
-  height:100%;
-  overflow: scroll;
-}
-
-  .sidebar a {
-    display: block;
-    color: #ffffff;
-    padding: 16px;
-    text-decoration: none;
-  }
-
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-
-  div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
-  .mainmenubtn {
-    background-color: #258baf;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding:20px;
-    margin-top:20px;
-
-  }
-
-.mainmenubtn:hover {
-  background-color: blue;
-  }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-
-}
-.dropdown-child {
-  display: none;
-
-  min-width: 200px;
-}
-.dropdown-child a {
-  color: white;
-  padding: 20px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown:hover .dropdown-child {
-  display: block;
-}
-  </style>
-
-
-
-
-<script>left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-
-
-.mainmenubtn {
-  background-color: #258baf;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding:20px;
-  margin-top:20px;
-
-}
-.mainmenubtn:hover {
-  background-color: blue;
-  }
-.dropdown {
-  position: relative;
-  display: inline-block;
-
-}
-.dropdown-child {
-  display: none;
-
-  min-width: 200px;
-}
-.dropdown-child a {
-  color: white;
-  padding: 20px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown:hover .dropdown-child {
-  display: block;
-}
-</style>
-</head>
-
-    {% endblock %}
+ </section>
+<div >
+ </div>
+   
 </div>
-
-
-    <footer>
-        {% include 'layout/partial/footer.html' %}
-    </footer>
-</body>
-
-
-
-
-
+{% endblock %}	

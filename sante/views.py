@@ -155,10 +155,10 @@ def survie(request):
 
 # update palu
 def update_vie(request, id):
-    dataP = SurvieEnfant.objects.get(id=id)
-    form = survienf(instance=dataP)
+    dataObject = SurvieEnfant.objects.get(id=id)
+    form = survienf(instance=dataObject)
     if request.method == 'POST':
-        form = survienf(request.POST, instance=dataP)
+        form = survienf(request.POST, instance=dataObject)
         if form.is_valid():
             form.save()
             return redirect('/sante/survienfant/')

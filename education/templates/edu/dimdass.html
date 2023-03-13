@@ -16,168 +16,7 @@
                   {% csrf_token %}
               
                   {{ form.as_p }}
-                  <div class="row">
-                     <div class="col-md-6">
-                        
-                        
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-group">
-                           <label>EffectifPrescoMoyenneSection:</label>
-                           {{ form.EffectifPrescoMoyenneSection }}
-                        </div>
-                        <div class="form-group">
-                           <label>EffectifPrescoGrandeSection:</label>
-                           {{ form.EffectifPrescoGrandeSection }}
-                        </div>
-                        <div class="form-group">
-                           <label>EffectifsPrescoTT:</label>
-                           {{ form.EffectifsPrescoTT }}</div>
-                        <div class="form-group">
-                           <label>NbreGarcons_FillesPSs:</label>
-                           {{ form.NbreGarcons_FillesPS }}
-                        </div>
-                        <div class="form-group">
-                           <label>NbreGarcons_FillesMS:</label>
-                           {{ form.NbreGarcons_FillesMS }}
-                        </div>
-                        <div class="form-group">
-                           <label>NbreGarcons_FillesGS:</label>
-                           {{ form.NbreGarcons_FillesGS }}
-                        </div>
-                        <div class="form-group">
-                          <label>NreFillesPrescolaire:</label>
-                          {{ form.NreFillesPrescolaire}}
-                       </div>
-                  </div>
-
-
-              
-                  <div class="row">
-                    <div class="col-md-6">
-                       
-                       <div class="form-group">
-                          <label>EffectifsTotalElvInscitPrescoPublic:</label>
-                          {{ form.EffectifsTotalElvInscitPrescoPublic}}
-                       </div>
-                       <div class="form-group">
-                          <label>EffectifsTotalElvInscitPrescoStuctureCommunautaires :</label>
-                          {{ form.EffectifsTotalElvInscitPrescoStuctureCommunautaires }}
-                       </div>
-                       <div class="form-group">
-                          <label>EffectifsTotalElev:</label>
-                          {{ form.EffectifsTotalElev}}
-                       </div>
-                       <div class="form-group">
-                         <label>NbreStructurePrescolairePublic:</label>
-                         {{ form.NbreStructurePrescolairePublic }}
-                      </div>
-                       <div class="form-group">
-                          <label>NbreStructurePrescolairePrive:</label>
-                          {{ form.NbreStructurePrescolairePublic}}
-                       </div>
-                       <div class="form-group">
-                          <label>EffectifTotalElevInscritPrescolaire:</label>
-                          {{ form.EffectifTotalElevInscritPrescolaire }}
-                       </div>
-                       <div class="form-group">
-                          <label>NbreStructuresPrescolaireCommunautaires:</label>
-                          {{ form.EffectifsTotalElvInscitPrescoStuctureCommunautaires}}
-                       </div>
-                    </div>
-                    <div class="col-md-6">
-                       <div class="form-group">
-                          <label>NbreDaaraModerne:</label>
-                          {{ form.NbreDaaraModernes}}
-                       </div>
-                       <div class="form-group">
-                          <label>NbreDaaraMises_Niveau:</label>
-                          {{ form.NbreDaaraMises_Niveau }}
-                       </div>
-                       <div class="form-group">
-                          <label>NbreEnfDansElementaire:</label>
-                          {{ form.NbreEnfDansElementaire }}</div>
-                       <div class="form-group">
-                          <label>NbreGarconsDansElementaire:</label>
-                          {{ form.NbreGarconsDansElementaire }}
-                       </div>
-                       <div class="form-group">
-                          <label>NbreFillesDansElementaire:</label>
-                          {{ form.NbreFillesDansElementaire }}
-                       </div>
-                       <div class="form-group">
-                          <label>NbreElvInscritCIPremierFois:</label>
-                          {{ form.NbreElvInscritCIPremierFois }}
-                       </div>
-                       <div class="form-group">
-                         <label>NbreElvQuittantEtablissementCommuneversEtablissemnetHorsCommune:</label>
-                         {{ form.NbreElvQuittantEtablissementCommuneversEtablissemnetHorsCommune}}
-                      </div>
-                 </div>
-
-
-                 
-                  <div class="col-md-6">
-                     
-                     <div class="form-group">
-                        <label>NbreEcoleElementairePubliques:</label>
-                        {{ form.NbreEcoleElementairePubliques}}
-                     </div>
-                     <div class="form-group">
-                        <label>NbreEcoleElementairePrivees:</label>
-                        {{ form.NbreEcoleElementairePrivees}}
-                     </div>
-                     <div class="form-group">
-                        <label>EnsGarcons_12_15ans:</label>
-                        {{ form.EnsGarcons_12_15ans}}
-                     </div>
-                     <div class="form-group">
-                       <label>EnsFilles_12_15ans:</label>
-                       {{ form.EnsFilles_12_15ans }}
-                        
-                    </div>
-                     <div class="form-group">
-                        <label>NreElevesElementaire:</label>
-                        {{ form.NreElevesElementaire}}
-                     </div>
-                     <div class="form-group">
-                        <label>NbreGarconsElementaire:</label>
-                        {{ form.NbreGarconsElementaire }}
-                     </div>
-                     <div class="form-group">
-                        <label>NbreFillesElementaire:</label>
-                        {{ form.NbreFillesElementaire}}
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label>EnsGarcons_16_18ans:</label>
-                        {{ form.EnsGarcons_16_18ans}}
-                     </div>
-                     <div class="form-group">
-                        <label>EnsFilles_16_18ans:</label>
-                        {{ form.EnsFilles_16_18ans}}
-                     </div>
-                     <div class="form-group">
-                        <label>EnsGarcons_Filles_16_18ans:</label>
-                        {{ form.EnsGarcons_Filles_16_18ans }}</div>
-                     <div class="form-group">
-                        <label>NbreElvSecondaire:</label>
-                        {{ form.NbreElvSecondaire }}
-                     </div>
-                     <div class="form-group">
-                        <label>NbreGarconsSecondaire:</label>
-                        {{ form.NbreGarconsSecondaire }}
-                     </div>
-                     <div class="form-group">
-                        <label>NbreFillesSecondaire:</label>
-                        {{ form.NbreFillesSecondaire }}
-                     </div>
-                     <div class="form-group">
-                       <label>NbreFillesEnceinteEnCoursAnnee_Secondaires:</label>
-                       {{ form.NbreFillesEnceinteEnCoursAnnee_Secondaire}}
-                    </div>
-               </div>
+                  
                   <div class="text-right">
                      <button type="submit" class="btn btn-primary">Ajouter</button>
                   </div>
@@ -187,12 +26,7 @@
       </div>
    </div>
    
-</div>
-
-
-     
-<div >
-  <div class="content container-fluid">
+ <div class="content container-fluid">
     <div class="page-header">
        <div class="row align-items-center">
           
@@ -209,146 +43,307 @@
                       <thead>
                          <tr>
                            <tr>
-                              <th >N</th>
-                              <th >EnsGarcons3_5ans</th>
-                              <th >EnsFilles3_5ans</th>
-                              <th >EnsFilles_Garcons3_5ans</th>
-                              <th Effectif Garcons Inscrit Prescolaire</th>
-                     <th >EffectifFillesnscritPrescolaire</th>
-                     <th >EffectifTotalElevInscritPrescolaire</th>
-                     <th >EffectifsPrescPetiteSection</th>
-                     <th >EffectifPrescoMoyenneSection</th>
-                     <th >EffectifPrescoGrandeSection</th>
-                     <th >EffectifsPrescoTT</th>
-                     <th >NbreGarcons_FillesPS</th>
-                     <th >NbreGarcons_FillesMS</th>
-                     <th >NbreGarcons_FillesGS</th>
-                     <th >NreFillesPrescolaire</th>
-                     <th >EffectifsTotalElvInscitPrescoPublic</th>
-                     <th >EffectifsTotalElvInscit</th>
-                     <th >EffectifsTotalElev</th>
-                     <th >NbreStructurePrescolairePublic</th>
-                     <th >NbreStructurePrescolairePrive</th>
-                     <th >NbreStructuresPrescolaireCommunautaires</th>
-                     <th >NbreDaaraModernes</th>
-                     <th >NbreDaaraMises_Niveau</th>
-                     <th >NbreEnfDansElementaire</th>
-                     <th >NbreGarconsDansElementaire</th>
-                     <th >NbreFillesDansElementaire</th>
-                     <th >NbreElvInscritCIPremierFois</th>
-                     <th >NbreElvQuittCommune</th>
-                     <th >NbreElvProvenanveEtablissemnetHorsCommune</th>
-                     <th >NbreEcoleElementairePubliques</th>
-                     <th >NbreEcoleElementairePrivees</th>
-                     <th >EnsGarcons_12_15ans</th>
-                     <th >EnsFilles_12_15ans</th>
-                     <th >EnsFilles_12_15ans</th>
-                     <th >EnsFillesGarcons_12_15ans</th>
-                     <th >NreElevesElementaire</th>
-                     <th >NbreGarconsElementaire</th>
-                     <th >NbreFillesElementaire</th>
-                     <th >EnsGarcons_16_18ans</th>
-                     <th >EnsFilles_16_18ans</th>
-                     <th >EnsGarcons_Filles_16_18ans</th>
-                     <th >NbreElvSecondaire</th>
-                     <th >NbreGarconsSecondaire</th>
-                     <th >NbreFillesSecondaire</th>
-                     <th >NbreFilleMarieeCoursAnnee_Secondaire</th>
+                              <th>id</th>
+                           <th>CodeDistrict </th>
+                           <th>NomDistrict </th>
+                           <th>PrescoEnsGrcns3et5ans </th>
+                           <th>PrescoEnsFilles3et5ans </th>
+                           <th>PrescoEnsFilesEtGrcnsAge3Et5ans </th>
+                           <th>PrescoEffectGrcnsInscritsPresco </th>
+                           <th>PrescoEffectFilleInscritPresco </th>
+                           <th>PrescoEffectTTInscritPresco </th>
+                           <th>PrescoEffectPS </th>
+                           <th>PrescoEffectMS </th>
+                           <th>PrescoEffectGS </th>
+                           <th>PrescoEffectTotal </th>
+                           <th>PrescoNbreGrcnsFillesEnPS </th>
+                           <th>PrescoNbreGrcnsFillesEnMS </th>
+                           <th>PrescoNbreGrcnsFillesEnGS </th>
+                           <th>PrescoNbreFillesPrescoTotal </th>
+                           <th>PrescoEffectTTInscritPreslrePublic </th>
+                           <th>PrescoEffecTTElvInscritsPrescoStructComm </th>
+                           <th>PrescoEffectTTElvInscritPrecoPrive </th>
+                           <th>PrescoEffectifTTElvFillesInscritPrecoPrive </th>
+                           <th>PrescoEffectifTTFillesIncritStructComm </th>
+                           <th>PrescoEffectifTTFillesAuPrescoStructComm </th>
+                           <th>PrescoNbreTTNvxInscritsPS </th>
+                           <th>PrescoNbreTTNvxInscritsMS </th>
+                           <th>NbreTTNvxInscritGS </th>
+                           <th>NbreStructurePrescoPublic </th>
+                           <th>NbreStructurePrescolairePrive </th>
+                           <th>NbreStructurePrescolaireComm </th>
+                           <th>EfectlevesPrescolAyantPieceEtatCivilPS </th>
+                           <th>EfectElvesPrescolAyantPiecEtatCivilMS </th>
+                           <th>EfectPrecolAyantPieceEtatCivilGS </th>
+                           <th>EfectEnfantsPrescolFrancoArabe </th>
+                           <th>NbreDaaraModerne </th>
+                           <th>NbreDaaraMiseAJour </th>
+                           <th>ElNbreGarconsDe6A11ans </th>
+                           <th>ElNbreFillesDe6A11ans </th>
+                           <th>ElNbreEnfantsDe6A11ans </th>
+                           <th>ElNbreEleveElmtaire </th>
+                           <th>ElNbreGarconsElmtaire </th>
+                           <th>ElNbreFillesElmtaire </th>
+                           <th>ElEfectsElmtairePrive </th>
+                           <th>ElEfectsElmtairePublic </th>
+                           <th>ElEfectPrimStructComm </th>
+                           <th>ElEfectsElvesPrimSituationHandicap </th>
+                           <th>ElEfectFillesPrimSituationHandicap </th>
+                           <th>ElEfectGarcsPrimSituationHandicap </th>
+                           <th>ElEffectifTTElevesElementaire </th>
+                           <th>ElEfectTTElvesPasPieceEtatCivil </th>
+                           <th>ElEfectTTElevesCI </th>
+                           <th>ElEfectlTTElevesCM2 </th>
+                           <th>ElEfectEnftsPrimFrancoArabe </th>
+                           <th>ElEfectPrimRedoublantsTotal </th>
+                           <th>ElEfectPrimRedblantsFilles </th>
+                           <th>ElEfectPrimRedblantGrcons </th>
+                           <th>ElEffectifsCI </th>
+                           <th>ElEffectifsCP </th>
+                           <th>ElEffectifsCE1 </th>
+                           <th>ElEffectifsCE2 </th>
+                           <th>ElEffectifsCM1 </th>
+                           <th>ElEffectifsCM2 </th>
+                           <th>ElNbreRedoublantCI </th>
+                           <th>ElNbreRedoublantCP </th>
+                           <th>ElNbreRedoublantsCE1 </th>
+                           <th>ElNbreRedoublantsCE2 </th>
+                           <th>ElNbreRedoublantsCM1 </th>
+                           <th>ElNbreRedoublantsCM2 </th>
+                           <th>ElEfectTotalInscritElmtaire </th>
+                           <th>ElEfectGrconsInscritElmtaire </th>
+                           <th>ElEfectFillesIncritElmtaire </th>
+                           <th>ElNbreElvesSituationHandicap </th>
+                           <th>ElNbreTleElevesElmtaire </th>
+                           <th>ElPopOfciellemntScolarbleJnes6_11ans </th>
+                           <th>ElPopOficielemntScolarbleGrcons6_11ans </th>
+                           <th>ElPopOficielemntScolarbleFilles6_11ans </th>
+                           <th>ElNbreElvesQuittEtablisPourHorsComm </th>
+                           <th>ElNbreElvesProvncEtablisSituantAutrComm </th>
+                           <th>ElNbreEcolElmntairePublic </th>
+                           <th>ElNbreEcolElmntairePrive </th>
+                           <th>MGEnsbleGrconsEntre12Et15ans </th>
+                           <th>MGEnsFillesEntre12Et15ans </th>
+                           <th>MGNbreElvesMG </th>
+                           <th>MGNbreElvesFilles </th>
+                           <th>MGNbreElvesGrcons </th>
+                           <th>MGEfectsMGPublic </th>
+                           <th>MGEfectifMGPrive </th>
+                           <th>MGRedblantsTotal </th>
+                           <th>RedblantsFillesMG </th>
+                           <th>RedblantsGrconsMG </th>
+                           <th>EfectsInscritMGFrancoArabe </th>
+                           <th>EffectifsMG6eme </th>
+                           <th>EffectifsMG5eme </th>
+                           <th>EffectifMG4e </th>
+                           <th>EffectifMG3e </th>
+                           <th>NbreRedoublants6e </th>
+                           <th>NbreRedoublants5e </th>
+                           <th>NbreRedoublants4e </th>
+                           <th>NbreRedoublants3e </th>
+                           <th>EfectTotalIncritMG </th>
+                           <th>PopJeunesTranche12_15ans </th>
+                           <th>NbreElevsEfectivmntInscrit6em1erFs </th>
+                           <th>NbreNouvxInscritFilles6eme </th>
+                           <th>NbreTotlNouvxInscrit6eme </th>
+                           <th>NbreNouvxInscrit6emePublic </th>
+                           <th>NbreElvSituationHandicapMG </th>
+                           <th>NbreTotElvMoyGenral </th>
+                           <th>NbreElvesMarieCrsAnnMG </th>
+                           <th>NbreElvFillesVictimGrosseMG </th>
+                           <th>NbreFilleVictimViolencSexuelMG </th>
+                           <th>NbreGrconsVictimViolencSexuelMG </th>
+                           <th>NbreFillesOrphelinMG </th>
+                           <th>NbreTotFilleMG </th>
+                           <th>NbreGrconsOrphelinMG </th>
+                           <th>GrconsAge16_18ans </th>
+                           <th>FillesAge16_18ans </th>
+                           <th>EnsFillesGrconsAge16_18ans </th>
+                           <th>NbreElvScdaire </th>
+                           <th>NbreGrconsScdaire </th>
+                           <th>NbreFillesScdaire </th>
+                           <th>EfectScdairePublic </th>
+                           <th>EfectScdairePrive </th>
+                           <th>EfectScdaireCommun </th>
+                           <th>RedblantsTotScdaireGnral </th>
+                           <th>RedblantsFillesScdaireGnral </th>
+                           <th>RedblantsGrconScdaire </th>
+                           <th>Effectifs2nd </th>
+                           <th>Effectifs1er </th>
+                           <th>EffectifsTle </th>
+                           <th>NbreRedblants2nd </th>
+                           <th>NbreRedblants1er </th>
+                           <th>NbreRedblantsTle </th>
+                           <th>EfectTotInscritScdaire </th>
+                           <th>PopJeunesTranch16_18ans </th>
+                           <th>NbreElvSituationHandicapScnd </th>
+                           <th>NbreTotElvesSecndaire </th>
+                           <th>NbreFilleMarieEnCourAnScdaire </th>
+                           <th>NbreElvFilleVictimGrosessScndre </th>
+                           <th>NbreElvsVictimViolencSexuelEtablis </th>
+                           <th>NbreFilleVictimViolencSexuelScdre </th>
+                           <th>NbreGrconVictimViolencSexuelScdair </th>
+                           <th>NbreElvsOrphelinScndaire </th>
+                           <th>NbreFilleOrphelinScndaire </th>
+                           <th>NbreGrconsOrphelinScndaire </th>
+                           <th>NbreElvSanPieceEtatCivilScndaire </th>
+                           <th>date</th>
+                           <th>date_modification</th>
                      <!--th >NbreFillesEnceinteEnCoursAnnee_Secondaire</th-->
                            <th class="text-right">Action</th>
                          </tr>
                       </thead>
                       <tbody>
-                        {% for stud in dataOb %}
+                        {% for stud in dbacess %}
                         <tr>
                           <td>{{ stud.id }}</td>
-                          <td>{{ stud.EnsGarcons3_5ans }}</td>
+                          
+                        <td>{{ stud.CodeDistrict  }}</td>
+                        <td>{{ stud.NomDistrict  }}</td>
+                        <td>{{ stud.PrescoEnsGrcns3et5ans  }}</td>
+                        <td>{{ stud.PrescoEnsFilles3et5ans  }}</td>
+                        <td>{{ stud.PrescoEnsFilesEtGrcnsAge3Et5ans  }}</td>
+                        <td>{{ stud.PrescoEffectGrcnsInscritsPresco  }}</td>
+                        <td>{{ stud.PrescoEffectFilleInscritPresco  }}</td>
+                        <td>{{ stud.PrescoEffectTTInscritPresco  }}</td>
+                        <td>{{ stud.PrescoEffectPS  }}</td>
+                        <td>{{ stud.PrescoEffectMS  }}</td>
+                        <td>{{ stud.PrescoEffectGS  }}</td>
+                        <td>{{ stud.PrescoEffectTotal  }}</td>
+                        <td>{{ stud.PrescoNbreGrcnsFillesEnPS  }}</td>
+                        <td>{{ stud.PrescoNbreGrcnsFillesEnMS  }}</td>
+                        <td>{{ stud.PrescoNbreGrcnsFillesEnGS  }}</td>
+                        <td>{{ stud.PrescoNbreFillesPrescoTotal  }}</td>
+                        <td>{{ stud.PrescoEffectTTInscritPreslrePublic  }}</td>
+                        <td>{{ stud.PrescoEffecTTElvInscritsPrescoStructComm  }}</td>
+                        <td>{{ stud.PrescoEffectTTElvInscritPrecoPrive  }}</td>
+                        <td>{{ stud.PrescoEffectifTTElvFillesInscritPrecoPrive  }}</td>
+                        <td>{{ stud.PrescoEffectifTTFillesIncritStructComm  }}</td>
+                        <td>{{ stud.PrescoEffectifTTFillesAuPrescoStructComm  }}</td>
+                        <td>{{ stud.PrescoNbreTTNvxInscritsPS  }}</td>
+                        <td>{{ stud.PrescoNbreTTNvxInscritsMS  }}</td>
+                        <td>{{ stud.NbreTTNvxInscritGS  }}</td>
+                        <td>{{ stud.NbreStructurePrescoPublic  }}</td>
+                        <td>{{ stud.NbreStructurePrescolairePrive  }}</td>
+                        <td>{{ stud.NbreStructurePrescolaireComm  }}</td>
+                        <td>{{ stud.EfectlevesPrescolAyantPieceEtatCivilPS  }}</td>
+                        <td>{{ stud.EfectElvesPrescolAyantPiecEtatCivilMS  }}</td>
+                        <td>{{ stud.EfectPrecolAyantPieceEtatCivilGS  }}</td>
+                        <td>{{ stud.EfectEnfantsPrescolFrancoArabe  }}</td>
+                        <td>{{ stud.NbreDaaraModerne  }}</td>
+                        <td>{{ stud.NbreDaaraMiseAJour  }}</td>
+                        <td>{{ stud.ElNbreGarconsDe6A11ans  }}</td>
+                        <td>{{ stud.ElNbreFillesDe6A11ans  }}</td>
+                        <td>{{ stud.ElNbreEnfantsDe6A11ans  }}</td>
+                        <td>{{ stud.ElNbreEleveElmtaire  }}</td>
+                        <td>{{ stud.ElNbreGarconsElmtaire  }}</td>
+                        <td>{{ stud.ElNbreFillesElmtaire  }}</td>
+                        <td>{{ stud.ElEfectsElmtairePrive  }}</td>
+                        <td>{{ stud.ElEfectsElmtairePublic  }}</td>
+                        <td>{{ stud.ElEfectPrimStructComm  }}</td>
+                        <td>{{ stud.ElEfectsElvesPrimSituationHandicap  }}</td>
+                        <td>{{ stud.ElEfectFillesPrimSituationHandicap  }}</td>
+                        <td>{{ stud.ElEfectGarcsPrimSituationHandicap  }}</td>
+                        <td>{{ stud.ElEffectifTTElevesElementaire  }}</td>
+                        <td>{{ stud.ElEfectTTElvesPasPieceEtatCivil  }}</td>
+                        <td>{{ stud.ElEfectTTElevesCI  }}</td>
+                        <td>{{ stud.ElEfectlTTElevesCM2  }}</td>
+                        <td>{{ stud.ElEfectEnftsPrimFrancoArabe  }}</td>
+                        <td>{{ stud.ElEfectPrimRedoublantsTotal  }}</td>
+                        <td>{{ stud.ElEfectPrimRedblantsFilles  }}</td>
+                        <td>{{ stud.ElEfectPrimRedblantGrcons  }}</td>
+                        <td>{{ stud.ElEffectifsCI  }}</td>
+                        <td>{{ stud.ElEffectifsCP  }}</td>
+                        <td>{{ stud.ElEffectifsCE1  }}</td>
+                        <td>{{ stud.ElEffectifsCE2  }}</td>
+                        <td>{{ stud.ElEffectifsCM1  }}</td>
+                        <td>{{ stud.ElEffectifsCM2  }}</td>
+                        <td>{{ stud.ElNbreRedoublantCI  }}</td>
+                        <td>{{ stud.ElNbreRedoublantCP  }}</td>
+                        <td>{{ stud.ElNbreRedoublantsCE1  }}</td>
+                        <td>{{ stud.ElNbreRedoublantsCE2  }}</td>
+                        <td>{{ stud.ElNbreRedoublantsCM1  }}</td>
+                        <td>{{ stud.ElNbreRedoublantsCM2  }}</td>
+                        <td>{{ stud.ElEfectTotalInscritElmtaire  }}</td>
+                        <td>{{ stud.ElEfectGrconsInscritElmtaire  }}</td>
+                        <td>{{ stud.ElEfectFillesIncritElmtaire  }}</td>
+                        <td>{{ stud.ElNbreElvesSituationHandicap  }}</td>
+                        <td>{{ stud.ElNbreTleElevesElmtaire  }}</td>
+                        <td>{{ stud.ElPopOfciellemntScolarbleJnes6_11ans  }}</td>
+                        <td>{{ stud.ElPopOficielemntScolarbleGrcons6_11ans  }}</td>
+                        <td>{{ stud.ElPopOficielemntScolarbleFilles6_11ans  }}</td>
+                        <td>{{ stud.ElNbreElvesQuittEtablisPourHorsComm  }}</td>
+                        <td>{{ stud.ElNbreElvesProvncEtablisSituantAutrComm  }}</td>
+                        <td>{{ stud.ElNbreEcolElmntairePublic  }}</td>
+                        <td>{{ stud.ElNbreEcolElmntairePrive  }}</td>
+                        <td>{{ stud.MGEnsbleGrconsEntre12Et15ans  }}</td>
+                        <td>{{ stud.MGEnsFillesEntre12Et15ans  }}</td>
+                        <td>{{ stud.MGNbreElvesMG  }}</td>
+                        <td>{{ stud.MGNbreElvesFilles  }}</td>
+                        <td>{{ stud.MGNbreElvesGrcons  }}</td>
+                        <td>{{ stud.MGEfectsMGPublic  }}</td>
+                        <td>{{ stud.MGEfectifMGPrive  }}</td>
+                        <td>{{ stud.MGRedblantsTotal  }}</td>
+                        <td>{{ stud.RedblantsFillesMG  }}</td>
+                        <td>{{ stud.RedblantsGrconsMG  }}</td>
+                        <td>{{ stud.EfectsInscritMGFrancoArabe  }}</td>
+                        <td>{{ stud.EffectifsMG6eme  }}</td>
+                        <td>{{ stud.EffectifsMG5eme  }}</td>
+                        <td>{{ stud.EffectifMG4e  }}</td>
+                        <td>{{ stud.EffectifMG3e  }}</td>
+                        <td>{{ stud.NbreRedoublants6e  }}</td>
+                        <td>{{ stud.NbreRedoublants5e  }}</td>
+                        <td>{{ stud.NbreRedoublants4e  }}</td>
+                        <td>{{ stud.NbreRedoublants3e  }}</td>
+                        <td>{{ stud.EfectTotalIncritMG  }}</td>
+                        <td>{{ stud.PopJeunesTranche12_15ans  }}</td>
+                        <td>{{ stud.NbreElevsEfectivmntInscrit6em1erFs  }}</td>
+                        <td>{{ stud.NbreNouvxInscritFilles6eme  }}</td>
+                        <td>{{ stud.NbreTotlNouvxInscrit6eme  }}</td>
+                        <td>{{ stud.NbreNouvxInscrit6emePublic  }}</td>
+                        <td>{{ stud.NbreElvSituationHandicapMG  }}</td>
+                        <td>{{ stud.NbreTotElvMoyGenral  }}</td>
+                        <td>{{ stud.NbreElvesMarieCrsAnnMG  }}</td>
+                        <td>{{ stud.NbreElvFillesVictimGrosseMG  }}</td>
+                        <td>{{ stud.NbreFilleVictimViolencSexuelMG  }}</td>
+                        <td>{{ stud.NbreGrconsVictimViolencSexuelMG  }}</td>
+                        <td>{{ stud.NbreFillesOrphelinMG  }}</td>
+                        <td>{{ stud.NbreTotFilleMG  }}</td>
+                        <td>{{ stud.NbreGrconsOrphelinMG  }}</td>
+                        <td>{{ stud.GrconsAge16_18ans  }}</td>
+                        <td>{{ stud.FillesAge16_18ans  }}</td>
+                        <td>{{ stud.EnsFillesGrconsAge16_18ans  }}</td>
+                        <td>{{ stud.NbreElvScdaire  }}</td>
+                        <td>{{ stud.NbreGrconsScdaire  }}</td>
+                        <td>{{ stud.NbreFillesScdaire  }}</td>
+                        <td>{{ stud.EfectScdairePublic  }}</td>
+                        <td>{{ stud.EfectScdairePrive  }}</td>
+                        <td>{{ stud.EfectScdaireCommun  }}</td>
+                        <td>{{ stud.RedblantsTotScdaireGnral  }}</td>
+                        <td>{{ stud.RedblantsFillesScdaireGnral  }}</td>
+                        <td>{{ stud.RedblantsGrconScdaire  }}</td>
+                        <td>{{ stud.Effectifs2nd  }}</td>
+                        <td>{{ stud.Effectifs1er  }}</td>
+                        <td>{{ stud.EffectifsTle  }}</td>
+                        <td>{{ stud.NbreRedblants2nd  }}</td>
+                        <td>{{ stud.NbreRedblants1er  }}</td>
+                        <td>{{ stud.NbreRedblantsTle  }}</td>
+                        <td>{{ stud.EfectTotInscritScdaire  }}</td>
+                        <td>{{ stud.PopJeunesTranch16_18ans  }}</td>
+                        <td>{{ stud.NbreElvSituationHandicapScnd  }}</td>
+                        <td>{{ stud.NbreTotElvesSecndaire  }}</td>
+                        <td>{{ stud.NbreFilleMarieEnCourAnScdaire  }}</td>
+                        <td>{{ stud.NbreElvFilleVictimGrosessScndre  }}</td>
+                        <td>{{ stud.NbreElvsVictimViolencSexuelEtablis  }}</td>
+                        <td>{{ stud.NbreFilleVictimViolencSexuelScdre  }}</td>
+                        <td>{{ stud.NbreGrconVictimViolencSexuelScdair  }}</td>
+                        <td>{{ stud.NbreElvsOrphelinScndaire  }}</td>
+                        <td>{{ stud.NbreFilleOrphelinScndaire  }}</td>
+                        <td>{{ stud.NbreGrconsOrphelinScndaire  }}</td>
+                        <td>{{ stud.NbreElvSanPieceEtatCivilScndaire  }}</td>
+                        <td>{{ stud.date }}</td>
+                        <td>{{ stud.date_modification }}</td>
 
-                          <td>{{ stud.EnsFilles3_5ans }}</td>
-
-                          <td>{{ stud.EnsFilles_Garcons3_5ans}}</td>
-
-                          <td>{{ stud.EffectifGarconsInscritPrescolaire }}</td>
-
-                          <td>{{ stud.EffectifFillesnscritPrescolaire }}</td>
-
-                          <td>{{ stud.EffectifTotalElevInscritPrescolaire }}</td>
-
-                          <td>{{ stud.EffectifsPrescPetiteSection }}</td>
-
-                          <td>{{ stud.EffectifPrescoMoyenneSection }}</td>
-
-                          <td>{{ stud.EffectifPrescoGrandeSection }}</td>
-
-                          <td>{{ stud.EffectifsPrescoTT }}</td>
-
-                          <td>{{ stud.NbreGarcons_FillesPS }}</td>
-
-                          <td>{{ stud.NbreGarcons_FillesMS }}</td>
-
-                          <td>{{ stud.NbreGarcons_FillesGS }}</td>
-
-                          <td>{{ stud.NreFillesPrescolaire }}</td>
-
-                          <td>{{ stud.NreFillesPrescolaire }}</td>
-
-                          <td>{{ stud.EffectifsTotalElvInscitPrescoPublic }}</td>
-
-                          <td>{{ stud.EffectifsTotalElvInscitPrescoStuctureCommunautaires }}</td>
-
-                          <td>{{ stud.EffectifsTotalElev }}</td>
-
-                          <td>{{ stud.NbreStructurePrescolairePublic }}</td>
-
-                          <td>{{ stud.NbreStructurePrescolairePrive }}</td>
-
-                          <td>{{ stud.NbreStructuresPrescolaireCommunautaires }}</td>
-
-                          <td>{{ stud.NbreDaaraModernes }}</td>
-
-                          <td>{{ stud.NbreDaaraMises_Niveau }}</td>
-
-                          <td>{{ stud.NbreEnfDansElementaire }}</td>
-
-                          <td>{{ stud.NbreGarconsDansElementaire }}</td>
-
-                          <td>{{ stud.NbreFillesDansElementaire }}</td>
-
-                          <td>{{ stud.NbreElvInscritCIPremierFois }}</td>
-
-                          <td>{{ stud.NbreElvQuittantEtablissementCommuneversEtablissemnetHorsCommune }}</td>
-
-                          <td>{{ stud.NbreElvProvenanveEtablissemnetHorsCommune }}</td>
-
-                          <td>{{ stud.NbreEcoleElementairePubliques }}</td>
-
-                          <td>{{ stud.NbreEcoleElementairePrivees }}</td>
-
-                          <td>{{ stud.EnsGarcons_12_15ans }}</td>
-
-                          <td>{{ stud.EnsFilles_12_15ans }}</td>
-
-                          <td>{{ stud.EnsFillesGarcons_12_15ans }}</td>
-
-                          <td>{{ stud.NreElevesElementaire }}</td>
-
-                          <td>{{ stud.NbreGarconsElementaire }}</td>
-
-                          <td>{{ stud.NbreFillesElementaire }}</td>
-
-                          <td>{{ stud.EnsGarcons_16_18ans }}</td>
-
-                          <td>{{ stud.EnsFilles_16_18ans }}</td>
-
-                          <td>{{ stud.EnsGarcons_Filles_16_18ans }}</td>
-
-                          <td>{{ stud.NbreElvSecondaire }}</td>
-
-                          <td>{{ stud.NbreGarconsSecondaire }}</td>
-
-                          <td>{{ stud.NbreFillesSecondaire }}</td>
-
-                          <td>{{ stud.NbreFilleMarieeCoursAnnee_Secondaire }}</td>
                             <td class="text-right">
                                <div class="actions">
                                   <a href="{% url 'education:up_acc' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -368,8 +363,5 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-    
- </div>
+</div>
  {% endblock %}	

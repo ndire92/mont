@@ -2,20 +2,17 @@
 <div class="header">
    <div class="header-left">
       <a href="{% url 'posts:index' %}" class="logo">
-      <img src=" {% static 'assets/img/logo.png ' %}" alt="Logo">
+      <img src=" {% static 'assets/img/logo-white.jpg' %}" alt="Logo">
       </a>
       <a href="{% url 'posts:index' %}" class="logo logo-small">
-      <img src="assets/img/log.png" alt="Logo" width="30" height="30">
+      <img src="assets/img/log.jpg" alt="Logo" width="30" height="30">
       </a>
    </div>
    <a href="javascript:void(0);" id="toggle_btn">
    <i class="fas fa-align-left"></i>
    </a>
    <div class="top-nav-search">
-      <form>
-         <input type="text" class="form-control" placeholder="Search here">
-         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-      </form>
+   
    </div>
    <a class="mobile_btn" id="mobile_btn">
    <i class="fas fa-bars"></i>
@@ -25,9 +22,9 @@
       <li class="nav-item dropdown has-arrow">
          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
             {% if user.profile_pic == "" %}
-            <span class="user-img"><img class="rounded-circle" src="{% static 'assets/img/photos.jfif' %}" width="31" alt="Ryan Taylor"></span>
+            <span class="user-img"><img class="rounded-circle" src="{% static 'assets/img/photos.jfif' %}" width="31" alt=""></span>
          {% else %}
-         <span class="user-img"><img class="rounded-circle" src="/{{user.profile_pic}}" width="31" alt="Ryan Taylor"></span>
+         <span class="user-img"><img class="rounded-circle" src="/{{user.profile_pic}}" width="31" alt="Votre profile"></span>
          {% endif %}
          </a>
          <div class="dropdown-menu">
@@ -55,9 +52,8 @@
               
                </div>
             </div>
-            <a class="dropdown-item" href="{% url 'profile_update' %}">My Profile</a>
-            <a class="dropdown-item"  <a class="dropdown-item" href="{% url 'posts:new_post' %}">nouveau poste</a></a>
-            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            <a class="dropdown-item" href="{% url 'profile_update' %}">Mon profil</a>
+            <a class="dropdown-item" href="{% url 'logout' %}">Se déconnecter</a>
          </div>
       </li>
    </ul>

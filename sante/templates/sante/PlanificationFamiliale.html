@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'sante:PlanificationFamiliale'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -52,35 +52,35 @@
                       <thead>
                          <tr>
                             <th>ID</th>
-                            <th>CodeDistrict</th>
-                           <th>CodeDomaine</th>
-                           <th>CodeTemps</th>
-                           <th>R20TauxdeRecrutementPF</th>
-                           <th>R20TauxdAbandonPF</th>
-                           <th>R20TotalAbandonsPF</th>
-                           <th>R20PourcentagedeFemmesde15a49ansSousMethodeContraceptiveapresAvortement</th>
-                           <th>R20PourcentagedUtilisatricesPF</th>
-                           <th>R20PourcentagedUtilisatricesPFchezles15a49ans</th>
-                           <th>R20TauxdePrevalencecontraceptive</th>
-
+                            <th>CodeDistrict </th>
+                           <th>NomDistrict</th>
+                           <th>TxRecrutementPF </th>
+                           <th>TxdAbandonPF </th>
+                           <th>TotAbandonsPF </th>
+                           <th>PctagF15a49ansSMCapresAvortt</th>
+                           <th>PctageUtilisacPF </th>
+                           <th>PcetageUtilisatPF_15a49ans</th>
+                           <th>TxPrevalencContraceptv</th>
+                           <th>date</th>
+                           <th>date_modification</th>
                            <th class="text-right">Action</th>
                          </tr>
                       </thead>
                       <tbody>
                         {% for stud in dataObject %}
                          <tr>
-                          
-                            <td>{{ stud.id }}</td>
-                             <td>{{ stud.CodeDistrict}}</td>
-                              <td>{{ stud.CodeDomaine}}</td>
-                              <td>{{ stud.CodeTemps}}</td>
-                              <td>{{ stud.R20TauxdeRecrutementPF}}</td>
-                              <td>{{ stud.R20TauxdAbandonPF}}</td>
-                              <td>{{ stud.R20TotalAbandonsPF}}</td>
-                              <td>{{ stud.R20PourcentagedeFemmesde15a49ansSousMethodeContraceptiveapresAvortement}}</td>
-                              <td>{{ stud.R20PourcentagedUtilisatricesPF}}</td>
-                              <td>{{ stud.R20PourcentagedUtilisatricesPFchezles15a49ans}}</td>
-                              <td>{{ stud.R20TauxdePrevalencecontraceptive}}</td>
+                          <td>{{ stud.id}}</td>
+                         <td>{{ stud.CodeDistrict }}</td>
+                        <td>{{ stud.NomDistrict}}</td>
+                        <td>{{ stud.TxRecrutementPF }}</td>
+                        <td>{{ stud.TxdAbandonPF }}</td>
+                        <td>{{ stud.TotAbandonsPF }}</td>
+                        <td>{{ stud.PctagF15a49ansSMCapresAvortt}}</td>
+                        <td>{{ stud.PctageUtilisacPF }}</td>
+                        <td>{{ stud.PcetageUtilisatPF_15a49ans}}</td>
+                        <td>{{ stud.TxPrevalencContraceptv}}</td>
+                        <td>{{ stud.date}}</td>
+                        <td>{{ stud.date_modification}}</td>
                               <td class="text-right">
                                <div class="actions">
                                   <a href="{% url 'sante:updatepl' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -100,8 +100,7 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-    </div>
+
+  
  </div>
  {% endblock %}	

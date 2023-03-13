@@ -3,155 +3,237 @@ from django.db import models
 
 class PlanificationFamiliale(models.Model):
     CodeDistrict = models.IntegerField()
-    CodeDomaine = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    R20TauxdeRecrutementPF = models.IntegerField()
-    R20TauxdAbandonPF = models.IntegerField()
-    R20TotalAbandonsPF = models.IntegerField()
-    R20PourcentagedeFemmesde15a49ansSousMethodeContraceptiveapresAvortement = models.IntegerField()
-    R20PourcentagedUtilisatricesPF = models.IntegerField()
-    R20PourcentagedUtilisatricesPFchezles15a49ans = models.IntegerField()
-    R20TauxdePrevalencecontraceptive = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
+    TxRecrutementPF = models.DecimalField(max_digits=10, decimal_places=5)
+    TxdAbandonPF = models.DecimalField(max_digits=10, decimal_places=5)
+    TotAbandonsPF = models.DecimalField(max_digits=10, decimal_places=5)
+    PctagF15a49ansSMCapresAvortt = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctageUtilisacPF = models.DecimalField(max_digits=10, decimal_places=5)
+    PcetageUtilisatPF_15a49ans = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxPrevalencContraceptv = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.CodeDistrict)
+        return str(self.NomDistrict)
 
 
 class GouvernanceSante(models.Model):
+    CodeDistrict = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
 
-    CodeCommune = models.IntegerField()
-    CodeDomaine = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    DepenseDeFonctionnement = models.IntegerField()
-    DepenseInvistissement = models.IntegerField()
-    MasseSalariale = models.IntegerField()
-    PersonnelMedical = models.IntegerField()
-    PersonnelDappui = models.IntegerField()
-    MasseSalarialePersonnelSanitaireEtAppui = models.IntegerField()
-    DepenseEnEauDansLeDomaineDeLaSante = models.IntegerField()
-    DepenseEnElectriciteDansLeDomaineDeLaSante = models.IntegerField()
-    AchatDeMedicamentAideSociale = models.IntegerField()
-    TotalDesDepensesEnSante = models.IntegerField()
-    DepensesInvestissementSante = models.IntegerField()
+    DepensFonctment = models.IntegerField()
+    DepensInvistisnt = models.IntegerField()
+    MassSalarial = models.IntegerField()
+    PersMedical = models.IntegerField()
+    PersAppui = models.IntegerField()
+    MasSalarialPersSanitairAppui = models.IntegerField()
+    DepensEauDomainSante = models.IntegerField()
+    DepensElectDomainSante = models.IntegerField()
+    AchatMedicaAidSocial = models.IntegerField()
+    TotDepensSant = models.IntegerField()
+    DepensInvestisSant = models.IntegerField()
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.Codecommun)
+        return str(self.NomDistrict)
 
 
 class ReproductionEtJeune(models.Model):
-
     CodeDistrict = models.IntegerField()
-    CodeDomaine = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    R20PourcentageAdolescentes15a19anSousMethodeContraceptiveApresAvortement = models.IntegerField()
-    R20PourcentageAdolescentes20a24ansSousMethodeContraceptiveApresAvortement = models.IntegerField()
-    R20PourcentageDAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeParAmiuAuPremierTrimestre = models.IntegerField()
-    R20PourcentageAvortementsChezLesJeunesFemmesDe20a24ansPrisEnChargeAuPremierTrimestreParMisoprostol = models.IntegerField()
-    R20PourcentageAvortementsChezLesAdolescentesDe20a24ansPrisEnChargeParAmiuAuPremierTrimestre = models.IntegerField()
-    R20PourcentageAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeAuPremierTrimestreParMisoprostol = models.IntegerField()
-    R20PourcentageAccouchementsDesAdolescentesDe15a19ansAssistesParUnPersonnelQalifie = models.IntegerField()
-    R20PourcentageAccouchementsDesAdolescentesDe20a24ansAssistesParUnPersonnelQualifie = models.IntegerField()
-    R20PourcentageUtilisatricesPFchezLes15a49ans = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
+    PctagAdo15a19anSousMC_aprAvort = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAdo20a24anSousMC_AprAvort = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAvortAdo15a19anPEC_AmiuAuPT = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAvortF20a24anPEC_AuPTMisoprostol = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAvortAdo20a24anPEC_AmiuAuPT = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAvortAdo15a19anPEC_AuPTMisoprostol = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAccouchAdo15a19an_AssistPerQalifi = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagAccouchAdo20a24an_AssistPersQalifie = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PctagUtilisatc_PF_15a49ans = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.CodeDistrict)
+        return str(self.NomDistrict)
 
 
 class SanteAlimentationEtNutrition(models.Model):
-
     CodeDistrict = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansAyantUneInsuffisancePonderale1 = models.IntegerField()
-    PourcentageDeFemmesEnceintesPresentantUneAnemie = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansAyantUneInsuffisancePonderale = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansAyantUneInsuffisancePonderaleModeree = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansAyantUneInsuffisancePonderaleGrave = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansAyantUneInsuffisancePonderaleGlobale = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansAyantUneMASsansComplication = models.IntegerField()
-    PourcentageEnfantsDemoinsDe5ansSouffrantDeMAM = models.IntegerField()
-    R20PourcentageEnfantsDeMoinsDe5ansDepistesPourLaMalnutritionAigue = models.IntegerField()
-    R20PourcentageFemmeEnceintePresentantUneMalnutritionAigue = models.IntegerField()
-    R20pourcentageEnfantsDeMoinsDe5ansPresentantUneAnemie = models.IntegerField()
-    R20PourcentageEnfantsDemoinsDe5ansAyantUnRetardDeCroissanceSevereTA = models.IntegerField()
-    R20PourcentageEnfantsDeMoinsDe5ansAyantunRetardDeCroissanceTA = models.IntegerField()
-    R20TauxAbandonDesEnfantsMoins5ansMASAuCREN = models.IntegerField()
-    PourcentageEnfants6a59moisDepistesPourMAM = models.IntegerField()
-    NouvellesAdmissionsLieesALaRechuteCREN = models.IntegerField()
-    NouvellesAdmissionsLieesALaRechuteUREN = models.IntegerField()
-    R20TAuxDeGuerisonDesEnfants6a59MoisMASaLUREN = models.IntegerField()
-    TotalEnfantsMAM6a59MoisDepistes = models.IntegerField()
-    TauxDeGuerisonUREN = models.IntegerField()
-    R20ProportionEnfantsDeMoinsDe5ansSouffrantDeMalnutritionAigueModéréeMAM = models.IntegerField()
-    R20TauxDeMASTraiteAvecSuccesAuCREN = models.IntegerField()
-    R20ProportionEnfantsDeMoinsDe5ansAyantUneInsuffisancePonderaleSevere = models.IntegerField()
-    R20ProportionDesEnfantsDeMoinsDe5ansMASGueris = models.IntegerField()
-    MalnutritionChroniqueOuRetardDeCroissanceSevereTA = models.IntegerField()
-    MalnutritionChroniqueOuRetardDeCroissanceModereeTA = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
+
+    PtgEnftDemoins5anAyantInsuffisPonderal1 = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgFEnceintesPresentantAnemie = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnfmoins5anAyantInsuffisPonderal = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftmoin5anAyantInsuffisPonderalModere = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftmoin5ansAyantInsuffisPonderalGrav = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftmoin5anAyanInsuffisPonderalGlobal = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftmoin5anAyantMASsansComplication = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftmoin5anSouffranMAM = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftMoin5anDepistMalnutriAigu = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgFEnceintPresentMalnutriAigu = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftMoins5anPresentAnemi = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftmoin5anAyantRetardCSeverTA = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnftMoin5anAyantRetarCroissancTA = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxAbandonEnftMoin5anMASAuCREN = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnft6a59moisDepistMAM = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NvxAdmissionLieRechutCREN = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NvxAdmissionLieRechutUREN = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxGuerisonEnft6a59MoisMASaLUREN = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TTEnftsMAM6a59MoisDepistes = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxDeGuerisonUREN = models.DecimalField(max_digits=10, decimal_places=5)
+    PptEnftMoins5anSouffranMAM = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxDeMASTraitAvecSuccesAuCREN = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PptEnftMoins5anAyantInsuffisPS = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PptEnftMoins5anMASGueri = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    MalnutChronic_RetarCSeverTA = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    MalnutChronicO_RetardCMTA = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.CodeDistrict)
+        return str(self.NomDistrict)
 
 
 class SantePaludisme (models.Model):
-
     CodeDistrict = models.IntegerField()
-    CodeDomaine = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    TauxDeMorbiditeProportionnellePalustreTousAge = models.IntegerField()
-    TauxDeMorbiditeProportionnellePalustreChezLesFemmesEnceintes = models.IntegerField()
-    TauxDemorbiditeProportionnellePalustreChezLesMoinsDe5ans = models.IntegerField()
-    IND20IncidenceDuPaludismePour1000Habitants = models.IntegerField()
-    IncidenceDuPaludismegGraveTotal = models.IntegerField()
-    R20CasPaludismeConfirmesTotal = models.IntegerField()
-    ombreTotalDeCasPaludismeSimpleConfirmesEnregistreesSurLaPériodeParLesDSDOMQuiOntReçuUnTraitemen = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
+
+    TxMorbiditPptnellPalustreTTAge = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxMorbiditPptnellPalustreFEnceint = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    TxmorbiditPptnellePalustrMoins5ans = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    IncidencPaludism_1000Habts = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    IncidencPaludismgGravTT = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    CasPaludismConfirmTT = models.DecimalField(max_digits=10, decimal_places=5)
+    NbreTTCasPaluSimplConfirmInsttTRecuTaitemt = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.CodeDistrict)
+        return str(self.NomDistrict)
 
 
 class SurvieEnfant(models.Model):
-
     CodeDistrict = models.IntegerField()
-    CodeDomaine = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    PourcentageEnfants0a59MoisAyantFaitUneDiarrhe = models.IntegerField()
-    R20ProportionDeCasDePneuMonie0a59Mois = models.IntegerField()
-    R20ProportionEnfantsAvecPneumonieGraveDontLaSaturationEnoxygèneAEtemesuree = models.IntegerField()
-    R20ProportionEnfantsDe0a59MoisSouffrantAnemie = models.IntegerField()
-    R20ProportionEnfantsDe0a59moisPresentantUneAnemie = models.IntegerField()
-    SAVEDeCasEnfantsDeMoinsDe5ansCorrectementSoignesContreLaDiarrheeDansLesCentresDeSanteCommunautairesM = models.IntegerField()
-    NombreDeCasDeDiarrheeReferesParleNiveauCommunautaire = models.IntegerField()
-    R20PourcentageEnfantsDe6a11MoisSupplementesEnVitamineAEnRoutine = models.IntegerField()
-    R20PourcentageEnfantsDe12a59MoisSupplementesEnVitamineAEnRoutine = models.IntegerField()
-    R20PourcentageEnfantsDe12a59MoisDeParasitésEnRoutine = models.IntegerField()
-    R20ProportionEnfantsDe0a59MoisAyantUnNuméroEtatcivil = models.IntegerField()
-    R20EnfantsDe0a59MoisReçusPourTraumatismeDuSaUnAccidentEtOuAUnActedeViolenceNombreTotalEnfants0a59MoisVusenConsultation = models.IntegerField()
-    DiarrheeReferesParleNiveauCommunautaire0a59mois = models.IntegerField()
-    SupplementationSystematiqueEnVitamineADesEnfantsDe6a59Mois = models.IntegerField()
-    R20PourcentageEnfantsDe6a59MoisSupplementesEnVitamineAEnRoutine = models.IntegerField()
-    PourcentageEnfants12a59MoisDeparasitesEnRoutineOK = models.IntegerField()
-    R20NombreDeCasDePneumonies0a59mois = models.IntegerField()
-    R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGraveAvechypoxietraiteeParoxygénoThérapieAuNiveauDesPPSFeminin = models.IntegerField()
-    R20NombreEnFantsDe0a59MoisPresentantUnePneumonieGraveAvecHypoxieTraiteeParoxygénoThérapieAuNiveauDesPPSMasculin = models.IntegerField()
-    R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquilaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSFeminin = models.IntegerField()
-    R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSMasculin = models.IntegerField()
-    R20PourcentageEnfantsde0a59MoisPresentantUnePneumonieGravechezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPS = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
+    PtgEnft0a59MoisAyantDiarrhe = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PptCasPneuMoni0a59Mois = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PptEnftPneumoniGravSaturatO2Mesure = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PptEnft0a59MoisSouffranAnemi = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PptEnft0a59moisPresenttAnemi = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    CasEnftMoins5ansBSoignCtrDiarrhCentr = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NbreCasDiarrhReferNivComm = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnft6a11MoisSupplemtEVitA_Routin = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnft12a59MoisSupplemt_VitARoutin = models.DecimalField(
+        max_digits=10, decimal_places=5)
+
+    PptEnft0a59MoisAyantNum_EtatC = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    Enfts0a59MoisReçuTraumaAccidt_ViolencNbreTot = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    DiarrheRefer_NivComm0a59mois = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    SuppltSystematic_VitADEnfts6a59Mois = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnfts6a59MoisSuppl_VitA_Routin = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnft12a59MoisDeparasit_Routin = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NbreCasPneumoni0a59mois = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NbreEnft0a59MoisPrestPneumoniGrav_hypoxiTPTh_NivPSF = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NbreEnFt0a59MoisPrestPneumoniGrav_HTPTh_NivPPSM = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NbreEnft0a59MoisPrestPneumoniGrav_SaturatO2NivPPSF = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    NbreEnft0a59MoisPrestPneumoniGrav_SatO2NivPPSMa = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    PtgEnft0a59MoisPrestPneumoniGrav_SatO2NivPPS = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.CodeDistrict)
+        return str(self.NomDistrict)
 
 
 class VaccinationEtRoutine(models.Model):
     CodeDistrict = models.IntegerField()
-    CodeDomaine = models.IntegerField()
-    CodeTemps = models.IntegerField()
-    TauxDeCouvertureAuPenta3 = models.IntegerField()
-    TauxDeCouvertureAuRR1 = models.IntegerField()
-    TauxDeCouvertureAuHepBInferieurOuEgal24heures = models.IntegerField()
-    Total0A11MoisNbreEnfantCompletementVaccine = models.IntegerField()
-    RR2Couverture12A23Mois = models.IntegerField()
-    Total12A23MoisFémininNbreEnfantCompletementVaccine = models.IntegerField()
-    Total12A23MoisMasculinNbreEnfantCompletementVaccine = models.IntegerField()
+    NomDistrict = models.CharField(max_length=250)
+    TxCouver_Penta3 = models.DecimalField(max_digits=10, decimal_places=5)
+    TxCouvert_RR1 = models.DecimalField(max_digits=10, decimal_places=5)
+    TxCouvert_HepBInfOuEgal2H = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    Tot0A11MoisNbreEnftCompletVacc = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    RR2Couvert12A23Mois = models.DecimalField(max_digits=10, decimal_places=5)
+    Tot12A23MoisFNbreEnftCompletVacc = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    Tot12A23MoisMNbreEnftCompletVacc = models.DecimalField(
+        max_digits=10, decimal_places=5)
+    date = models.DateTimeField()
+    date_modification = models.DateTimeField()
 
     def __str__(self):
-        return str(self.CodeDistrict)
+        return str(self.NomDistrict)
+
+
+class Visiteur (models.Model):
+    nom = models.CharField(max_length=25)
+    date_visiteur = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.nom

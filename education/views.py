@@ -26,12 +26,11 @@ def DimEq(request):
 
 
 def update_eq(request, id):
-    dataObject = DimEduc_Equipements.objects.get(id=id)
-    form = equi(instance=dataObject)
+    dO = DimEduc_Equipements.objects.get(id=id)
+    form = equi(instance=dO)
     if request.method == 'POST':
-        form = equi(request.POST, instance=dataObject)
+        form = equi(request.POST, instance = dO)
         if form.is_valid():
-            messages.success(request, " Are Successfully Added !")
             form.save()
             return redirect('/education/DimEqui/')
 
@@ -201,7 +200,7 @@ def dis(request):
             return redirect('/education/dim_Access/')
     else:
         form = acc()
-    return render(request, 'edu/dimdass.html', {'form': form, 'dataObject': DimEduc_Access.objects.all()})
+    return render(request, 'edu/dimdass.html', {'form': form, 'dbacess': DimEduc_Access.objects.all()})
 
 
 # update perfor
@@ -220,7 +219,7 @@ def update_acc(request, id):
         'form': form,
 
     }
-    return render(request, 'edu/dimass.html', context)
+    return render(request, 'edu/dimdass.html', context)
 
 # delete perfor
 
@@ -229,8 +228,8 @@ def delete_acc(request, id):
     dataPerf = DimEduc_Access.objects.get(id=id)
     if request.method == 'POST':
         dataPerf.delete()
-        return redirect('education/dim_Access/')
+        return redirect('/education/dim_Access/')
     context = {
 
         'item': dataPerf, }
-    return render(request, 'edu/delete_perfo.html', context)
+    return render(request, 'edu/delete.html', context)

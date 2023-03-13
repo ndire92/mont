@@ -54,9 +54,9 @@ def new_post(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save(commit=False)
-            form.user = request.user
+            form.admin = request.admin
             form.save()
-            return redirect('/')
+            return redirect('/post/')
     else:
         form = PostForm()
 
@@ -70,12 +70,13 @@ def new_post(request):
 # @login_required
 def update_post(request, id):
     post = Post.objects.get(id=id)
-    if post.user == request.user:
+    if post== request.admin:
         if request.method == 'POST':
             form = PostForm(request.POST, request.FILES, instance=post)
             if form.is_valid():
                 form.save()
-                return redirect('/')
+                return redirect('/post/')
+            9
 
         else:
             form = PostForm(instance=post)
@@ -93,9 +94,9 @@ def update_post(request, id):
 # @login_required
 def delete_post(request, id):
     post = Post.objects.get(id=id)
-    if post.user == request.user:
+    if post.admin == request.admin:
         post.delete()
-        return redirect('/')
+        return redirect('/post/')
     else:
         raise Http404
 

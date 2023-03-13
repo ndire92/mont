@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'sante:survienfant'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -22,7 +22,7 @@
                         
                   </div>
                   <div class="text-right">
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary">Ajoutert</button>
                   </div>
                </form>
             </div>
@@ -51,65 +51,65 @@
                       <thead>
                          <tr>
                             <th>ID</th>
-                           <th> stud.CodeDistrict </th>
-                           <th> stud.CodeDomaine </th>
-                           <th> stud.CodeTemps </th>
-                           <th> stud.PourcentageEnfants0a59MoisAyantFaitUneDiarrhe </th>
-                           <th> stud.R20ProportionDeCasDePneuMonie0a59Mois </th>
-                           <th> stud.R20ProportionEnfantsAvecPneumonieGraveDontLaSaturationEnoxygèneAEtemesuree </th>
-                           <th> stud.R20ProportionEnfantsDe0a59MoisSouffrantAnemie </th>
-                           <th> stud.R20ProportionEnfantsDe0a59moisPresentantUneAnemie </th>
-                           <th> stud.SAVEDeCasEnfantsDeMoinsDe5ansCorrectementSoignesContreLaDiarrheeDansLesCentresDeSanteCommunautairesM </th>
-                           <th> stud.NombreDeCasDeDiarrheeReferesParleNiveauCommunautaire </th>
-                           <th> stud.R20PourcentageEnfantsDe6a11MoisSupplementesEnVitamineAEnRoutine </th>
-                           <th> stud.R20PourcentageEnfantsDe12a59MoisSupplementesEnVitamineAEnRoutine </th>
-                           <th> stud.R20PourcentageEnfantsDe12a59MoisDeParasitésEnRoutine </th>
-                           <th> stud.R20ProportionEnfantsDe0a59MoisAyantUnNuméroEtatcivil </th>
-                           <th> stud.R20EnfantsDe0a59MoisReçusPourTraumatismeDuSaUnAccidentEtOuAUnActedeViolenceNombreTotalEnfants0a59MoisVusenConsultation </th>
-                           <th> stud.DiarrheeReferesParleNiveauCommunautaire0a59mois </th>
-                           <th> stud.SupplementationSystematiqueEnVitamineADesEnfantsDe6a59Mois </th>
-                           <th> stud.R20PourcentageEnfantsDe6a59MoisSupplementesEnVitamineAEnRoutine </th>
-                           <th> stud.PourcentageEnfants12a59MoisDeparasitesEnRoutineOK </th>
-                           <th> stud.R20NombreDeCasDePneumonies0a59mois </th>
-                           <th> stud.R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGraveAvechypoxietraiteeParoxygénoThérapieAuNiveauDesPPSFeminin </th>
-                           <th> stud.R20NombreEnFantsDe0a59MoisPresentantUnePneumonieGraveAvecHypoxieTraiteeParoxygénoThérapieAuNiveauDesPPSMasculin </th>
-                           <th> stud.R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquilaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSFeminin </th>
-                           <th> stud.R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSMasculin </th>
-                           <th> stud.R20PourcentageEnfantsde0a59MoisPresentantUnePneumonieGravechezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPS </th>
+                            <th>CodeDistrict </th>
+                           <th>NomDistrict </th>
+                           <th>PtgEnft0a59MoisAyantDiarrhe </th>
+                           <th>PptCasPneuMoni0a59Mois </th>
+                           <th>PptEnftPneumoniGravSaturatO2Mesure </th>
+                           <th>PptEnft0a59MoisSouffranAnemi </th>
+                           <th>PptEnft0a59moisPresenttAnemi </th>
+                           <th>CasEnftMoins5ansBSoignCtrDiarrhCentr </th>
+                           <th>NbreCasDiarrhReferNivComm </th>
+                           <th>PtgEnft6a11MoisSupplemtEVitA_Routin </th>
+                           <th>PtgEnft12a59MoisSupplemt_VitARoutin </th>
 
+                           <th>PptEnft0a59MoisAyantNum_EtatC </th>
+                           <th>Enfts0a59MoisReçuTraumaAccidt_ViolencNbreTot </th>
+                           <th>DiarrheRefer_NivComm0a59mois </th>
+                           <th>SuppltSystematic_VitADEnfts6a59Mois </th>
+                           <th>PtgEnfts6a59MoisSuppl_VitA_Routin </th>
+                           <th>PtgEnft12a59MoisDeparasit_Routin </th>
+                           <th>NbreCasPneumoni0a59mois </th>
+                           <th>NbreEnft0a59MoisPrestPneumoniGrav_hypoxiTPTh_NivPSF </th>
+                           <th>NbreEnFt0a59MoisPrestPneumoniGrav_HTPTh_NivPPSM </th>
+                           <th>NbreEnft0a59MoisPrestPneumoniGrav_SaturatO2NivPPSF </th>
+                           <th>NbreEnft0a59MoisPrestPneumoniGrav_SatO2NivPPSMa </th>
+                           <th>PtgEnft0a59MoisPrestPneumoniGrav_SatO2NivPPS </th>
+                           <th>date</th>
+                           <th>date_modification</th>
                            <th class="text-right">Action</th>
                          </tr>
                       </thead>
                       <tbody>
                         {% for stud in dataObject %}
                          <tr>
-                          
-                              <td>{{ stud.CodeDistrict }}</td>
-                              <td>{{ stud.CodeDomaine }}</td>
-                              <td>{{ stud.CodeTemps }}</td>
-                              <td>{{ stud.PourcentageEnfants0a59MoisAyantFaitUneDiarrhe }}</td>
-                              <td>{{ stud.R20ProportionDeCasDePneuMonie0a59Mois }}</td>
-                              <td>{{ stud.R20ProportionEnfantsAvecPneumonieGraveDontLaSaturationEnoxygèneAEtemesuree }}</td>
-                              <td>{{ stud.R20ProportionEnfantsDe0a59MoisSouffrantAnemie }}</td>
-                              <td>{{ stud.R20ProportionEnfantsDe0a59moisPresentantUneAnemie }}</td>
-                              <td>{{ stud.SAVEDeCasEnfantsDeMoinsDe5ansCorrectementSoignesContreLaDiarrheeDansLesCentresDeSanteCommunautairesM }}</td>
-                              <td>{{ stud.NombreDeCasDeDiarrheeReferesParleNiveauCommunautaire }}</td>
-                              <td>{{ stud.R20PourcentageEnfantsDe6a11MoisSupplementesEnVitamineAEnRoutine }}</td>
-                              <td>{{ stud.R20PourcentageEnfantsDe12a59MoisSupplementesEnVitamineAEnRoutine }}</td>
-                              <td>{{ stud.R20PourcentageEnfantsDe12a59MoisDeParasitésEnRoutine }}</td>
-                              <td>{{ stud.R20ProportionEnfantsDe0a59MoisAyantUnNuméroEtatcivil }}</td>
-                              <td>{{ stud.R20EnfantsDe0a59MoisReçusPourTraumatismeDuSaUnAccidentEtOuAUnActedeViolenceNombreTotalEnfants0a59MoisVusenConsultation }}</td>
-                              <td>{{ stud.DiarrheeReferesParleNiveauCommunautaire0a59mois }}</td>
-                              <td>{{ stud.SupplementationSystematiqueEnVitamineADesEnfantsDe6a59Mois }}</td>
-                              <td>{{ stud.R20PourcentageEnfantsDe6a59MoisSupplementesEnVitamineAEnRoutine }}</td>
-                              <td>{{ stud.PourcentageEnfants12a59MoisDeparasitesEnRoutineOK }}</td>
-                              <td>{{ stud.R20NombreDeCasDePneumonies0a59mois }}</td>
-                              <td>{{ stud.R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGraveAvechypoxietraiteeParoxygénoThérapieAuNiveauDesPPSFeminin }}</td>
-                              <td>{{ stud.R20NombreEnFantsDe0a59MoisPresentantUnePneumonieGraveAvecHypoxieTraiteeParoxygénoThérapieAuNiveauDesPPSMasculin }}</td>
-                              <td>{{ stud.R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquilaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSFeminin }}</td>
-                              <td>{{ stud.R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSMasculin }}</td>
-                              <td>{{ stud.R20PourcentageEnfantsde0a59MoisPresentantUnePneumonieGravechezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPS }}</td>
+                          <td>{{ stud.id }}</td>
+                              <td>{{ stud.CodeDistrict}}</td>
+                              <td>{{ stud.NomDistrict }}</td>
+                              <td>{{ stud.PtgEnft0a59MoisAyantDiarrhe  }}</td>
+                              <td>{{ stud.PptCasPneuMoni0a59Mois  }}</td>
+                              <td>{{ stud.PptEnftPneumoniGravSaturatO2Mesure  }}</td>
+                              <td>{{ stud.PptEnft0a59MoisSouffranAnemi  }}</td>
+                              <td>{{ stud.PptEnft0a59moisPresenttAnemi  }}</td>
+                              <td>{{ stud.CasEnftMoins5ansBSoignCtrDiarrhCentr  }}</td>
+                              <td>{{ stud.NbreCasDiarrhReferNivComm  }}</td>
+                              <td>{{ stud.PtgEnft6a11MoisSupplemtEVitA_Routin  }}</td>
+                              <td>{{ stud.PtgEnft12a59MoisSupplemt_VitARoutin  }}</td>
 
+                              <td>{{ stud.PptEnft0a59MoisAyantNum_EtatC  }}</td>
+                              <td>{{ stud.Enfts0a59MoisReçuTraumaAccidt_ViolencNbreTot  }}</td>
+                              <td>{{ stud.DiarrheRefer_NivComm0a59mois  }}</td>
+                              <td>{{ stud.SuppltSystematic_VitADEnfts6a59Mois  }}</td>
+                              <td>{{ stud.PtgEnfts6a59MoisSuppl_VitA_Routin  }}</td>
+                              <td>{{ stud.PtgEnft12a59MoisDeparasit_Routin  }}</td>
+                              <td>{{ stud.NbreCasPneumoni0a59mois  }}</td>
+                              <td>{{ stud.NbreEnft0a59MoisPrestPneumoniGrav_hypoxiTPTh_NivPSF  }}</td>
+                              <td>{{ stud.NbreEnFt0a59MoisPrestPneumoniGrav_HTPTh_NivPPSM  }}</td>
+                              <td>{{ stud.NbreEnft0a59MoisPrestPneumoniGrav_SaturatO2NivPPSF  }}</td>
+                              <td>{{ stud.NbreEnft0a59MoisPrestPneumoniGrav_SatO2NivPPSMa  }}</td>
+                              <td>{{ stud.PtgEnft0a59MoisPrestPneumoniGrav_SatO2NivPPS  }}</td>
+                              <td>{{ stud.date}}</td>
+                              <td>{{ stud.date_modification }}</td>
                             <td class="text-right">
                                <div class="actions">
                                   <a href="{% url 'sante:up_vie' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -129,9 +129,6 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-       
-</div>
+
  </div>
  {% endblock %}	

@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'education:DimEqui'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -22,7 +22,7 @@
                         
                   </div>
                   <div class="text-right">
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary">Ajouter</button>
                   </div>
                </form>
             </div>
@@ -52,84 +52,90 @@
                      <thead>
                         <tr>
                               <th>ID</th>
-                              <th>EquiNombreCasesDesTouPetits </th>
-                              <th>EquiNombreGarderie </th>
-                              <th>EquiNombreMaternelle </th>
-                              <th>NombrePrescolaireTotal </th>
-                              <th>EquiNombreStructurePrescolaireDisposantCantinesScolaire </th>
-                              <th>EquiNombreSallesDeClasseAvecUnLocalNormalPrescolaire </th>
-                              <th>EquiNombreSallesDeClasseSituationAbrisProvisoirePrescolaire </th>
-                              <th>EquiNombreSallesTotalPrescolaire </th>
-                              <th>EquiNombreStructurePrescolaireDisposantDeCloturePrescolaire </th>
-                              <th>EquiNombreStructurePrescolairesDisposantElectricitePrescolaire </th>
-                              <th>EquiNombreTotalLatrinesFonctionnellesPrescolaire </th>
-                              <th>EquiLatrinesFonctionnellesGarconsPrescolaire </th>
-                              <th>EquiLatrinesFonctionnellesFillesPrescolaire </th>
-                              <th>EquiNombrePlacesAssisesPrescolaire </th>
-                              <th>EquiNombreElevesPrescolaire </th>
-                              <th>EquiNombrePontsEauCourantePrescolaire </th>
-                              <th>EquiNombreEnfantsBeneficieDeparasitageMTN_Prescolaire </th>
-                              <th>EquiNombreEnfantsBeneficieDeparasitageFER_Prescolaire </th>
-                              <th>EquiNombreStructureElementaireDisposantCantinesScolaires </th>
-                              <th>EquiNombreSallesDeClassePrimaireAvecUnLocalNormal </th>
-                              <th>EquiNombreSallesClassePrimaireEnSituationAbrisProvisoire </th>
-                              <th>EquiNombreSallesTotalPrimaire </th>
-                              <th>EquiNombreStructureElementaireDisposantCloture </th>
-                              <th>EquiTotalLatrinesFonctionnellesPrimaire </th>
-                              <th>EquiLatrinesFonctionnellesGarconsPrimaire </th>
-                              <th>EquiLatrinesFonctionnellesFillesPrimaire </th>
-                              <th>EquiNombreEcolePubliquesAyantElectricitePrimaire </th>
-                              <th>EquiNombreEauCourantePrimaire </th>
-                              <th>EquiNombrePlacesAssisesStructutesPubliquesPrimaire </th>
-                              <th>EquiNombrePlacesAssisesStructurePriveesPrimaire </th>
-                              <th>EquiNombreElevesStructurePubliquePrimaire </th>
-                              <th>EquiNombreElevesStructurePubliquePrivees </th>
-                              <th>EquiNombreSallesDeClasseAvecUnLocalNormalPrimaire </th>
-                              <th>EquiNombreSallesClassePrimaireEnSituationAbrisProvisoirePrimaire </th>
-                              <th>EquiNombreSallesTotalEtablissementPrimairePublic </th>
-                              <th>EquiNombreGroupePedagogiquesPrimaire </th>
-                              <th>EquiNombreClassesPhysiquesPrimaire </th>
-                              <th>EquiNombreEcolesEquipeeSalleInformatiquePrimaire </th>
-                              <th>EquiNombreEcolesPrimaireDisposantConnexionInternet </th>
-                              <th>EquiNombreStructureDisposantCatineScolaireMG </th>
-                              <th>EquiNombreSallesDeClasseAvecLocalNormalMG </th>
-                              <th>EquiNombreSallesClasseSituationAbrisProvisoireMG </th>
-                              <th>EquiNombreSallesTotalMG </th>
-                              <th>EquiNombreStructuresElementaireDisposantClotureMG </th>
-                              <th>EquiTotalLatrinesFonctionnellesMG </th>
-                              <th>EquiLatrinesFonctionnellesGarconsMG </th>
-                              <th>EquiLatrinesFonctionnellesFillesMG </th>
-                              <th>EquiNombreEcolesPubliquesAyantElectriciteMG </th>
-                              <th>EquiNombreEauCouranteMG </th>
-                              <th>EquiNombrePlacesAssisesStructurePubliquesMG </th>
-                              <th>EquiNombrePlacesAssisesStructurePriveesMG </th>
-                              <th>EquiNombreElevesStructurePubliquesMG </th>
-                              <th>EquiNombreElevesStructurePriveesMG </th>
-                              <th>EquiNombreSallesClasseAvecUnLocalNormalMG </th>
-                              <th>EquiNombreGroupePedagogiquesMG </th>
-                              <th>EquiNombreClassesPhysiquesMG </th>
-                              <th>EquiNombreEcolesEquipeeSalleInformatiqueMG </th>
-                              <th>EquiNombreEcoleDisposantConnexionInternetMG </th>
-                              <th>EquiNombreStructureDisposantCatineScolaireSecondaire </th>
-                              <th>EquiNombreSallesClasseAvecUnLocalNormalSecondaire </th>
-                              <th>EquiNombreSallesClasseSituationAbrisProvisoireSecondaire </th>
-                              <th>EquiNombreSallesTotalSecondaire </th>
-                              <th>EquiNombreStructuresSecondaireDisposantCloture </th>
-                              <th>EquiTotalLatrinesFonctionnellesSecondaire </th>
-                              <th>EquiLatrinesGarconsFonctionnellesSecondaire </th>
-                              <th>EquiLatrinesFillesFonctionellesSecondaire </th>
-                              <th>EquiNombreEcolePubliquesAyantElectriciteSecondaire </th>
-                              <th>EquiNombreEauCouranteSecondaire </th>
-                              <th>EquiNombrePlacesAssisesStructurePubliquesSecondaire </th>
-                              <th>EquiNombrePlacesAssisesStructutesPriveesSecondaire </th>
-                              <th>EquiNombreElevesStructurePubliquesSecondaire </th>
-                              <th>EquiNombreElevesStructurePriveeSecondaire </th>
-                              <th>EquiNombreSallesDeClasseAvecunLocalNormalSecondaire </th>
-                              <th>EquiNombreSallesTotalSecondairePublic </th>
-                              <th>EquiNombreGroupesPedagogiquesSecondaire </th>
-                              <th>EquiNombreClassePhysiquesSecondaire </th>
-                              <th>EquiNombreEcoleEquipeeSalleInformatiqueSecondaire </th>
-                              <th>EquipementNombreEcoleDisposantConnexionInternetSecondaire </th>
+                               <th>CodeDistrict </th>
+                              <th>NomDistrict</th>
+
+                              <th>NbreCasesDesTtPetits </th>
+                              <th>NbreGarderie </th>
+                              <th>NbreMaternelle </th>
+                              <th>NbrePrescoTt </th>
+                              <th>NbreStructPrescoDisposantCantinSclre </th>
+                              <th>NbreSCLocalNormalPresco </th>
+                              <th>NbreSCSituationAbrisProvsrPresco </th>
+                              <th>NbreSallesTtPresco </th>
+                              <th>NbreStructPrescoAyantClotur </th>
+                              <th>NbreStructPrescoAyantElectricit </th>
+                              <th>NbreToTLatrinFonctionel </th>
+                              <th>LatrinFonctionelGrcons </th>
+                              <th>LatrinFonctionnelFilles </th>
+                              <th>NbrePlacesAssises </th>
+                              <th>NbreElevPresco </th>
+                              <th>NbrePontEauCournt </th>
+                              <th>NbreEnftBeneficDeparasitgMTN </th>
+                              <th>NbreEnftBeneficieDeparasitgFER </th>
+                              <th>NbreStructElmntaireAyantCantinScolair </th>
+                              <th>NbreSCPrimAvecLocalNormal </th>
+                              <th>NbreSCPrimSituationAbriProvisoir </th>
+                              <th>NbreSallesTTPrim </th>
+                              <th>NbreStructurAyantCloturPrim </th>
+                              <th>TTLatrineFonctionnelPrim </th>
+                              <th>LatrinFonctionnelGrconsPrim </th>
+                              <th>LatrinsFonctionnelFilles </th>
+                              <th>NbreEcolPublicAyantElectricite </th>
+                              <th>NbreEauCourantePrim </th>
+                              <th>NbrePlacAssisStructurPublic </th>
+                              <th>NbrePlacAssisStructurPrive </th>
+                              <th>NbreElvStructurPublicPrimair </th>
+                              <th>NbreElvStructurPublicPrive </th>
+                              <th>NbreSalleClassAvecLocalNormal </th>
+                              <th>NbreSalleClassPrimrSituatAbriProvisoir </th>
+                              <th>NbreSalleTotEtablisPrimPublic </th>
+                              <th>NbreGrpPedagogicPrim </th>
+                              <th>NbreClassePhysicPrim </th>
+                              <th>NbreEcolEquipeSalleITPrim </th>
+                              <th>NbreEcolPrimAyantConexionNet </th>
+                              <th>NbreStructreAyantCatinScolreMG </th>
+                              <th>NbreSalleClassAcLocalNormalMG </th>
+                              <th>NbreSalleClassSituatAbriProvisoirMG </th>
+                              <th>NbreSalleTotalMG </th>
+                              <th>NbreStructurElmntreAyantCloturMG </th>
+                              <th>TotLatrinFonctionnelMG </th>
+                              <th>LatrinFonctionnelGrconsMG </th>
+                              <th>LatrinFonctionnelFilleMG </th>
+                              <th>NbreEcolPublicAyantElectMG </th>
+                              <th>NbreEauCouranteMG </th>
+                              <th>NbrePlaceAssisStructurPublicMG </th>
+                              <th>NbrePlacAssiseStructurPrivMG </th>
+                              <th>NbreElvStructurPublicMG </th>
+                              <th>NbreElevStructurPrivMG </th>
+                              <th>NbreSalleClassAvcLocalNormalMG </th>
+                              <th>NbreGrpPedagogicMG </th>
+                              <th>NbreClassPhysicMG </th>
+                              <th>NbreEcolEquipSalleTIMG </th>
+                              <th>NbreEcolAyantConnexionInetMG </th>
+                              <th>NbreStructurAyantCatinScolreSe </th>
+                              <th>NbreSalleClassAvecLocalNormalSecd </th>
+                              <th>NbreSalleClassSituatAbriProvisScndre </th>
+                              <th>NbreSallesTTSecondaire </th>
+                              <th>NbreStructurScndrAyantClotur </th>
+                              <th>TTLatrinFonctionnelScndr </th>
+                              <th>LatrinGrconFonctionelScndr </th>
+                              <th>LatrinFillesFonctionelScndr </th>
+                              <th>NbreEcolPublicAyantElectScndr </th>
+                              <th>NbreEauCourantScndr </th>
+                              <th>NbrePlacAssisStructPublicScndr </th>
+                              <th>NbrePlacAssisStructPrivScndr </th>
+                              <th>NbreElvStructPublicScndr </th>
+                              <th>NbreElvStructPrivScndr </th>
+                              <th>NbreSalleDeClassAvcLocalNormalScndr </th>
+                              <th>NbreSalleTTScndrPublic </th>
+                              <th>NbreGrpPedagogicScndr </th>
+                              <th>NbreClassPhysicScndr </th>
+                              <th>NbreEcolEquipSalleITScndr </th>
+                              <th>NbreEcolAyantConexionNetScndr </th>
+                              <th>date</th>
+                              <th>date_modification</th>
+                         
                               <th class="text-right">Action</th>
                             </tr>
                      </thead>
@@ -137,86 +143,89 @@
                         {% for stud in dataObject %}
                          <tr>
                           
-                            <td>{{ stud.id }}</td>
-                             <td>{{ stud.EquiNombreCasesDesTouPetits }}</td>
-                              <td>{{ stud.EquiNombreGarderie }}</td>
-                              <td>{{ stud.EquiNombreMaternelle }}</td>
-                              <td>{{ stud.NombrePrescolaireTotal }}</td>
-                              <td>{{ stud.EquiNombreStructurePrescolaireDisposantCantinesScolaire }}</td>
-                              <td>{{ stud.EquiNombreSallesDeClasseAvecUnLocalNormalPrescolaire }}</td>
-                              <td>{{ stud.EquiNombreSallesDeClasseSituationAbrisProvisoirePrescolaire }}</td>
-                              <td>{{ stud.EquiNombreSallesTotalPrescolaire }}</td>
-                              <td>{{ stud.EquiNombreStructurePrescolaireDisposantDeCloturePrescolaire }}</td>
-                              <td>{{ stud.EquiNombreStructurePrescolairesDisposantElectricitePrescolaire }}</td>
-                              <td>{{ stud.EquiNombreTotalLatrinesFonctionnellesPrescolaire }}</td>
-                              <td>{{ stud.EquiLatrinesFonctionnellesGarconsPrescolaire }}</td>
-                              <td>{{ stud.EquiLatrinesFonctionnellesFillesPrescolaire }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesPrescolaire }}</td>
-                              <td>{{ stud.EquiNombreElevesPrescolaire }}</td>
-                              <td>{{ stud.EquiNombrePontsEauCourantePrescolaire }}</td>
-                              <td>{{ stud.EquiNombreEnfantsBeneficieDeparasitageMTN_Prescolaire }}</td>
-                              <td>{{ stud.EquiNombreEnfantsBeneficieDeparasitageFER_Prescolaire }}</td>
-                              <td>{{ stud.EquiNombreStructureElementaireDisposantCantinesScolaires }}</td>
-                              <td>{{ stud.EquiNombreSallesDeClassePrimaireAvecUnLocalNormal }}</td>
-                              <td>{{ stud.EquiNombreSallesClassePrimaireEnSituationAbrisProvisoire }}</td>
-                              <td>{{ stud.EquiNombreSallesTotalPrimaire }}</td>
-                              <td>{{ stud.EquiNombreStructureElementaireDisposantCloture }}</td>
-                              <td>{{ stud.EquiTotalLatrinesFonctionnellesPrimaire }}</td>
-                              <td>{{ stud.EquiLatrinesFonctionnellesGarconsPrimaire }}</td>
-                              <td>{{ stud.EquiLatrinesFonctionnellesFillesPrimaire }}</td>
-                              <td>{{ stud.EquiNombreEcolePubliquesAyantElectricitePrimaire }}</td>
-                              <td>{{ stud.EquiNombreEauCourantePrimaire }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesStructutesPubliquesPrimaire }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesStructurePriveesPrimaire }}</td>
-                              <td>{{ stud.EquiNombreElevesStructurePubliquePrimaire }}</td>
-                              <td>{{ stud.EquiNombreElevesStructurePubliquePrivees }}</td>
-                              <td>{{ stud.EquiNombreSallesDeClasseAvecUnLocalNormalPrimaire }}</td>
-                              <td>{{ stud.EquiNombreSallesClassePrimaireEnSituationAbrisProvisoirePrimaire }}</td>
-                              <td>{{ stud.EquiNombreSallesTotalEtablissementPrimairePublic }}</td>
-                              <td>{{ stud.EquiNombreGroupePedagogiquesPrimaire }}</td>
-                              <td>{{ stud.EquiNombreClassesPhysiquesPrimaire }}</td>
-                              <td>{{ stud.EquiNombreEcolesEquipeeSalleInformatiquePrimaire }}</td>
-                              <td>{{ stud.EquiNombreEcolesPrimaireDisposantConnexionInternet }}</td>
-                              <td>{{ stud.EquiNombreStructureDisposantCatineScolaireMG }}</td>
-                              <td>{{ stud.EquiNombreSallesDeClasseAvecLocalNormalMG }}</td>
-                              <td>{{ stud.EquiNombreSallesClasseSituationAbrisProvisoireMG }}</td>
-                              <td>{{ stud.EquiNombreSallesTotalMG }}</td>
-                              <td>{{ stud.EquiNombreStructuresElementaireDisposantClotureMG }}</td>
-                              <td>{{ stud.EquiTotalLatrinesFonctionnellesMG }}</td>
-                              <td>{{ stud.EquiLatrinesFonctionnellesGarconsMG }}</td>
-                              <td>{{ stud.EquiLatrinesFonctionnellesFillesMG }}</td>
-                              <td>{{ stud.EquiNombreEcolesPubliquesAyantElectriciteMG }}</td>
-                              <td>{{ stud.EquiNombreEauCouranteMG }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesStructurePubliquesMG }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesStructurePriveesMG }}</td>
-                              <td>{{ stud.EquiNombreElevesStructurePubliquesMG }}</td>
-                              <td>{{ stud.EquiNombreElevesStructurePriveesMG }}</td>
-                              <td>{{ stud.EquiNombreSallesClasseAvecUnLocalNormalMG }}</td>
-                              <td>{{ stud.EquiNombreGroupePedagogiquesMG }}</td>
-                              <td>{{ stud.EquiNombreClassesPhysiquesMG }}</td>
-                              <td>{{ stud.EquiNombreEcolesEquipeeSalleInformatiqueMG }}</td>
-                              <td>{{ stud.EquiNombreEcoleDisposantConnexionInternetMG }}</td>
-                              <td>{{ stud.EquiNombreStructureDisposantCatineScolaireSecondaire }}</td>
-                              <td>{{ stud.EquiNombreSallesClasseAvecUnLocalNormalSecondaire }}</td>
-                              <td>{{ stud.EquiNombreSallesClasseSituationAbrisProvisoireSecondaire }}</td>
-                              <td>{{ stud.EquiNombreSallesTotalSecondaire }}</td>
-                              <td>{{ stud.EquiNombreStructuresSecondaireDisposantCloture }}</td>
-                              <td>{{ stud.EquiTotalLatrinesFonctionnellesSecondaire }}</td>
-                              <td>{{ stud.EquiLatrinesGarconsFonctionnellesSecondaire }}</td>
-                              <td>{{ stud.EquiLatrinesFillesFonctionellesSecondaire }}</td>
-                              <td>{{ stud.EquiNombreEcolePubliquesAyantElectriciteSecondaire }}</td>
-                              <td>{{ stud.EquiNombreEauCouranteSecondaire }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesStructurePubliquesSecondaire }}</td>
-                              <td>{{ stud.EquiNombrePlacesAssisesStructutesPriveesSecondaire }}</td>
-                              <td>{{ stud.EquiNombreElevesStructurePubliquesSecondaire }}</td>
-                              <td>{{ stud.EquiNombreElevesStructurePriveeSecondaire }}</td>
-                              <td>{{ stud.EquiNombreSallesDeClasseAvecunLocalNormalSecondaire }}</td>
-                              <td>{{ stud.EquiNombreSallesTotalSecondairePublic }}</td>
-                              <td>{{ stud.EquiNombreGroupesPedagogiquesSecondaire }}</td>
-                              <td>{{ stud.EquiNombreClassePhysiquesSecondaire }}</td>
-                              <td>{{ stud.EquiNombreEcoleEquipeeSalleInformatiqueSecondaire }}</td>
-                              <td>{{ stud.EquipementNombreEcoleDisposantConnexionInternetSecondaire }}</td>
+                            <td>{{ stud.id }}</td><td>{{ stud.CodeDistrict  }}</td>
+                           <td>{{ stud.NomDistrict }}</td>
 
+                           <td>{{ stud.NbreCasesDesTtPetits  }}</td>
+                           <td>{{ stud.NbreGarderie  }}</td>
+                           <td>{{ stud.NbreMaternelle  }}</td>
+                           <td>{{ stud.NbrePrescoTt  }}</td>
+                           <td>{{ stud.NbreStructPrescoDisposantCantinSclre  }}</td>
+                           <td>{{ stud.NbreSCLocalNormalPresco  }}</td>
+                           <td>{{ stud.NbreSCSituationAbrisProvsrPresco  }}</td>
+                           <td>{{ stud.NbreSallesTtPresco  }}</td>
+                           <td>{{ stud.NbreStructPrescoAyantClotur  }}</td>
+                           <td>{{ stud.NbreStructPrescoAyantElectricit  }}</td>
+                           <td>{{ stud.NbreToTLatrinFonctionel  }}</td>
+                           <td>{{ stud.LatrinFonctionelGrcons  }}</td>
+                           <td>{{ stud.LatrinFonctionnelFilles  }}</td>
+                           <td>{{ stud.NbrePlacesAssises  }}</td>
+                           <td>{{ stud.NbreElevPresco  }}</td>
+                           <td>{{ stud.NbrePontEauCournt  }}</td>
+                           <td>{{ stud.NbreEnftBeneficDeparasitgMTN  }}</td>
+                           <td>{{ stud.NbreEnftBeneficieDeparasitgFER  }}</td>
+                           <td>{{ stud.NbreStructElmntaireAyantCantinScolair  }}</td>
+                           <td>{{ stud.NbreSCPrimAvecLocalNormal  }}</td>
+                           <td>{{ stud.NbreSCPrimSituationAbriProvisoir  }}</td>
+                           <td>{{ stud.NbreSallesTTPrim  }}</td>
+                           <td>{{ stud.NbreStructurAyantCloturPrim  }}</td>
+                           <td>{{ stud.TTLatrineFonctionnelPrim  }}</td>
+                           <td>{{ stud.LatrinFonctionnelGrconsPrim  }}</td>
+                           <td>{{ stud.LatrinsFonctionnelFilles  }}</td>
+                           <td>{{ stud.NbreEcolPublicAyantElectricite  }}</td>
+                           <td>{{ stud.NbreEauCourantePrim  }}</td>
+                           <td>{{ stud.NbrePlacAssisStructurPublic  }}</td>
+                           <td>{{ stud.NbrePlacAssisStructurPrive  }}</td>
+                           <td>{{ stud.NbreElvStructurPublicPrimair  }}</td>
+                           <td>{{ stud.NbreElvStructurPublicPrive  }}</td>
+                           <td>{{ stud.NbreSalleClassAvecLocalNormal  }}</td>
+                           <td>{{ stud.NbreSalleClassPrimrSituatAbriProvisoir  }}</td>
+                           <td>{{ stud.NbreSalleTotEtablisPrimPublic  }}</td>
+                           <td>{{ stud.NbreGrpPedagogicPrim  }}</td>
+                           <td>{{ stud.NbreClassePhysicPrim  }}</td>
+                           <td>{{ stud.NbreEcolEquipeSalleITPrim  }}</td>
+                           <td>{{ stud.NbreEcolPrimAyantConexionNet  }}</td>
+                           <td>{{ stud.NbreStructreAyantCatinScolreMG  }}</td>
+                           <td>{{ stud.NbreSalleClassAcLocalNormalMG  }}</td>
+                           <td>{{ stud.NbreSalleClassSituatAbriProvisoirMG  }}</td>
+                           <td>{{ stud.NbreSalleTotalMG  }}</td>
+                           <td>{{ stud.NbreStructurElmntreAyantCloturMG  }}</td>
+                           <td>{{ stud.TotLatrinFonctionnelMG  }}</td>
+                           <td>{{ stud.LatrinFonctionnelGrconsMG  }}</td>
+                           <td>{{ stud.LatrinFonctionnelFilleMG  }}</td>
+                           <td>{{ stud.NbreEcolPublicAyantElectMG  }}</td>
+                           <td>{{ stud.NbreEauCouranteMG  }}</td>
+                           <td>{{ stud.NbrePlaceAssisStructurPublicMG  }}</td>
+                           <td>{{ stud.NbrePlacAssiseStructurPrivMG  }}</td>
+                           <td>{{ stud.NbreElvStructurPublicMG  }}</td>
+                           <td>{{ stud.NbreElevStructurPrivMG  }}</td>
+                           <td>{{ stud.NbreSalleClassAvcLocalNormalMG  }}</td>
+                           <td>{{ stud.NbreGrpPedagogicMG  }}</td>
+                           <td>{{ stud.NbreClassPhysicMG  }}</td>
+                           <td>{{ stud.NbreEcolEquipSalleTIMG  }}</td>
+                           <td>{{ stud.NbreEcolAyantConnexionInetMG  }}</td>
+                           <td>{{ stud.NbreStructurAyantCatinScolreSe  }}</td>
+                           <td>{{ stud.NbreSalleClassAvecLocalNormalSecd  }}</td>
+                           <td>{{ stud.NbreSalleClassSituatAbriProvisScndre  }}</td>
+                           <td>{{ stud.NbreSallesTTSecondaire  }}</td>
+                           <td>{{ stud.NbreStructurScndrAyantClotur  }}</td>
+                           <td>{{ stud.TTLatrinFonctionnelScndr  }}</td>
+                           <td>{{ stud.LatrinGrconFonctionelScndr  }}</td>
+                           <td>{{ stud.LatrinFillesFonctionelScndr  }}</td>
+                           <td>{{ stud.NbreEcolPublicAyantElectScndr  }}</td>
+                           <td>{{ stud.NbreEauCourantScndr  }}</td>
+                           <td>{{ stud.NbrePlacAssisStructPublicScndr  }}</td>
+                           <td>{{ stud.NbrePlacAssisStructPrivScndr  }}</td>
+                           <td>{{ stud.NbreElvStructPublicScndr  }}</td>
+                           <td>{{ stud.NbreElvStructPrivScndr  }}</td>
+                           <td>{{ stud.NbreSalleDeClassAvcLocalNormalScndr  }}</td>
+                           <td>{{ stud.NbreSalleTTScndrPublic  }}</td>
+                           <td>{{ stud.NbreGrpPedagogicScndr  }}</td>
+                           <td>{{ stud.NbreClassPhysicScndr  }}</td>
+                           <td>{{ stud.NbreEcolEquipSalleITScndr  }}</td>
+                           <td>{{ stud.NbreEcolAyantConexionNetScndr  }}</td>
+                           <td>{{ stud.date }}</td>
+                           <td>{{ stud.date_modification }}</td>
                               <td class="text-right">
                               <div class="actions">
                                   <a href="{% url 'education:update_equ' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -236,8 +245,7 @@
           </div>
        </div>
     </div>
- </div>
-    </div></div>
+
     
  </div>
  {% endblock %}	

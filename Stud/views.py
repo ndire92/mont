@@ -52,7 +52,7 @@ def doLogout(request):
     return redirect('/')
 
 
-@login_required(login_url='/')
+@login_required(login_url='home')
 def PROFILE(request):
 
     user = CustomUser.objects.get(id=request.user.id)
@@ -64,7 +64,7 @@ def PROFILE(request):
     return render(request, 'pages/profile.html', context)
 
 
-@login_required(login_url='/')
+# @login_required(login_url='home')
 def PROFILE_UPDATE(request):
     if request.method == "POST":
         profile_pic = request.FILES.get('profile_pic')

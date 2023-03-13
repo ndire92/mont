@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'education:Dimp'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -22,7 +22,7 @@
                         
                   </div>
                   <div class="text-right">
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary">Ajouter</button>
                   </div>
                </form>
             </div>
@@ -55,69 +55,72 @@
                             
                            <th>ID</th>
 
-                           <th>PersEnseignantsPrescolairePublic</th>
-                           <th>PersEnseignantsPrescolairePrive</th>
-                           <th>PersEnseignantsPrescolaireCommunautaire</th>
-                           <th>PersEnseignantPrescolaieTotal</th>
-                           <th>PersElevesPrescolairePublic</th>
-                           <th>PersElevesPrescolairePrive</th>
-                           <th>PersElevesPrescolaireCommunautaire</th>
-                           <th>PersElevesPrescolaireTotal</th>
-                           <th>PersNombreStructurePrescolaireDisposantInfirmerie</th>
-                           <th>PersEnseignantsPrimairePublic</th>
-                           <th>PersEnseignantsPrimairePrive</th>
-                           <th>PersEnseignantsPrimaireCommunautaire</th>
-                           <th>PersEnseignantsPrimaireTotal</th>
-                           <th>PersElevesPrimairePublic</th>
-                           <th>PersElevesPrimairePrive</th>
-                           <th>PersElevesPrimaireCommunautaire</th>
-                           <th>PersNombreClassesUnSeulMaitreDonneCours2cohortesPrimaire</th>
-                           <th>PersNombreClassesDansLesquellesUnseulEnseignantEstChargeDePlusieursNiveauxPrimaire</th>
-                           <th>PersNombreEcolePrimairesPubliquesDisposantAuMoinsUnInfirmierScolaire</th>
-                           <th>PersNombreEcolePrimairesPriveesDisposantAuMoinsUnInfirmierScolaire</th>
-                           <th>PersNombreEcolePrimairesCommunautairesDisposantAuMoinsUnInfirmierScolaire</th>
-                           <th>PersEnseignantsduPrimaireAyantDiplomeProfessionnelCAP</th>
-                           <th>PersEnseignantsduPrimaireAyantDiplômeCEAP</th>
-                           <th>PersEnseignantsduPrimaireSansDiplomeProfessionnel</th>
-                           <th>PersEnseignantsduPrimaireAyantBac</th>
-                           <th>PersEnseignantsduPrimaireAyantBFEM</th>
-                           <th>PersEnseignantsduPrimaireAyantCFEE</th>
-                           <th>PersEnseignantsduPrimaireAyantBacplus2</th>
-                           <th>PersEnseignantsduPrimaireAyantLicence</th>
-                           <th>PersEnseignantsduPrimaireAyantDiplomeMaitriseMasterDEA</th>
-                           <th>PersEnseignantsPrimaireAyantAutresDiplome</th>
-                           <th>PersNombreEnseignants6emeA3eme</th>
-                           <th>PersNombreEnseignantsHommes6emeA3eme</th>
-                           <th>PersNombreEnseignantsFemmes6emeA3eme</th>
-                           <th>PersEnseignantsPublicCollegeSelonDiplomeProfessionnelCAECEM</th>
-                           <th>PersEnseignantsPublicCollegeSelonDiplomeProfessionnelCAES</th>
-                           <th>PersEnseignantsPublicCollegeSansDiplomeProfessionnel</th>
-                           <th>PersElevesTotalMoyenGeneral6emeA3eme</th>
-                           <th>PersElevesGarconsMoyenGeneral6A3eme</th>
-                           <th>PersElevesFillesMoyenGeneral6emeA3eme</th>
-                           <th>PersPersonnelAdministratifMoyenSecondaireHomme</th>
-                           <th>PersPersonnelAdministratifMoyenSecondairFemme</th>
-                           <th>PersPersonnelAdministratifMoyenSecondaireTotal</th>
-                           <th>PersEnseignantsLyceePublic</th>
-                           <th>PersEnseignantLyceePrive</th>
-                           <th>PersEnseignantsTotalLycee</th>
-                           <th>PersElevesTotalSecondaireGeneral2nd_Tle</th>
-                           <th>PersElevesGarconsSecondaireGeneral2nd_Tle</th>
-                           <th>PersElevesFillesSecondaireGeneral2nd_Tle</th>
-                           <th>PersNombreEnseignantsTotal2nd_Tle</th>
-                           <th>PersNombreEnseignantsHommes2nd_Tle</th>
-                           <th>PersNombreEnseignantsFilles2nd_Tles</th>
-                           <th>PersNombreMedecinEtablissementPulicSecondaire</th>
-                           <th>PersNombreMedecinEtablissementPriveSecondaire</th>
-                           <th>PersNombreMedecinSecondaireTotal</th>
-                           <th>PersEnseignantsPublicSecondaireAyantDiplomeAcademieBAC</th>
-                           <th>PersEnseignantsPublicSecondaireAyantDiplomeAcademieBFEM</th>
-                           <th>PersEnseignantPublicSecondaireAyantDiplomeAcademieCFEE</th>
-                           <th>PersEnseignantsDuPublicSecondaireAyantBasplus2</th>
-                           <th>PersEnseignantsPublicSecondaireAyantLicence</th>
-                           <th>PersEnseignantsPublicSecondaireAyantDiplomeMaitrise_MasterPlus</th>
-                           <th>PersEnseignantsPublicSecondaireAyantAutresDiplomeAcademique</th>
-
+                           <th>CodeDistrict</th>
+                           <th>NomDistrict</th>
+                           <th>EnseigtPrescoPublic</th>
+                           <th>EnseigtPrescoPrive</th>
+                           <th>EnseigtPrescoComm</th>
+                           <th>EnseigtPrescoTot</th>
+                           <th>ElvsPrescoPublic</th>
+                           <th>ElvsPrescoPrive</th>
+                           <th>ElvsPrescoComm</th>
+                           <th>ElvsPrescoTT</th>
+                           <th>NbreStructPrescoAyantInfirm</th>
+                           <th>EnseigtPrimPublic</th>
+                           <th>EnseigtPrimPrive</th>
+                           <th>EnseigtPrimComm</th>
+                           <th>EnseigtPrimTT</th>
+                           <th>ElvsPrimPublic</th>
+                           <th>ElvsPrimPrive</th>
+                           <th>ElvsPrimComm</th>
+                           <th>NbreClass1MtreDonneCrscohortPrim</th>
+                           <th>NbreClass1EnseiChargPlsrsNVPrim</th>
+                           <th>NbreEclPPubliAyanAMInfirmiSco</th>
+                           <th>NbreEclPPrivAyantAMInfirmSco</th>
+                           <th>NbreEclPCommAyantAMInfirmSco</th>
+                           <th>EnseigtPAyantDP_PCAP</th>
+                           <th>EnseigPAyantD_CEAP</th>
+                           <th>EnseigtPSans_DP</th>
+                           <th>EnseigtPAyant_Bac</th>
+                           <th>EnseigtPAyant_BFEM</th>
+                           <th>EnseigtPAyant_CFEE</th>
+                           <th>EnseigtPAyant_BacPs2</th>
+                           <th>EnseigtPAyant_Licenc</th>
+                           <th>EnseigtPAyant_DM_DM_DEA</th>
+                           <th>EnseigtPAyantAutre_D</th>
+                           <th>NbreEnseigt6emA3em</th>
+                           <th>NbreEnseigtH6emA3em</th>
+                           <th>NbreEnseigtF6emeA3eme</th>
+                           <th>EnsPcMGSelon_DProCAECEM</th>
+                           <th>EnsPublicColleg_DProCAES</th>
+                           <th>EnsPublicCollegSans_DPro</th>
+                           <th>ElevTotMG6emA3em</th>
+                           <th>ElevGrconMG6A3em</th>
+                           <th>ElevFilleMoyG6emA3em</th>
+                           <th>PerAdminfMoySecond_H</th>
+                           <th>PersAdminMoySecond_F</th>
+                           <th>PersAdminMoySecondTot</th>
+                           <th>EnseigtLyceePublic</th>
+                           <th>EnseigtLyceePrive</th>
+                           <th>EnseigtTotLyce</th>
+                           <th>ElevTTSecondG_2nd_Tle</th>
+                           <th>ElevGrconSecondG_2nd_Tle</th>
+                           <th>ElevFilleSecondG_2nd_Tle</th>
+                           <th>NbreEnseigtTT2nd_Tle</th>
+                           <th>NbreEnseigtH_2nd_Tle</th>
+                           <th>NbreEnseigtFille2nd_Tles</th>
+                           <th>NbreMedcinEtablisPulicSecond</th>
+                           <th>NbreMedcinEtablisPriveSecond</th>
+                           <th>NbreMedcincondTT</th>
+                           <th>EnsPublicSecondAyan_DAcademiBAC</th>
+                           <th>EnsPublicSecondAyan_DA_BFEM</th>
+                           <th>EnsPublicSecondAyan_DA_CFEE</th>
+                           <th>EnsPublicSecondAyant_Baspls2</th>
+                           <th>EnsPublicSecondAyan_Licenc</th>
+                           <th>EnsPcSecondAyan_DM_DM_Plus</th>
+                           <th>EnsPcSecondAyan_Autr_DA</th>
+                           <th>date</th>
+                           <th>date_modification</th>
                            <th class="text-right">Action</th>
                          </tr>
                       </thead>
@@ -126,71 +129,72 @@
                          <tr>
                           
                             <td>{{ stud.id }}</td>
-                            
-
-                           <td>{{ stud.PersEnseignantsPrescolairePublic}}</td>
-                           <td>{{ stud.PersEnseignantsPrescolairePrive}}</td>
-                           <td>{{ stud.PersEnseignantsPrescolaireCommunautaire}}</td>
-                           <td>{{ stud.PersEnseignantPrescolaieTotal}}</td>
-                           <td>{{ stud.PersElevesPrescolairePublic}}</td>
-                           <td>{{ stud.PersElevesPrescolairePrive}}</td>
-                           <td>{{ stud.PersElevesPrescolaireCommunautaire}}</td>
-                           <td>{{ stud.PersElevesPrescolaireTotal}}</td>
-                           <td>{{ stud.PersNombreStructurePrescolaireDisposantInfirmerie}}</td>
-                           <td>{{ stud.PersEnseignantsPrimairePublic}}</td>
-                           <td>{{ stud.PersEnseignantsPrimairePrive}}</td>
-                           <td>{{ stud.PersEnseignantsPrimaireCommunautaire}}</td>
-                           <td>{{ stud.PersEnseignantsPrimaireTotal}}</td>
-                           <td>{{ stud.PersElevesPrimairePublic}}</td>
-                           <td>{{ stud.PersElevesPrimairePrive}}</td>
-                           <td>{{ stud.PersElevesPrimaireCommunautaire}}</td>
-                           <td>{{ stud.PersNombreClassesUnSeulMaitreDonneCours2cohortesPrimaire}}</td>
-                           <td>{{ stud.PersNombreClassesDansLesquellesUnseulEnseignantEstChargeDePlusieursNiveauxPrimaire}}</td>
-                           <td>{{ stud.PersNombreEcolePrimairesPubliquesDisposantAuMoinsUnInfirmierScolaire}}</td>
-                           <td>{{ stud.PersNombreEcolePrimairesPriveesDisposantAuMoinsUnInfirmierScolaire}}</td>
-                           <td>{{ stud.PersNombreEcolePrimairesCommunautairesDisposantAuMoinsUnInfirmierScolaire}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantDiplomeProfessionnelCAP}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantDiplômeCEAP}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireSansDiplomeProfessionnel}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantBac}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantBFEM}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantCFEE}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantBacplus2}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantLicence}}</td>
-                           <td>{{ stud.PersEnseignantsduPrimaireAyantDiplomeMaitriseMasterDEA}}</td>
-                           <td>{{ stud.PersEnseignantsPrimaireAyantAutresDiplome}}</td>
-                           <td>{{ stud.PersNombreEnseignants6emeA3eme}}</td>
-                           <td>{{ stud.PersNombreEnseignantsHommes6emeA3eme}}</td>
-                           <td>{{ stud.PersNombreEnseignantsFemmes6emeA3eme}}</td>
-                           <td>{{ stud.PersEnseignantsPublicCollegeSelonDiplomeProfessionnelCAECEM}}</td>
-                           <td>{{ stud.PersEnseignantsPublicCollegeSelonDiplomeProfessionnelCAES}}</td>
-                           <td>{{ stud.PersEnseignantsPublicCollegeSansDiplomeProfessionnel}}</td>
-                           <td>{{ stud.PersElevesTotalMoyenGeneral6emeA3eme}}</td>
-                           <td>{{ stud.PersElevesGarconsMoyenGeneral6A3eme}}</td>
-                           <td>{{ stud.PersElevesFillesMoyenGeneral6emeA3eme}}</td>
-                           <td>{{ stud.PersPersonnelAdministratifMoyenSecondaireHomme}}</td>
-                           <td>{{ stud.PersPersonnelAdministratifMoyenSecondairFemme}}</td>
-                           <td>{{ stud.PersPersonnelAdministratifMoyenSecondaireTotal}}</td>
-                           <td>{{ stud.PersEnseignantsLyceePublic}}</td>
-                           <td>{{ stud.PersEnseignantLyceePrive}}</td>
-                           <td>{{ stud.PersEnseignantsTotalLycee}}</td>
-                           <td>{{ stud.PersElevesTotalSecondaireGeneral2nd_Tle}}</td>
-                           <td>{{ stud.PersElevesGarconsSecondaireGeneral2nd_Tle}}</td>
-                           <td>{{ stud.PersElevesFillesSecondaireGeneral2nd_Tle}}</td>
-                           <td>{{ stud.PersNombreEnseignantsTotal2nd_Tle}}</td>
-                           <td>{{ stud.PersNombreEnseignantsHommes2nd_Tle}}</td>
-                           <td>{{ stud.PersNombreEnseignantsFilles2nd_Tles}}</td>
-                           <td>{{ stud.PersNombreMedecinEtablissementPulicSecondaire}}</td>
-                           <td>{{ stud.PersNombreMedecinEtablissementPriveSecondaire}}</td>
-                           <td>{{ stud.PersNombreMedecinSecondaireTotal}}</td>
-                           <td>{{ stud.PersEnseignantsPublicSecondaireAyantDiplomeAcademieBAC}}</td>
-                           <td>{{ stud.PersEnseignantsPublicSecondaireAyantDiplomeAcademieBFEM}}</td>
-                           <td>{{ stud.PersEnseignantPublicSecondaireAyantDiplomeAcademieCFEE}}</td>
-                           <td>{{ stud.PersEnseignantsDuPublicSecondaireAyantBasplus2}}</td>
-                           <td>{{ stud.PersEnseignantsPublicSecondaireAyantLicence}}</td>
-                           <td>{{ stud.PersEnseignantsPublicSecondaireAyantDiplomeMaitrise_MasterPlus}}</td>
-                           <td>{{ stud.PersEnseignantsPublicSecondaireAyantAutresDiplomeAcademique}}</td>
-
+                            <td>{{ stud.CodeDistrict}}</td>
+                              <td>{{ stud.NomDistrict}}</td>
+                                    <td>{{ stud.EnseigtPrescoPublic}}</td>
+                                    <td>{{ stud.EnseigtPrescoPrive}}</td>
+                                    <td>{{ stud.EnseigtPrescoComm}}</td>
+                                    <td>{{ stud.EnseigtPrescoTot}}</td>
+                                    <td>{{ stud.ElvsPrescoPublic}}</td>
+                                    <td>{{ stud.ElvsPrescoPrive}}</td>
+                                    <td>{{ stud.ElvsPrescoComm}}</td>
+                                    <td>{{ stud.ElvsPrescoTT}}</td>
+                                    <td>{{ stud.NbreStructPrescoAyantInfirm}}</td>
+                                    <td>{{ stud.EnseigtPrimPublic}}</td>
+                                    <td>{{ stud.EnseigtPrimPrive}}</td>
+                                    <td>{{ stud.EnseigtPrimComm}}</td>
+                                    <td>{{ stud.EnseigtPrimTT}}</td>
+                                    <td>{{ stud.ElvsPrimPublic}}</td>
+                                    <td>{{ stud.ElvsPrimPrive}}</td>
+                                    <td>{{ stud.ElvsPrimComm}}</td>
+                                    <td>{{ stud.NbreClass1MtreDonneCrscohortPrim}}</td>
+                                    <td>{{ stud.NbreClass1EnseiChargPlsrsNVPrim}}</td>
+                                    <td>{{ stud.NbreEclPPubliAyanAMInfirmiSco}}</td>
+                                    <td>{{ stud.NbreEclPPrivAyantAMInfirmSco}}</td>
+                                    <td>{{ stud.NbreEclPCommAyantAMInfirmSco}}</td>
+                                    <td>{{ stud.EnseigtPAyantDP_PCAP}}</td>
+                                    <td>{{ stud.EnseigPAyantD_CEAP}}</td>
+                                    <td>{{ stud.EnseigtPSans_DP}}</td>
+                                    <td>{{ stud.EnseigtPAyant_Bac}}</td>
+                                    <td>{{ stud.EnseigtPAyant_BFEM}}</td>
+                                    <td>{{ stud.EnseigtPAyant_CFEE}}</td>
+                                    <td>{{ stud.EnseigtPAyant_BacPs2}}</td>
+                                    <td>{{ stud.EnseigtPAyant_Licenc}}</td>
+                                    <td>{{ stud.EnseigtPAyant_DM_DM_DEA}}</td>
+                                    <td>{{ stud.EnseigtPAyantAutre_D}}</td>
+                                    <td>{{ stud.NbreEnseigt6emA3em}}</td>
+                                    <td>{{ stud.NbreEnseigtH6emA3em}}</td>
+                                    <td>{{ stud.NbreEnseigtF6emeA3eme}}</td>
+                                    <td>{{ stud.EnsPcMGSelon_DProCAECEM}}</td>
+                                    <td>{{ stud.EnsPublicColleg_DProCAES}}</td>
+                                    <td>{{ stud.EnsPublicCollegSans_DPro}}</td>
+                                    <td>{{ stud.ElevTotMG6emA3em}}</td>
+                                    <td>{{ stud.ElevGrconMG6A3em}}</td>
+                                    <td>{{ stud.ElevFilleMoyG6emA3em}}</td>
+                                    <td>{{ stud.PerAdminfMoySecond_H}}</td>
+                                    <td>{{ stud.PersAdminMoySecond_F}}</td>
+                                    <td>{{ stud.PersAdminMoySecondTot}}</td>
+                                    <td>{{ stud.EnseigtLyceePublic}}</td>
+                                    <td>{{ stud.EnseigtLyceePrive}}</td>
+                                    <td>{{ stud.EnseigtTotLyce}}</td>
+                                    <td>{{ stud.ElevTTSecondG_2nd_Tle}}</td>
+                                    <td>{{ stud.ElevGrconSecondG_2nd_Tle}}</td>
+                                    <td>{{ stud.ElevFilleSecondG_2nd_Tle}}</td>
+                                    <td>{{ stud.NbreEnseigtTT2nd_Tle}}</td>
+                                    <td>{{ stud.NbreEnseigtH_2nd_Tle}}</td>
+                                    <td>{{ stud.NbreEnseigtFille2nd_Tles}}</td>
+                                    <td>{{ stud.NbreMedcinEtablisPulicSecond}}</td>
+                                    <td>{{ stud.NbreMedcinEtablisPriveSecond}}</td>
+                                    <td>{{ stud.NbreMedcincondTT}}</td>
+                                    <td>{{ stud.EnsPublicSecondAyan_DAcademiBAC}}</td>
+                                    <td>{{ stud.EnsPublicSecondAyan_DA_BFEM}}</td>
+                                    <td>{{ stud.EnsPublicSecondAyan_DA_CFEE}}</td>
+                                    <td>{{ stud.EnsPublicSecondAyant_Baspls2}}</td>
+                                    <td>{{ stud.EnsPublicSecondAyan_Licenc}}</td>
+                                    <td>{{ stud.EnsPcSecondAyan_DM_DM_Plus}}</td>
+                                    <td>{{ stud.EnsPcSecondAyan_Autr_DA}}</td>
+                              <td>{{ stud.date}}</td>
+                              <td>{{ stud.date_modification}}</td>
                             <td class="text-right">
                                <div class="actions">
                                   <a href="{% url 'education:update_per' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -210,8 +214,7 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-    </div>
+ 
+   
  </div>
  {% endblock %}	

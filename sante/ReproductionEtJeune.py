@@ -5,41 +5,33 @@ from django import forms
 
 class reprojeu(ModelForm):
 
-    CodeDistrict = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
+    CodeDistrict = forms.CharField(label='Code District', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    CodeDomaine = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    CodeTemps = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAdolescentes15a19anSousMethodeContraceptiveApresAvortement = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAdolescentes20a24ansSousMethodeContraceptiveApresAvortement = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageDAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeParAmiuAuPremierTrimestre = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAvortementsChezLesJeunesFemmesDe20a24ansPrisEnChargeAuPremierTrimestreParMisoprostol = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAvortementsChezLesAdolescentesDe20a24ansPrisEnChargeParAmiuAuPremierTrimestre = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeAuPremierTrimestreParMisoprostol = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAccouchementsDesAdolescentesDe15a19ansAssistesParUnPersonnelQalifie = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageAccouchementsDesAdolescentesDe20a24ansAssistesParUnPersonnelQualifie = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageUtilisatricesPFchezLes15a49ans = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
+    NomDistrict = forms.CharField(label='Nom District', widget=forms.TextInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAdo15a19anSousMC_aprAvort = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAdo20a24anSousMC_AprAvort = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAvortAdo15a19anPEC_AmiuAuPT = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAvortF20a24anPEC_AuPTMisoprostol = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAvortAdo20a24anPEC_AmiuAuPT = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAvortAdo15a19anPEC_AuPTMisoprostol = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAccouchAdo15a19an_AssistPerQalifi = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagAccouchAdo20a24an_AssistPersQalifie = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PctagUtilisatc_PF_15a49ans = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    date = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
+    date_modification = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
 
     class Meta:
         model = ReproductionEtJeune

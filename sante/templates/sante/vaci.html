@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'sante:vacination'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -52,16 +52,17 @@
                       <thead>
                          <tr>
                             <th>ID</th>
-                            <th>CodeDistrict </h>
-                           <th>CodeDomaine </h>
-                           <th>CodeTemps </h>
-                           <th>TauxDeCouvertureAuPenta3 </h>
-                           <th>TauxDeCouvertureAuRR1 </h>
-                           <th>TauxDeCouvertureAuHepBInferieurOuEgal24heures </h>
-                           <th>Total0A11MoisNbreEnfantCompletementVaccine </h>
-                           <th>RR2Couverture12A23Mois </h>
-                           <th>Total12A23MoisFémininNbreEnfantCompletementVaccine </h>
-                           <th>Total12A23MoisMasculinNbreEnfantCompletementVaccine </h>
+                      <th>CodeDistrict</th>
+                     <th>NomDistrict</th>
+                     <th>TxCouver_Penta3 </th>
+                     <th>TxCouvert_RR1 </th>
+                     <th>TxCouvert_HepBInfOuEgal2H</th>
+                     <th>Tot0A11MoisNbreEnftCompletVacc</th>
+                     <th>RR2Couvert12A23Mois </th>
+                     <th>Tot12A23MoisFNbreEnftCompletVacc</th>
+                     <th>Tot12A23MoisMNbreEnftCompletVacc</th>
+                     <th>date</th>
+                     <th>date_modification</th>
                            <th class="text-right">Action</th>
                          </tr>
                       </thead>
@@ -70,16 +71,17 @@
                          <tr>
                           
                             <td>{{ stud.id }}</td>
-                           <td>{{stud.CodeDistrict }}</td>
-                           <td>{{stud.CodeDomaine }}</td>
-                           <td>{{stud.CodeTemps }}</td>
-                           <td>{{stud.TauxDeCouvertureAuPenta3 }}</td>
-                           <td>{{stud.TauxDeCouvertureAuRR1 }}</td>
-                           <td>{{stud.TauxDeCouvertureAuHepBInferieurOuEgal24heures }}</td>
-                           <td>{{stud.Total0A11MoisNbreEnfantCompletementVaccine }}</td>
-                           <td>{{stud.stud.RR2Couverture12A23Mois }}</td>
-                           <td>{{stud.Total12A23MoisFémininNbreEnfantCompletementVaccine }}</td>
-                           <td>{{stud.Total12A23MoisMasculinNbreEnfantCompletementVaccine }}</td>
+                           <td>{{ stud.CodeDistrict}}</td>
+                        <td>{{ stud.NomDistrict}}</td>
+                        <td>{{ stud.TxCouver_Penta3 }}</td>
+                        <td>{{ stud.TxCouvert_RR1 }}</td>
+                        <td>{{ stud.TxCouvert_HepBInfOuEgal2H}}</td>
+                        <td>{{ stud.Tot0A11MoisNbreEnftCompletVacc}}</td>
+                        <td>{{ stud.RR2Couvert12A23Mois }}</td>
+                        <td>{{ stud.Tot12A23MoisFNbreEnftCompletVacc}}</td>
+                        <td>{{ stud.Tot12A23MoisMNbreEnftCompletVacc}}</td>
+                        <td>{{ stud.date}}</td>
+                        <td>{{ stud.date_modification}}</td>
                             <td class="text-right">
                                <div class="actions">
                                   <a href="{% url 'sante:up_vac' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -99,8 +101,6 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-    </div>
+
  </div>
  {% endblock %}	

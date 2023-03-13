@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'education:DimPer'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -52,67 +52,71 @@
                    <table id="table_id" class="table table-hover table-center mb-0">
                       <thead>
                          <tr>
-                              <th>ID</th>
-                              <th>PerNombreNouveauxInscritsCPAnneeT</th>
-                              <th>PerNombreRedoublantsCPAnneeT</th>
-                              <th>PerNombleElevesCiAnneeT_1</th>
-                              <th>PerNombreNouveauxInscritsCE1AnneeT</th>
-                              <th>PerNombreNouveauxInscritsCE2AnneeT</th>
-                              <th>PerNombreNouveauxInscritsCM1AnneeT</th>
-                              <th>PerNombreNouveauxInscritsCM2AnneeT</th>
-                              <th>PerNombreRedoublantsCE1AnneeT</th>
-                              <th>PerNombreRedoublantsCE2AnneeT</th>
-                              <th>PerNombreRedoublantsCM1AnneeT</th>
-                              <th>PerNombreRedoublantsCM2AnneeT</th>
-                              <th>PerNombleElevesCpAnneeT_1</th>
-                              <th>PerNombleElevesCE1AnneeT_1</th>
-                              <th>PerNombleElevesCE2AnneeT_1</th>
-                              <th>PerNombleElevesCM1AnneeT_1</th>
-                              <th>PerNombleElevesCM2AnneeT_1</th>
-                              <th>PerNombreNouveauxInscrits5emeAnneeT</th>
-                              <th>PerNombreNouveauxInscrits4emeAnneeT</th>
-                              <th>PerNombreNouveauxInscrits3emeAnneeT</th>
-                              <th>PerNombreNouveauxInscrits1ereAnneeT</th>
-                              <th>PerNombreNouveauxInscritsTerminaleAnneeT</th>
-                              <th>PerNombreRedoublantsEn5emeAnneeT</th>
-                              <th>PerNombreRedoublantsEn4emeAnneeT</th>
-                              <th>PerNombreRedoublantsEn3emeAnneeT</th>
-                              <th>PerNombreRedoublantsEn1erAnneeT</th>
-                              <th>PerNombreRedoublantsTerminaleAnneeT</th>
-                              <th>PerNombreEleves6emeAnneeT_1</th>
-                              <th>PerNombreEleves5emeAnneeT_1</th>
-                              <th>PerNombreEleves4emeAnneeT_1</th>
-                              <th>PerNombreEleves2ndeAnneeT_1</th>
-                              <th>PerNombreEleves1erAnneeT_1</th>
-                              <th>PerNombreNouveauxInscrisGarconsCM2AnneeT</th>
-                              <th>PerNombreNouveauxInscritsFillesCM2AnneeT</th>
-                              <th>PerPopulationJeunesAge11ansAnneeT</th>
-                              <th>PerNombreNouveauxInscrits3emeGarconsAnneeT</th>
-                              <th>PerNombreNouveauxInscrits3emeFillesAnneeT</th>
-                              <th>PerPopulationJeunesAge15ansAnneeT</th>
-                              <th>PerNouveauxInscrits6eme</th>
-                              <th>PerNouveauxFillesInscrits6eme</th>
-                              <th>PerNouveauxGarconsInscrits6eme</th>
-                              <th>PerEffectifTotalInscritCm2AnneeT_1</th>
-                              <th>PerNouveauxInscrit2ndAnneeT</th>
-                              <th>PerNouveauxGarconsInscrits2nd</th>
-                              <th>PerNouveauxFillesInscrits2nd</th>
-                              <th>PerEffectifTotalInscrit3emeAnneeT_1</th>
-                              <th>PerNombreNouveauxInscritsEnTerminaleAnneeT</th>
-                              <th>PerNombreFillesNouveauxInscritsTerminale</th>
-                              <th>PerNombreGarconsNouveauxInscritTerminale</th>
-                              <th>PerPopulationJeunesAges18ansAnneeT</th>
-                              <th>PerPopulationJeunesGarçonsAge18ansAnneeT</th>
-                              <th>PerPopulationJeunesFilles18ansAnneeT</th>
-                              <th>PerResultatCFEE</th>
-                              <th>PerResultatCFEE_Filles</th>
-                              <th>PerResultatCFEE_Garcons</th>
-                              <th>PerResultatBFEM</th>
-                              <th>PerResultatBFEM_Filles</th>
-                              <th>PerResultatBfem_Garcons</th>
-                              <th>PerResultatBac</th>
-                              <th>PerResultatBac_Filles</th>
-                              <th>PerResultatBac_Garcons</th>
+                              <th>ID</th><th>CodeDistrict</th>
+                                 <th>NomDistrict </th>
+
+                                 <th>NbreNvxInscriCPAnT</th>
+                                 <th>NbreRedoublanCPAnT</th>
+                                 <th>NbreElevesCiAnneeT_1</th>
+                                 <th>NbreNvxInscriCE1AnT</th>
+                                 <th>NbreNvxInscriCE2AnT</th>
+                                 <th>NbreNvxInscriCM1AnT</th>
+                                 <th>NbreNvxInscriCM2AnT</th>
+                                 <th>NbreRedoublanCE1AnT</th>
+                                 <th>NbreRedoublanCE2AnT</th>
+                                 <th>NbreRedoublanCM1AnT</th>
+                                 <th>NbreRedoublanCM2AnT</th>
+                                 <th>NbreElevCpAnT_1</th>
+                                 <th>NbreElevCE1AnT_1</th>
+                                 <th>NbreElevCE2AnT_1</th>
+                                 <th>NbreElevCM1AnT_1</th>
+                                 <th>NbreElevCM2AnT_1</th>
+                                 <th>NbreNvxInscri5emAnT</th>
+                                 <th>NbreNvxInscri4emAnT</th>
+                                 <th>NbreNvxInscri3emAnT</th>
+                                 <th>NbreNvxInscri1erAnT</th>
+                                 <th>NbreNvxInscriTleAnT</th>
+                                 <th>NbreRedoublan5emAnT</th>
+                                 <th>NbreRedoublan4emAnT</th>
+                                 <th>NbreRedoublan3emAnT</th>
+                                 <th>NbreRedoublan1erAnT</th>
+                                 <th>NbreRedoublanTleAnT</th>
+                                 <th>NbreElvs6emAnT_1</th>
+                                 <th>NbreElvs5emAnT_1</th>
+                                 <th>Nbre4emAnT_1</th>
+                                 <th>Nbre2ndeAnT_1</th>
+                                 <th>NbreElev1erAnT_1</th>
+                                 <th>NbreNvxInscriGrconCM2AnT</th>
+                                 <th>NbreNvxInscriFilleCM2AnT</th>
+                                 <th>PopJeunAge11ansAnT</th>
+                                 <th>NbreNvxInscri3emGrconAnT</th>
+                                 <th>NbreNvxInscri3emFilleAnT</th>
+                                 <th>PopJeunAge15ansAnT</th>
+                                 <th>NvxInscri6eme</th>
+                                 <th>NvxFilleInscri6em</th>
+                                 <th>NvxGrconInscri6em</th>
+                                 <th>EffectTTInscriCm2AnT_1</th>
+                                 <th>NvxInscri2ndAnT</th>
+                                 <th>NvxGrconInscri2nd</th>
+                                 <th>NvxFilleInscri2nd</th>
+                                 <th>efectifTTInscrit3emAnT_1</th>
+                                 <th>NbreNvxInscriTleAnT</th>
+                                 <th>NbreFilleNvxInscriTle</th>
+                                 <th>NbreGrconNvxInscriTle</th>
+                                 <th>PopJeunAge18ansAnT</th>
+                                 <th>PopJeunGrçsAge18ansAnT</th>
+                                 <th>PopJeunFille18ansAnT</th>
+                                 <th>ResultatCFEE</th>
+                                 <th>ResultatCFEE_F</th>
+                                 <th>ResultatCFEE_G</th>
+                                 <th>ResultatBFEM</th>
+                                 <th>ResultatBFEM_F</th>
+                                 <th>ResultatBfem_G</th>
+                                 <th>ResultatBac</th>
+                                 <th>ResultatBac_F</th>
+                                 <th>ResultatBac_G</th>
+                                 <th>date</th>
+                                 <th>date_modification</th>
                               <th class="text-right">Action</th>
                          </tr>
                       </thead>
@@ -121,66 +125,71 @@
                          <tr>
                           
                                  <td>{{ stud.id }}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsCPAnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsCPAnneeT}}</td>
-                                 <td>{{ stud.PerNombleElevesCiAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsCE1AnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsCE2AnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsCM1AnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsCM2AnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsCE1AnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsCE2AnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsCM1AnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsCM2AnneeT}}</td>
-                                 <td>{{ stud.PerNombleElevesCpAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombleElevesCE1AnneeT_1}}</td>
-                                 <td>{{ stud.PerNombleElevesCE2AnneeT_1}}</td>
-                                 <td>{{ stud.PerNombleElevesCM1AnneeT_1}}</td>
-                                 <td>{{ stud.PerNombleElevesCM2AnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrits5emeAnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrits4emeAnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrits3emeAnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrits1ereAnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsTerminaleAnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsEn5emeAnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsEn4emeAnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsEn3emeAnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsEn1erAnneeT}}</td>
-                                 <td>{{ stud.PerNombreRedoublantsTerminaleAnneeT}}</td>
-                                 <td>{{ stud.PerNombreEleves6emeAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreEleves5emeAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreEleves4emeAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreEleves2ndeAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreEleves1erAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrisGarconsCM2AnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsFillesCM2AnneeT}}</td>
-                                 <td>{{ stud.PerPopulationJeunesAge11ansAnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrits3emeGarconsAnneeT}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscrits3emeFillesAnneeT}}</td>
-                                 <td>{{ stud.PerPopulationJeunesAge15ansAnneeT}}</td>
-                                 <td>{{ stud.PerNouveauxInscrits6eme}}</td>
-                                 <td>{{ stud.PerNouveauxFillesInscrits6eme}}</td>
-                                 <td>{{ stud.PerNouveauxGarconsInscrits6eme}}</td>
-                                 <td>{{ stud.PerEffectifTotalInscritCm2AnneeT_1}}</td>
-                                 <td>{{ stud.PerNouveauxInscrit2ndAnneeT}}</td>
-                                 <td>{{ stud.PerNouveauxGarconsInscrits2nd}}</td>
-                                 <td>{{ stud.PerNouveauxFillesInscrits2nd}}</td>
-                                 <td>{{ stud.PerEffectifTotalInscrit3emeAnneeT_1}}</td>
-                                 <td>{{ stud.PerNombreNouveauxInscritsEnTerminaleAnneeT}}</td>
-                                 <td>{{ stud.PerNombreFillesNouveauxInscritsTerminale}}</td>
-                                 <td>{{ stud.PerNombreGarconsNouveauxInscritTerminale}}</td>
-                                 <td>{{ stud.PerPopulationJeunesAges18ansAnneeT}}</td>
-                                 <td>{{ stud.PerPopulationJeunesGarçonsAge18ansAnneeT}}</td>
-                                 <td>{{ stud.PerPopulationJeunesFilles18ansAnneeT}}</td>
-                                 <td>{{ stud.PerResultatCFEE}}</td>
-                                 <td>{{ stud.PerResultatCFEE_Filles}}</td>
-                                 <td>{{ stud.PerResultatCFEE_Garcons}}</td>
-                                 <td>{{ stud.PerResultatBFEM}}</td>
-                                 <td>{{ stud.PerResultatBFEM_Filles}}</td>
-                                 <td>{{ stud.PerResultatBfem_Garcons}}</td>
-                                 <td>{{ stud.PerResultatBac}}</td>
-                                 <td>{{ stud.PerResultatBac_Filles}}</td>
-                                 <td>{{ stud.PerResultatBac_Garcons}}</td>
+                                 <td>{{ stud.CodeDistrict}}</td>
+                                 <td>{{ stud.NomDistrict }}</td>
+
+                                 <td>{{ stud.NbreNvxInscriCPAnT}}</td>
+                                 <td>{{ stud.NbreRedoublanCPAnT}}</td>
+                                 <td>{{ stud.NbreElevesCiAnneeT_1}}</td>
+                                 <td>{{ stud.NbreNvxInscriCE1AnT}}</td>
+                                 <td>{{ stud.NbreNvxInscriCE2AnT}}</td>
+                                 <td>{{ stud.NbreNvxInscriCM1AnT}}</td>
+                                 <td>{{ stud.NbreNvxInscriCM2AnT}}</td>
+                                 <td>{{ stud.NbreRedoublanCE1AnT}}</td>
+                                 <td>{{ stud.NbreRedoublanCE2AnT}}</td>
+                                 <td>{{ stud.NbreRedoublanCM1AnT}}</td>
+                                 <td>{{ stud.NbreRedoublanCM2AnT}}</td>
+                                 <td>{{ stud.NbreElevCpAnT_1}}</td>
+                                 <td>{{ stud.NbreElevCE1AnT_1}}</td>
+                                 <td>{{ stud.NbreElevCE2AnT_1}}</td>
+                                 <td>{{ stud.NbreElevCM1AnT_1}}</td>
+                                 <td>{{ stud.NbreElevCM2AnT_1}}</td>
+                                 <td>{{ stud.NbreNvxInscri5emAnT}}</td>
+                                 <td>{{ stud.NbreNvxInscri4emAnT}}</td>
+                                 <td>{{ stud.NbreNvxInscri3emAnT}}</td>
+                                 <td>{{ stud.NbreNvxInscri1erAnT}}</td>
+                                 <td>{{ stud.NbreNvxInscriTleAnT}}</td>
+                                 <td>{{ stud.NbreRedoublan5emAnT}}</td>
+                                 <td>{{ stud.NbreRedoublan4emAnT}}</td>
+                                 <td>{{ stud.NbreRedoublan3emAnT}}</td>
+                                 <td>{{ stud.NbreRedoublan1erAnT}}</td>
+                                 <td>{{ stud.NbreRedoublanTleAnT}}</td>
+                                 <td>{{ stud.NbreElvs6emAnT_1}}</td>
+                                 <td>{{ stud.NbreElvs5emAnT_1}}</td>
+                                 <td>{{ stud.Nbre4emAnT_1}}</td>
+                                 <td>{{ stud.Nbre2ndeAnT_1}}</td>
+                                 <td>{{ stud.NbreElev1erAnT_1}}</td>
+                                 <td>{{ stud.NbreNvxInscriGrconCM2AnT}}</td>
+                                 <td>{{ stud.NbreNvxInscriFilleCM2AnT}}</td>
+                                 <td>{{ stud.PopJeunAge11ansAnT}}</td>
+                                 <td>{{ stud.NbreNvxInscri3emGrconAnT}}</td>
+                                 <td>{{ stud.NbreNvxInscri3emFilleAnT}}</td>
+                                 <td>{{ stud.PopJeunAge15ansAnT}}</td>
+                                 <td>{{ stud.NvxInscri6eme}}</td>
+                                 <td>{{ stud.NvxFilleInscri6em}}</td>
+                                 <td>{{ stud.NvxGrconInscri6em}}</td>
+                                 <td>{{ stud.EffectTTInscriCm2AnT_1}}</td>
+                                 <td>{{ stud.NvxInscri2ndAnT}}</td>
+                                 <td>{{ stud.NvxGrconInscri2nd}}</td>
+                                 <td>{{ stud.NvxFilleInscri2nd}}</td>
+                                 <td>{{ stud.efectifTTInscrit3emAnT_1}}</td>
+                                 <td>{{ stud.NbreNvxInscriTleAnT}}</td>
+                                 <td>{{ stud.NbreFilleNvxInscriTle}}</td>
+                                 <td>{{ stud.NbreGrconNvxInscriTle}}</td>
+                                 <td>{{ stud.PopJeunAge18ansAnT}}</td>
+                                 <td>{{ stud.PopJeunGrçsAge18ansAnT}}</td>
+                                 <td>{{ stud.PopJeunFille18ansAnT}}</td>
+                                 <td>{{ stud.ResultatCFEE}}</td>
+                                 <td>{{ stud.ResultatCFEE_F}}</td>
+                                 <td>{{ stud.ResultatCFEE_G}}</td>
+                                 <td>{{ stud.ResultatBFEM}}</td>
+                                 <td>{{ stud.ResultatBFEM_F}}</td>
+                                 <td>{{ stud.ResultatBfem_G}}</td>
+                                 <td>{{ stud.ResultatBac}}</td>
+                                 <td>{{ stud.ResultatBac_F}}</td>
+                                 <td>{{ stud.ResultatBac_G}}</td>
+                                 <td>{{ stud.date}}</td>
+                                 <td>{{ stud.date_modification}}</td>
                                  <td class="text-right">
                                 <div class="actions">
                                   <a href="{% url 'education:update_perf' stud.id %}" class="btn btn-sm bg-success-light mr-2">
@@ -200,8 +209,6 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-    </div>
+
  </div>
  {% endblock %}	

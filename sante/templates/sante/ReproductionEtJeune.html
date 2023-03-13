@@ -12,7 +12,7 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'sante:ReproductionEtJeune'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
@@ -22,7 +22,7 @@
                         
                   </div>
                   <div class="text-right">
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary">Ajouter</button>
                   </div>
                </form>
             </div>
@@ -30,11 +30,12 @@
       </div>
    </div>
    
-</div>
+
 
 
      
-<div >
+
+ <div >
   <div class="content container-fluid">
     <div class="page-header">
        <div class="row align-items-center">
@@ -52,18 +53,19 @@
                       <thead>
                          <tr>
                             <th>ID</th>
-                          <th>CodeDistrict</th>
-                           <th>CodeDomaine</th>
-                           <th>CodeTemps</th>
-                           <th>R20PourcentageAdolescentes15a19anSousMethodeContraceptiveApresAvortement</th>
-                           <th>R20PourcentageAdolescentes20a24ansSousMethodeContraceptiveApresAvortement</th>
-                           <th>R20PourcentageDAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeParAmiuAuPremierTrimestre</th>
-                           <th>R20PourcentageAvortementsChezLesJeunesFemmesDe20a24ansPrisEnChargeAuPremierTrimestreParMisoprostol</th>
-                           <th>R20PourcentageAvortementsChezLesAdolescentesDe20a24ansPrisEnChargeParAmiuAuPremierTrimestre</th>
-                           <th>R20PourcentageAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeAuPremierTrimestreParMisoprostol</th>
-                           <th>R20PourcentageAccouchementsDesAdolescentesDe15a19ansAssistesParUnPersonnelQalifie</th>
-                           <th>R20PourcentageAccouchementsDesAdolescentesDe20a24ansAssistesParUnPersonnelQualifie</th>
-                           <th>R20PourcentageUtilisatricesPFchezLes15a49ans</th>
+                         <th>CodeDistrict </th>
+                        <th>NomDistrict </th>
+                        <th>PctagAdo15a19anSousMC_aprAvort</th>
+                        <th>PctagAdo20a24anSousMC_AprAvort</th>
+                        <th>PctagAvortAdo15a19anPEC_AmiuAuPT</th>
+                        <th>PctagAvortF20a24anPEC_AuPTMisoprostol</th>
+                        <th>PctagAvortAdo20a24anPEC_AmiuAuPT</th>
+                        <th>PctagAvortAdo15a19anPEC_AuPTMisoprostol</th>
+                        <th>PctagAccouchAdo15a19an_AssistPerQalifi</th>
+                        <th>PctagAccouchAdo20a24an_AssistPersQalifie</th>
+                        <th>PctagUtilisatc_PF_15a49ans</th>
+                        <th>date </th>
+                        <th>date_modification </th>
                            <th class="text-right">Action</th>
                          </tr>
                       </thead>
@@ -72,18 +74,19 @@
                          <tr>
                           
                             <td>{{ stud.id }}</td>
-                           <td>{{ stud.CodeDistrict}}</td>
-                           <td>{{ stud.CodeDomaine}}</td>
-                           <td>{{ stud.CodeTemps}}</td>
-                           <td>{{ stud.R20PourcentageAdolescentes15a19anSousMethodeContraceptiveApresAvortement}}</td>
-                           <td>{{ stud.R20PourcentageAdolescentes20a24ansSousMethodeContraceptiveApresAvortement}}</td>
-                           <td>{{ stud.R20PourcentageDAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeParAmiuAuPremierTrimestre}}</td>
-                           <td>{{ stud.R20PourcentageAvortementsChezLesJeunesFemmesDe20a24ansPrisEnChargeAuPremierTrimestreParMisoprostol}}</td>
-                           <td>{{ stud.R20PourcentageAvortementsChezLesAdolescentesDe20a24ansPrisEnChargeParAmiuAuPremierTrimestre}}</td>
-                           <td>{{ stud.R20PourcentageAvortementsChezLesAdolescentesDe15a19ansPrisEnChargeAuPremierTrimestreParMisoprostol}}</td>
-                           <td>{{ stud.R20PourcentageAccouchementsDesAdolescentesDe15a19ansAssistesParUnPersonnelQalifie}}</td>
-                           <td>{{ stud.R20PourcentageAccouchementsDesAdolescentesDe20a24ansAssistesParUnPersonnelQualifie}}</td>
-                           <td>{{ stud.R20PourcentageUtilisatricesPFchezLes15a49ans}}</td>
+                           <td>{{ stud.CodeDistrict }}</td>
+                           <td>{{ stud.NomDistrict }}</td>
+                           <td>{{ stud.PctagAdo15a19anSousMC_aprAvort}}</td>
+                           <td>{{ stud.PctagAdo20a24anSousMC_AprAvort}}</td>
+                           <td>{{ stud.PctagAvortAdo15a19anPEC_AmiuAuPT}}</td>
+                           <td>{{ stud.PctagAvortF20a24anPEC_AuPTMisoprostol}}</td>
+                           <td>{{ stud.PctagAvortAdo20a24anPEC_AmiuAuPT}}</td>
+                           <td>{{ stud.PctagAvortAdo15a19anPEC_AuPTMisoprostol}}</td>
+                           <td>{{ stud.PctagAccouchAdo15a19an_AssistPerQalifi}}</td>
+                           <td>{{ stud.PctagAccouchAdo20a24an_AssistPersQalifie}}</td>
+                           <td>{{ stud.PctagUtilisatc_PF_15a49ans}}</td>
+                           <td>{{ stud.date }}</td>
+                           <td>{{ stud.date_modification }}</td>
 
                             <td class="text-right">
                                <div class="actions">
@@ -104,8 +107,5 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-    
  </div>
  {% endblock %}	

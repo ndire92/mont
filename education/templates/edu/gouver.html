@@ -12,17 +12,19 @@
             </div>
             {% include 'includes/messages.html' %}	
             <div class="card-body">
-               <form method="POST" action="{% url 'education:DimGou'%}" enctype="multipart/form-data">
+               <form method="POST" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                  
                   <div class="row">
                      <div class="col-md-6">
                         {{ form.as_p }}
-                    </div>
+                        <div class="col-sm-11">
+                    
+                   
                         
                   </div>
                   <div class="text-right">
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary">Ajouter</button>
                   </div>
                </form>
             </div>
@@ -51,70 +53,83 @@
                    <table id="table_id" class="table table-hover table-center mb-0">
                       <thead>
                          <tr>
-                              <th>ID</th>
-                              <th>DepensesInvestissement</th>
-                              <th>MasseSalariale</th>
-                              <th>PersonnelAppui</th>
-                              <th>MasseSalarialeDuPersonnelEnChage</th>
-                              <th>DepenseEnEau</th>
-                              <th>DepenseEnElectricite</th>
-                              <th>AchatDeFournitureScolaireAideSociale</th>
-                              <th>BeneficiaireDesActivitesRenforcementDeCapaciteEtFormationProfessionnel</th>
-                              <th>DepensesPourLeRenforcementDeCapaciteFormationProfessionnelle</th>
-                              <th>DepensesPourHebergementDesEtudiants</th>
-                              <th>NombreDeRecompenses</th>
-                              <th>NombreDeBourses</th>
-                              <th>MontantDesRecompenses</th>
-                              <th>MontantDesBources</th>
-                              <th>TotalDesDepensesEnEducation</th>
-                              <th>DepensesInvestissementDansEducation</th>
-                              <th>MasseSalarialeFloat</th>
-                              <th>MasseSalarialeDuPersonnelEnChageFloat</th>
-                              <th>AchatDeFournitureScolaireAideSocialeFloat</th>
-                              <th>DepensesPourLeRenforcementDeCapaciteFormationProfessionnelleFloat</th>
-                              <th>DepensesPourHebergementDesEtudiantsFloat</th>
-                              <th>MontantDesRecompensesFloat</th>
-                              <th>MontantDesBourcesFloat</th>
-                              <th>TotalDesDepensesEnEducationFloat</th>
-                              <th>DepensesInvestissementDansEducationFloat</th>
+                              <th>ID</th><th> CodeDistrict </th>
+                              <th>NomDistrict </th>
+
+                              <th>DepensFonctionnt </th>
+                              <th>DepensInvestis </th>
+                              <th>MassSalarial </th>
+                              <th>PersonelAppui </th>
+                              <th>MassSalarialPersnlCharg </th>
+                              <th>DepenseEnEau </th>
+                              <th>DepensElect </th>
+                              <th>AchatFournitScolreAidSocial </th>
+                              <th>BeneficActivRenforcmntCapacitFP </th>
+                              <th>DepensRenforcmntCapacitFP </th>
+                              <th>DepensHebergtEtudts </th>
+                              <th>NbreRecompense </th>
+                              <th>NbreBours </th>
+                              <th>MontanRecompens </th>
+                              <th>MontanBourc </th>
+                              <th>TotDepensEducat </th>
+                              <th>DepensInvestismtEducat </th>
+                              <th>DepensInvestismtEducat </th>
+                              <th>MassSalarialFloat </th>
+                              <th>MassSalarialPerslChargFT </th>
+                              <th>AchaFournitScolairASF </th>
+                              <th>DepensRenforcCapacitFPF </th>
+                              <th>DepensHebergEtudtsFlt </th>
+                              <th>MontanRecompensFlt </th>
+                              <th>MontanBourceFlt </th>
+                              <th>TotDepensEducatFlt </th>
+
+                              <th>date</th>
+                              <th>date_modification </th>
                               <th class="text-right">Action</th>
                          </tr>
                       </thead>
                       <tbody>
                         {% for stud in dataObject %}
                          <tr>
-                          
-                              <td>{{ stud.DepensesInvestissement}}</td>
-                              <td>{{ stud.MasseSalariale}}</td>
-                              <td>{{ stud.PersonnelAppui}}</td>
-                              <td>{{ stud.MasseSalarialeDuPersonnelEnChage}}</td>
-                              <td>{{ stud.DepenseEnEau}}</td>
-                              <td>{{ stud.DepenseEnElectricite}}</td>
-                              <td>{{ stud.AchatDeFournitureScolaireAideSociale}}</td>
-                              <td>{{ stud.BeneficiaireDesActivitesRenforcementDeCapaciteEtFormationProfessionnel}}</td>
-                              <td>{{ stud.DepensesPourLeRenforcementDeCapaciteFormationProfessionnelle}}</td>
-                              <td>{{ stud.DepensesPourHebergementDesEtudiants}}</td>
-                              <td>{{ stud.NombreDeRecompenses}}</td>
-                              <td>{{ stud.NombreDeBourses}}</td>
-                              <td>{{ stud.MontantDesRecompenses}}</td>
-                              <td>{{ stud.MontantDesBources}}</td>
-                              <td>{{ stud.TotalDesDepensesEnEducation}}</td>
-                              <td>{{ stud.DepensesInvestissementDansEducation}}</td>
-                              <td>{{ stud.MasseSalarialeFloat}}</td>
-                              <td>{{ stud.MasseSalarialeDuPersonnelEnChageFloat}}</td>
-                              <td>{{ stud.AchatDeFournitureScolaireAideSocialeFloat}}</td>
-                              <td>{{ stud.DepensesPourLeRenforcementDeCapaciteFormationProfessionnelleFloat}}</td>
-                              <td>{{ stud.DepensesPourHebergementDesEtudiantsFloat}}</td>
-                              <td>{{ stud.MontantDesRecompensesFloat}}</td>
-                              <td>{{ stud.MontantDesBourcesFloat}}</td>
-                              <td>{{ stud.TotalDesDepensesEnEducationFloat}}</td>
-                              <td>{{ stud.DepensesInvestissementDansEducationFloat}}</td>
+                           <td>{{ stud.id}}</td>
+                           <td>{{ stud.CodeDistrict }}</td>
+                                 <td>{{ stud.NomDistrict }}</td>
+
+                                 <td>{{ stud.DepensFonctionnt }}</td>
+                                 <td>{{ stud.DepensInvestis }}</td>
+                                 <td>{{ stud.MassSalarial }}</td>
+                                 <td>{{ stud.PersonelAppui }}</td>
+                                 <td>{{ stud.MassSalarialPersnlCharg }}</td>
+                                 <td>{{ stud.DepenseEnEau }}</td>
+                                 <td>{{ stud.DepensElect }}</td>
+                                 <td>{{ stud.AchatFournitScolreAidSocial }}</td>
+                                 <td>{{ stud.BeneficActivRenforcmntCapacitFP }}</td>
+                                 <td>{{ stud.DepensRenforcmntCapacitFP }}</td>
+                                 <td>{{ stud.DepensHebergtEtudts }}</td>
+                                 <td>{{ stud.NbreRecompense }}</td>
+                                 <td>{{ stud.NbreBours }}</td>
+                                 <td>{{ stud.MontanRecompens }}</td>
+                                 <td>{{ stud.MontanBourc }}</td>
+                                 <td>{{ stud.TotDepensEducat }}</td>
+                                 <td>{{ stud.DepensInvestismtEducat }}</td>
+                                 <td>{{ stud.DepensInvestismtEducat }}</td>
+                                 <td>{{ stud.MassSalarialFloat }}</td>
+                                 <td>{{ stud.MassSalarialPerslChargFT }}</td>
+                                 <td>{{ stud.AchaFournitScolairASF }}</td>
+                                 <td>{{ stud.DepensRenforcCapacitFPF }}</td>
+                                 <td>{{ stud.DepensHebergEtudtsFlt }}</td>
+                                 <td>{{ stud.MontanRecompensFlt }}</td>
+                                 <td>{{ stud.MontanBourceFlt }}</td>
+                                 <td>{{ stud.TotDepensEducatFlt }}</td>
+
+                                 <td>{{ stud.date}}</td>
+                                 <td>{{ stud.date_modification }}</td>
                               <td class="text-right">
                                <div class="actions">
-                                  <a href="{% url 'sante:up_repro' stud.id %}" class="btn btn-sm bg-success-light mr-2">
+                                  <a href="{% url 'education:update_dg' stud.id %}" class="btn btn-sm bg-success-light mr-2">
                                   <i class="fas fa-pen"></i>
                                   </a>
-                                  <a href="{% url 'sante:de_repro' stud.id %}" class="btn btn-sm bg-danger-light">
+                                  <a href="{% url 'education:delete_dg' stud.id %}" class="btn btn-sm bg-danger-light">
                                   <i class="fas fa-trash"></i>
                                   </a>
                                </div>
@@ -128,8 +143,6 @@
           </div>
        </div>
     </div>
- </div>
-    </div>
-   </div> 
+ 
  </div>
  {% endblock %}	
