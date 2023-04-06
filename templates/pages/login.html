@@ -12,7 +12,7 @@
       <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
       <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
       <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
-      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
    </head>
    <body>
       <div class="main-wrapper login-body">
@@ -20,7 +20,7 @@
             <div class="container">
                <div class="loginbox">
                   <div class="login-left">
-                     <p class="account-subtitle" style="color: #fff">Commune de MONT ROLLAND</p>
+                     <p class="account-subtitle" style="color: #fff">Commune de Joal Fathdiou</p>
                      <img class="img-fluid" src="{% static 'assets/img/logo-white.jpg' %}" alt="Logo">
                   </div>
                   <div class="login-right">
@@ -28,20 +28,34 @@
                         <h1>Login</h1>
                         <p class="account-subtitle">Accéder à notre tableau de bord</p>
                         
-                        <form action="{% url 'doLogin' %}" method="post">
+                        <form action="{% url 'login' %}" method="post">
                            {% csrf_token %}
+                           
                            <div class="form-group">
-                              <input class="form-control" type="text" placeholder="Email" name="email">
+                              <label for="id_username">Username:</label>
+                              <input class="form-control" type="text" placeholder="Utilisateur" name="username" id="id_username">
                            </div>
                            <div class="form-group">
-                              <input class="form-control" type="password" placeholder="Password" name="password">
+                              <label for="id_password">Mot de Passe:</label>
+                              <input class="form-control" type="password" placeholder="Password" name="password" id="id_password">
                            </div>
+                        
                            <div class="form-group">
                               <button class="btn btn-primary btn-block" type="submit">Connexion</button>
                            </div>
                         </form>
-
-                  </div>
+                        <div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
+                        <div class="login-or">
+                           <span class="or-line"></span>
+                           <span class="span-or">or</span>
+                        </div>
+                        <div class="social-login">
+                           <span>Login with</span>
+                           <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="google"><i class="fab fa-google"></i></a>
+                        </div>
+                        <div class="text-center dont-have">Don’t have an account? <a href="{% url 'register' %}">Register</a></div>
+                     
+                      </div>
                </div>
             </div>
          </div>
@@ -51,5 +65,4 @@
       <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
       <script src="{% static 'assets/js/script.js' %}"></script>
    </body>
-   <!-- Mirrored from preschool.dreamguystech.com/html-template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:40 GMT -->
 </html>

@@ -1,0 +1,92 @@
+{% extends 'layout/base.html'%}
+
+{% load static %}
+<title>{% block title%}My block{%endblock%}</title>
+
+
+    <header>
+        {% include 'layout/partial/header.html' %}
+    </header>
+
+<div class="body container">
+    {% block body  %}
+
+<center><h1 style=" color: #258baf; margin:6%;">Bienvenue {{ request.user.username }} sur votre page de blog !</h1></center>
+
+    <div class="row row-cols-md-3 row-cols-sm-6" style="margin:6%"; >
+   
+        {% for post in posts %}
+            <div class="col">
+                <div class="custom-card card mb-3 shadow"   style=" display: flex;
+                flex-direction: column;
+                width: 350px; /* ajustez la largeur en fonction de vos préférences */">
+                    {% if post.image %}
+                        <img src="{{ post.image.url }}" class="card-img-top" alt="..."  >
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #258baf">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.content|truncatechars:"300"|safe }}</p>
+                        <a href="{% url 'detail' post.id %}" class="btn btn- " style="background-color:#258baf; color:#fff" >Savoir Plus</a>
+                        {% if post.user == request.user %}
+                            <a href="{% url 'update_post' post.id %}" class="btn btn-info">Update</a>
+                            <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a>
+                        {% endif %}
+                    </div>
+                    <div class="card-footer">
+                    <b> {{ post.date }}&nbsp;&nbsp;Par
+                        {{ post.user.username }}</b>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<nav>
+    <ul class="pagination justify-content-center">
+        {% if posts.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ posts.previous_page_number }}">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+        <li class="page-item"><p class="page-link text-muted" >Page {{ posts.number }} of {{ posts.paginator.num_pa }}.</p></li>
+        {% if posts.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ posts.next_page_number }}">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+
+        {% endif %}
+    </ul>
+</nav>
+
+   
+<div class="row justify-content-center patenaires">
+    <h1 style=" color: #258baf;text-align: center;">Nos Partenaires !</h1>
+    <div class="col-sm-2 text-center">
+        <div class="card patenaire-item">
+          <a target="_blank" href=""><img src="{% static 'as/partenaire/igt.png'%}" class="card-img-top" alt=""><br><b></b></a>
+        </div>
+    </div>
+    <div class="col-sm-2 text-center">
+        <div class="card patenaire-item">
+          <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/aphrc.png'%}" alt="APHRC"><br> <b></b></a>
+        </div>
+    </div>
+
+    <div class="col-sm-2 text-center">
+        <div class="card patenaire-item">
+          <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/ensa.jpg'%}" alt=""><br> <b></b></a>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>  
+
+    {% endblock %}
+

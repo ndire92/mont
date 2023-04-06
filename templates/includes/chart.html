@@ -3,7 +3,7 @@
   $(document).ready(function() {
 
     var options = {
-      series: [{{palu}}, {{repro}}, {{plan}}, {{survie}}, {{vacc}}],
+      series: [{{plan}}, {{repro }},{{palu}}, {{survie}}],
       chart: {
         height: 350,
         width: '100%',
@@ -41,19 +41,19 @@
     }]
     };
 
-    var chart = new ApexCharts(document.querySelector("#course"), options);
+    var chart = new ApexCharts(document.querySelector("#c"), options);
     chart.render();
 
 
 
       var options = {
-        series: [{{dimequ}}, {{dimgou}}, {{dimperf}}, {{dimper}}, {{dimacc}}],
+          series: [{{peche}}, {{pfina}}, {{peino}}, {{pcom}}],
           chart: {
             height: 350,
             width: '100%',
           type: 'pie',
         },
-        labels: ['Equipement', 'Gouvernance', 'Performance', 'Personnel', 'Access'],
+        labels: ['Peche Finance', 'Peche Artisan', 'Peche Commerce', 'Peche Innovation'],
         responsive: [{
           breakpoint: 480,
           options: {
@@ -74,7 +74,7 @@
 
 
 
-        if ($('#stud_gender').length > 0) {
+      if ($('#stud_gender').length > 0) {
           var optionsBar = {
               chart: {
                   type: 'bar',
@@ -95,32 +95,27 @@
               },
               series: [
               {
-                  name: "Paludisme",
+                  name: "Peche Artisan",
                   color: '#fdbb38',
-                  data: [{{palu}}],
+                  data: [{{peche}}],
               },
 
 
               {
-                  name: "Reproduction Jeune",
+                  name: "Peche Finance",
                   color: '#18affb',
-                  data: [{{repro}}],
+                  data: [{{pfina}}],
               },
               
               {
-                  name: "Planification Familiale",
+                  name: "Peche Commerce",
                   color: '#59a11a',
-                  data: [{{plan}}],
+                  data: [{{pcom}}],
               },
                 {
-                  name: "Survie Enfant",
+                  name: "Peche Innovation",
                   color: '#a1371a',
-                  data: [{{survie}}],
-              },
-              {
-                  name: "Vaccination",
-                  color: '#a13731a',
-                  data: [{{vacc}}],
+                  data: [{{peino}}],
               }],
               labels: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
               xaxis: {
@@ -160,6 +155,7 @@
           var chartBar = new ApexCharts(document.querySelector('#stud_gender'), optionsBar);
           chartBar.render();
           }
+
 
       var options = {
           series:  [{{peche}}, {{pfina}}, {{peino}}, {{pcom}}],
@@ -204,4 +200,5 @@
         chart.render();
 
   });
+
 </script>
