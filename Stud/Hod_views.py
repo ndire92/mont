@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 # from django.template import engine
 # from django.template import Engine, EngineHandler, engines
-from app.models import CustomUser
+#from app.models import UserProfile
 from django.contrib import messages
 
 from education.models import DimEduc_Equipements, DimEduc_Gouvernance, DimEduc_Personnel, DimEduc_Perfomance, DimEduc_Access

@@ -8,7 +8,7 @@
       <div class="col-sm-12">
          <div class="card">
             <div class="card-body">
-               <form method="post" action="{% url 'profile_update' %}" enctype="multipart/form-data">
+               <form method="post" action="" enctype="multipart/form-data">
                   {% csrf_token %}
                   <div class="col-12">
                      <h5 class="form-title"><span>Profile Update</span></h5>
@@ -38,7 +38,7 @@
                   {% endfor %}
                   {% endif %}
                   <div class="col-sm-11">
-                     <h3 class="page-title">Bienvenu {{ user.first_name}} {{ user.last_name}}</h3>
+                     <h3 class="page-title">Bienvenue {{ user.first_name}} {{ user.last_name}}</h3>
                      <div class="form-group">
                         <label>Photo de profil</label>
                         <input type="file" class="form-control" name="profile_pic">

@@ -1,0 +1,25 @@
+
+{% extends 'pages/base.html' %}
+{% load static %}
+
+
+{% block content  %}
+<div class="page-wrapper">
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="card">
+            <div class="card-body">
+
+  <p>Are you sure you want to delete your profile?</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete" class="btn btn-danger">
+    <a href="{% url 'delete' user.id %}"></a>
+    <a href="{% url 'acceueil' %}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

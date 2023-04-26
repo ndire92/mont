@@ -4,24 +4,12 @@ from venv import create
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.db import models
+from django.urls import reverse_lazy
 from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-class Profile(models.Model):
 
-    description = models.CharField(max_length=250, null=True)
-    phone = models.CharField(max_length=20, null=True, blank=True, default="")
-    addresse = models.CharField(max_length=50, null=True, blank=False)
-    profile_pic = models.ImageField(upload_to='media/profile_pic')
-
-    def __str__(self):
-        return self.description
-
-
-class CustomUser(models.Model):
-
-    profile_pic = models.ImageField(upload_to='media/profile_pic')
 
 
 class Post(models.Model):
@@ -53,3 +41,20 @@ class Ressource(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone_number = models.IntegerField()
+    address = models.CharField(max_length=100, blank=True)
+    description = models.TextField(blank=True)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
+    reset_password_token = models.CharField(max_length=40, blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+    def get_absolute_url(self):
+        return reverse_lazy('edit', args=[str(self.id)])

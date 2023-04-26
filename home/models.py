@@ -7,7 +7,7 @@ from ckeditor.fields import RichTextField
 from asyncio import AbstractServer
 from django.db import models
 
-from app.models import CustomUser
+#from app.models import CustomUser
 
 
 # from django.contrib.auth.models import User

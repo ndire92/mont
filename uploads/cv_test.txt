@@ -1,0 +1,492 @@
+nHTML : 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>CV de prénom nom</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profileText">
+                <div class="imgBx">
+                  <img src="./photo3.png">
+                  </div>
+                <h2>Prénom Nom<br><span>Candidature au XXXXXXXXXXXXXXXXXXXXXX</span></h2>
+            </div>
+            <div class="contactInfo">
+                <div class="button">
+                    <a class="button" href="#" target="_blank">CV en PDF</a>
+                </div>
+                <div class="contact">
+                <h3 class="title">Coordonnées</h3>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> X ans</li>
+                    <li><i class="fa fa-compass" aria-hidden="true"></i> x rue xx, xx, xxxxx</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> XX XX XX XX XX</li>
+                    <li><i class="fa fa-envelope-open" aria-hidden="true"></i> <a href="#">prénom.nom@mail.fr</a></li>
+                    <li><i class="fa fa-linkedin" aria-hidden="true"></i> <a href="#" target="_blank"> @prénomnom</a></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i> permis X</li>
+                    </div>
+                    </div>
+                    <div class="contactInfo education">
+                        <h3 class="title">Diplômes et certifications</h3>   
+                            <li>
+                              <h5>2021-2022</h5>
+                              <h4>Certification 1 xxxxxxxxxxx</h4>
+                              <h4><i class="fa fa-certificate" aria-hidden="true"></i>XxxxxxXXXXXxxxxxxx Structure</h4>
+                              <h4>Certification 2 xxxxxxxxx</h4>
+                              <h4><i class="fa fa-certificate" aria-hidden="true"></i>XxxxxXXXXXxxxx Structure</h4>
+                              <h4>Certification 3 xxxxxxxxxx</h4>
+                              <h4><i class="fa fa-certificate" aria-hidden="true"></i>XxxxxxXXXXXXxxxxxxx Structure</h4>
+                            </li>
+                            <li>
+                              <h5>2018 - 2021</h5>
+                              <h4>Diplôme 1 xxxxxxxxxxx</h4>
+                              <h4><i class="fa fa-graduation-cap" aria-hidden="true"></i>Structure xxxxxXXXXXxxxxxx</h4>
+                              <h4>Diplôme 2 xxxxxxxxxxx</h4>
+                              <h4><i class="fa fa-graduation-cap" aria-hidden="true"></i>Structure xxxxxxXXXXXxxxxxx</h4>
+                            </li>
+                            <li>
+                              <h5>2015 - 2018</h5>
+                              <h4>diplôme 3 xxxxxxxxxxx</h4>
+                              <h4><i class="fa fa-graduation-cap" aria-hidden="true"></i>structure xxxxxxxXXXXXXxxxxxx</h4>
+                            </li>
+                          </div>
+                              <div class="contactInfo langues">
+                                <h3 class="title">Langues</h3>   
+                                    <li>
+                                      <span class="text">Langue 1</span>
+                                      <span class="percent">
+                                          <div style="width: 100%";></div>
+                                      </span>
+                                    </li>
+                                    <li>
+                                        <span class="text">Langue 2</span>
+                                        <span class="percent">
+                                            <div style="width: 90%";></div>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <span class="text">Langue 3</span>
+                                        <span class="percent">
+                                            <div style="width: 50%";></div>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <span class="text">Langue 4</span>
+                                        <span class="percent">
+                                            <div style="width: 45%";></div>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <span class="text">Langue 5</span>
+                                        <span class="percent">
+                                            <div style="width: 10%";></div>
+                                        </span>
+                                      </li>
+                                  </div>
+            </div>
+            <div class="right_side">
+              <div class="about">
+                  <h2 class="title2">Profil</h2>
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  </div>
+                  <div class="about">
+                    <h2 class="title2">Compétences professionnelles</h2>
+                    <table>
+                      <tbody>
+                          <tr>
+                              <td><li>compétence xxxxxxxxx</li>
+                                <li>compétence xxxxxxxxxxx</li>
+                                <li>compétence xxxxxx</li>
+                                <li>compétence xxxxxxxx</li>
+                                <li>compétence xxxxxxxx</li></td>
+  
+                              <td><li>compétence xxxxxxxxxx</li>
+                                <li>compétence xxxxxxxx</li>
+                                <li>compétence xxxxxxx</li>
+                          </tr>
+                      </tbody>
+                  </table>
+                  </div>
+                <div class="about">
+                  <h2 class="title2">Expériences professionnelles</h2>
+                  <div class="box">
+                    <div class="year_company">
+                        <h5>période</h5>
+                        <h5>structure</h5>
+                        </div>
+                        <div class="text">
+                          <h4>poste</h4>
+                          <li>mission 1</li>
+                          <li>mission 2</li>
+                          <li>mission 3</li>
+                      </div>
+                    </div>
+                  <div class="box">
+                    <div class="year_company">
+                        <h5>période</h5>
+                        <h5>structure</h5>
+                        </div>
+                        <div class="text">
+                          <h4>poste</h4>
+                          <li>mission 1</li>
+                          <li>mission 2</li>
+                          <li>mission 3</li>
+                          <li>mission 4</li>
+                    </div>
+                    </div>
+                    <div class="box">
+                      <div class="year_company">
+                          <h5>période</h5>
+                          <h5>structure</h5> 
+                        </div>
+                          <div class="text">
+                          <h4>postes</h4>
+                            <li>mission 1</li>
+                            <li>mission 2</li>
+                            <li>mission 3</li>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="year_company">
+                          <h5>période</h5>
+                          <h5>structure</h5>
+                          </div>
+                          <div class="text">
+                          <h4>poste</h4>
+                          <li>mission 1</li>
+                          <li>mission 2</li>
+                          <li>mission 3</li>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="year_company">
+                          <h5>période</h5>
+                          <h5>structure</h5>
+                          </div>
+                          <div class="text">
+                          <h4>poste</h4>
+                          <li>mission 1</li>
+                          <li>mission 2</li>
+                          <li>mission 3</li>
+                          <li>mission 4</li>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="year_company">
+                          <h5>période</h5>
+                          <h5>structure</h5>
+                          </div>
+                          <div class="text">
+                          <h4>poste</h4>
+                          <li>mission 1</li>
+                          <li>mission 2</li>
+                        </div>
+                      </div>
+                      <h2 class="title2">Expériences associatives</h2>
+                  <div class="box">
+                    <div class="year_company">
+                        <h5>période</h5>
+                        <h5>structure</h5>
+                        </div>
+                        <div class="text">
+                        <h4>poste</h4>
+                        <li>misison 1</li>
+                        <li>mission 2</li>
+                      </div>
+                    </div>
+                    <div class="box">
+                    <div class="year_company">
+                      <h5>période</h5>
+                      <h5>structure</h5>
+                      </div>
+                      <div class="text">
+                      <h4>poste</h4>
+                      <li>mission 1</li>
+                      <li>mission 2</li>
+                    </div>
+                  </div>
+                    </div>
+                <div class="about">
+                <table>
+                  <tbody>
+                    <tr>
+                        <td><h2 class="title2">Qualités</h2></td>
+                        <td><h2 class="title2">Centres d'intérêts</h2></td>
+                    </tr>
+                </tbody>
+                  <tbody>
+                      <tr>
+                          <td><li>Autonomie</li>
+                            <li>autonomie</li>
+                            <li>autonomie</li>
+                            <li>autonomie</li>
+                            <li>autonomie</li>
+                          </td>
+                          <td><li>Lecture</li>
+                            <li>Lecture</li>
+                            <li>lecture</li>
+                            <li>lecture</li>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+CSS : 
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display&display=swap');
+
+head {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    max-width: 2000px;
+    min-height: 2000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.2);
+}
+.container .left_side{
+    height : 2000px;
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx{
+    position: relative;
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 4px #fff;
+}
+.profileText .imgBx img{
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+    font-family: "Questrial", serif;
+}
+.profileText h2 span{
+    text-transform : none;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    font-family: "Poppins", serif;
+    line-height: 1.6em;
+}
+.contact li{
+    font-family: "Poppins", serif;
+    font-size: 15px;
+    color: #fff;
+}
+.contact .title{
+    padding-top: 40px;
+}
+.contactInfo h3{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-size: 1.2em;
+}
+/*mail et linkedin*/.contactInfo li a{
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    background-color: #77b1cc;
+    border: none;
+    border-radius: 10px 100px / 120px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    padding: 0.1px;
+}
+.contactInfo li a:hover{
+    background-color: #03a9f4;
+    transition: all 0.7s ease 0;
+}
+.fa{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.button{
+    margin-top: 50px;
+    text-align: center; 
+}
+.button a{
+    color: #fff;
+    background: #77b1cc;
+    padding: 15px 65px;
+    border-radius: 10px 100px / 120px;
+    text-decoration: none;
+}
+.button:hover a{
+    background: #03a9f4;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.contactInfo h5{
+    color: #03a9f4;
+    font-family: 'Poppins' sans-serif;
+    font-size: 18px;
+}
+.contactInfo li h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo li h4:nth-child(4){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo li h4:nth-child(6){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo li h4{
+    color: #fff;
+    font-weight: 300;
+}
+.fa fa-graduation-cap{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.contactInfo.langues .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.langues .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.container .right_side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child {
+    margin-bottom: 0; 
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: "Questrial", serif;
+}
+p, .box .text li {
+    color: #333;
+    text-align: justify;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company{
+    min-width: 150px;
+}
+.about .box .year_company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    max-width : 150px;
+    max-height : 150px;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+table, td {
+   border: 1px solid #fff;
+   border-right-width: 80px;
+   color: #333;
+   border-collapse: collapse;
+   margin-top: 20px;
+}
+.container .right_side p{
+    text-indent: 40px;
+}
