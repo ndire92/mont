@@ -15,6 +15,10 @@ from django.contrib import messages
 from app.forms import SignUpForm, UserProfileForm
 from app.ressource import Ressou
 from app.forms import PostForm
+from education.models import DimEduc_Equipements, DimEduc_Gouvernance, DimEduc_Personnel, DimEduc_Perfomance, DimEduc_Access
+
+from sante.models import PlanificationFamiliale, Visiteur, ReproductionEtJeune, SantePaludisme, SurvieEnfant, VaccinationEtRoutine
+
 
 
 def Base(request):
@@ -22,7 +26,37 @@ def Base(request):
 
 
 def Accueil(request):
-    return render(request, 'pages/accueil.html')
+
+
+    plan = PlanificationFamiliale.objects.all().count()
+    repro = ReproductionEtJeune.objects.all().count()
+    palu = SantePaludisme.objects.all().count()
+    survie = SurvieEnfant.objects.all().count()
+    vacc = VaccinationEtRoutine.objects.all().count()
+    nb_visite = Visiteur.objects.all().count()
+    # educ
+    dimequ = DimEduc_Equipements.objects.all().count()
+    dimgou = DimEduc_Gouvernance.objects.all().count()
+    dimper = DimEduc_Personnel.objects.all().count()
+    dimperf = DimEduc_Perfomance.objects.all().count()
+    dimacc = DimEduc_Access.objects.all().count()
+
+    context = {
+        'plan ': plan,
+        'repro': repro,
+        'palu': palu,
+        'survie': survie,
+        'vacc': vacc,
+        'nb_visite': nb_visite,
+        'dimequ': dimequ,
+        'dimgou ': dimgou,
+        'dimper': dimper,
+        'dimperf': dimperf,
+        'dimacc': dimacc,
+
+    }
+
+    return render(request, 'pages/accueil.html', context)
 
 
 def register(request):
@@ -175,6 +209,7 @@ def search(request):
     return render(request, 'pa/search.html', context)
 
 
+
 def all(request):
 
     posts = Post.objects.order_by('-id').all()
@@ -183,6 +218,7 @@ def all(request):
         # 'post_number':post_number,
     }
     return render(request, 'pa/blog.html', context)
+
 
 
 def ress(request):
@@ -232,25 +268,34 @@ def del_ress(request, id):
 
 @login_required(login_url='/login/')
 def user_table(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        phone_number = request.POST.get('phone_number')
-        address = request.POST.get('address')
-        description = request.POST.get('description')
-        profile_picture = request.FILES.get('profile_picture')
+    users = UserProfile.objects.select_related('user').all()
 
-        try:
-            user = User.objects.create_user(username, email, password)
-            user_profile = UserProfile.objects.create(
-                user=user, phone_number=phone_number, address=address, description=description, profile_picture=profile_picture)
-            messages.success(request, 'Profile created successfully.')
-            return redirect('profile-detail', id=user_profile.id)
-        except:
-            messages.error(request, 'An error occurred. Please try again.')
+    user_list = []
+    for user in users:
+        user_dict = {}
+        user_dict['id'] = user.user.id
+        user_dict['username'] = user.user.username
+        user_dict['email'] = user.user.email
+        user_dict['first_name'] = user.user.first_name
+        user_dict['last_name'] = user.user.last_name
 
-    return render(request, 'pages/user_table.html')
+        user_dict['profile_picture'] = user.profile_picture.url
+        user_dict['description'] = user.description
+        user_dict['phone_number'] = user.phone_number
+        user_dict['address'] = user.address
+
+        # Vérifier si le mot de passe est correct
+        password_is_correct = check_password('password', user.user.password)
+
+        user_dict['password_is_correct'] = password_is_correct
+
+        user_list.append(user_dict)
+
+        print(user_dict['id'], user_dict['username'], user_dict['profile_picture'],
+              user_dict['description'], user_dict['phone_number'], user_dict['address'])
+
+    context = {'user_list': user_list}
+    return render(request, 'pages/user_table.html', context)
 
 
 @login_required(login_url='/login/')
@@ -302,7 +347,7 @@ def user_edit(request, id):
 
         messages.success(request, 'Profile updated successfully.')
 
-        return redirect('profile-detail', id=user_profile.id)
+        return redirect('all')
 
     context = {'user_profile': user_profile}
     if request.user.is_authenticated and request.user == user_profile.user:
@@ -318,11 +363,15 @@ def delete_user(request, id):
     if request.user != user_profile.user:
         messages.error(
             request, 'You are not authorized to delete this profile.')
-        return redirect('user_profile_detail', id=user_profile.id)
+        return redirect('all')
 
-    user_profile.delete()
-    messages.success(request, 'Profile deleted successfully.')
-    return redirect('home')
+    if request.method == 'POST':
+        user_profile.delete()
+        messages.success(request, 'Profile deleted successfully.')
+        return redirect('all')
+
+    context = {'user_profile': user_profile}
+    return render(request, 'pages/user_delete.html', context)
 
 
 @login_required(login_url='/login/')
@@ -341,3 +390,14 @@ def ajout_profile(request):
 
     context = {'form': form}
     return render(request, 'pages/add_profile.html', context)
+
+
+
+
+
+
+def san(request):
+    return render(request, 'pa/sante.html')
+
+def edu(request):
+    return render(request, 'pa/education.html')

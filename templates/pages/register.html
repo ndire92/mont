@@ -38,7 +38,7 @@
                            <ul class="dropdown-menu">
                                <li class="nav-item">
                                    <a href="{% url 'ressource' %}" class="nav-link">
-                                     Documents APHRC
+                                     Ressources Documentaires
                                    </a>
                                </li>
                            </ul>
@@ -179,45 +179,47 @@
 </div>
 </div>
 
-         
+
 <footer style="background-color: #000">
-   <div class="row">
-     
+    <div class="row">
       
-       <div class="col-xl-4 col-sm-6 col-12">
-          <div class="">
-           <a href="{% url 'posts:index' %}" class="logo">
-               <img src=" {% static 'assets/img/log.jpg ' %}" alt="Logo">
-           </a>
-           <p style="color: #fff">Copyright © 2022<br> Precvadi ENSAIGT.</p>
-          </div>
-         
-       </div>
-       <div class="col-xl-4 col-sm-6 col-12">
-           <div  class="">
-              <p  style="color: #fff">Nombre de visiteur: {{ nb_visite}}</p><br><br>
-              <h6><p  style="color: #fff">Mairie de Joal-Fadiouth</p></h6>
-              <p  style="color: #fff"><i class="fa-regular fa-envelope"></i> &nbsp;&nbsp;communejf@yahoo.com</p>
-              <p  style="color: #fff"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+221 33 957 61 04</p>
+       
+        <div class="col-xl-4 col-sm-6 col-12">
+           <div class="">
+            <a href="{% url 'acceueil' %}" class="logo">
+                <img src=" {% static 'assets/img/logo-white.jpg' %}" alt="Logo">
+            </a>
+            <p style="color: #fff">Copyright © 2022<br> Precvadi ENSAIGT.</p>
            </div>
+          
         </div>
-       <div class="col-xl-4 col-sm-6 col-12">
-          <div class="">
-           <div class="column">
-               <h3  style="color: #fff">Suivez-nous</h3>
-               <ul style="color: #fff">
-                 <li ><a href="#" style="color: #fff">Facebook</a></li>
-                 <li ><a href="#" style="color: #fff">Twitter</a></li>
-                 <li ><a href="#" style="color: #fff">Instagram</a></li>
-               </ul>
-             </div>
-       </div>
-    </div>
-     
+        <div class="col-xl-4 col-sm-6 col-12">
+            <div  class="">
+               <p  style="color: #fff">Nombre de visiteur: {{ nb_visite}}</p><br><br>
+               <h6><p  style="color: #fff">Commune de Mont_Rolland</p></h6>
+               <p  style="color: #fff"><i class="fa-regular fa-envelope"></i> &nbsp;&nbsp;comrolland@gmail.com</p>
+               <p  style="color: #fff"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+221 33 926 92 59</p>
+               <p  style="color: #fff">&nbsp;&nbsp;<a href="https://www.montrolland.gouv.sn">site web</a></p>
+           
+            </div>
+         </div>
+        <div class="col-xl-4 col-sm-6 col-12">
+           <div class="">
+            <div class="column">
+                <h3  style="color: #fff">Suivez-nous</h3>
+                <ul style="color: #fff">
+                  <li ><a href="https://web.facebook.com/comrolland?_rdc=1&_rdr" style="color: #fff">Facebook</a></li>
+                  <li ><a href="https://twitter.com/cissyves" style="color: #fff">Twitter</a></li>
+                  <li ><a href="#" style="color: #fff">Instagram</a></li>
+                </ul>
+              </div>
+        </div>
+     </div>
+      
 
-  
- </div>
-
+   
+  </div>
+ 
 </footer>
       </div>
       

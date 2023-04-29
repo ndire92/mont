@@ -4,19 +4,20 @@
 
 
 <title>{% block title%}Commun Mont Ronllant{%endblock%}</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <header>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     </header>
 
     <div class="body container">
     {% block body  %}
 <div class="carouse">
 	<div class="carousel-inner">
-		
+
 		<div class="carousel-item active">
-			
-			<img src="{% static '/imge/mont.jpg ' %}" class="d-block w-100" style="max-height: 500px;" alt="...">
+			<img src="{% static '/imge/mont.jpg ' %}"class="d-block w-100" style="max-height: 500px;" alt="...">
+
 		</div>
 	</div>
 
@@ -35,98 +36,73 @@
 					<div class="info-flottan-text-title">
 						<h5 class="" >Commune Mont-Ronlland</h5>
 					</div>
-					
-					<p align="">Cette plateforme met ensemble des données clés et informations essentielles sur les différents axes prioritaires de développement au niveau de la commune de <b>Mont-Ronllant </b> a savoir la peche et la transformation artisanal</a> </p>
+
+					<p align="">Cette plateforme met ensemble des données clés et informations essentielles sur les différents axes prioritaires de développement au niveau de la commune de <b>Mont-Ronllant </b> à savoir l'education et la santé</a> </p>
 				</div>
-				
+
 				<div class="out-indic mx-auto">
-					<div class="row my-3 mx-auto"><div class="col-6 col-indic"><a href=""class="btn btn-outline-success" ><img src="{% static '/imge/sante icon.png'%}" alt="logo" width="50" height="50"> Santé</a></div>
+				<div class="row my-3 mx-auto">
+				    <div class="col-6 col-indic"><a href="{% url 'sante' %}"class="btn btn-outline-success" ><img src="{% static '/imge/sante icon.png'%}" alt="logo" width="50" height="50"> Santé</a></div>
+					   <div class="col-6 col-indic"><a href="{% url 'education' %}"class="btn btn-outline-success" ><img src="{% static '/imge/education icon.png'%}" alt="logo" width="50" height="50"> Education</a></div>
 					</div>
 					<div class="row my-1 mx-auto">
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
 <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 container">
     <div class=" px-4 my-5 row row-cols-sm-12">
-        <div class="jumbotron text-center" style =" color: #258baf;text-align: center; background-color: #fff;padding: 0rem 0rem;">
-            <div>
-                <h2 style =" color: #258baf;text-align: center;">Mont-Rollant</h2>
-				
-			</div></div>
-			<div class="col-sm-6">
-                    <p class="para" style="font-size: 17px">
-					La commune de Mont-Rolland, d’une superficie de 172 km², est située au nord-ouest de la ville de Thiès, dans les parties basses du plateau de Thiès. Le lac Tanma borde la commune à l’ouest. Mont-Rolland est, sur le plan administratif, rattaché au département de Tivaoune, et à l'arrondissement de Pambal. Toutefois, dans son fonctionnement, Mont-Rolland subit fortement l’influence de sa proximité avec la ville de Thiès. Sa position dans le triangle métropolitain Daka-Thiès-Mbour l’inscrit dans des dynamiques territoriales multiformes. Le caractère semi-rural de Mont-Rolland est dû à une dynamique d’urbanisation favorisée par l’extension de la ville de Thiès sur le périmètre communal au sud-est. Le développement récent du maraîchage dans le lit majeur et les bordures du lac Tanma et de l’agrobusiness sur le bas plateau à côté des cultures pluviales et de l’élevage extensif a rendu la commune attractive. Jadis, foyer d’émigration en direction de la capitale et des autres régions du pays voire de l’étranger, Mont-Rolland est en voie de devenir un bassin d’emplois agricoles pour l’essentiel des actifs de la commune et des localités environnantes dans les activités champêtres, de tri et de conditionnement de la production maraichère et arboricole. La population communale, estimée à 17 074 habitants en 2020 l’Agence Nationale de la Statistique et de la Démographique, est très concentrée dans la moitié nord de la commune. La population est à 70 % composé de Sérères, suivis des Wolofs (25%) et des autres groupes ethniques (5%), Peul et Diola. Mont-Rolland a la particularité que ses villages les plus peuplés, Fouloume, Ndiaye Bop, Loukhouss, Thiaye et Nguinck Fall, sont excentrés et non desservis par un axe routier bitumé. La route départementale Thiès-Notto, principal axe de liaison avec l’extérieur, dessert la commune sur un axe nord-sud. La plupart des villages de la commune sont connectés à cet axe majeur par des pistes latéritiques qui subissent les effets de l'érosion hydrique et du ravinement durant la saison des pluies en raison de la topographie accidentée. Les coupures y sont fréquentes durant cette période, accentuant ainsi les contraintes de mobilité surtout en direction du chef-lieu communal, Tivigne Tanghor, qui polarise toutes les infrastructures sanitaires, éducatives, administratives et marchandes. Les populations des villages excentrés ont des difficultés à se déplacer vers les structures sanitaires et éducatives les plus proches, faute d’un service de transport régulier et de l’éloignement de ces services. Le rayon d’action moyen pour atteindre un poste de santé est de 9 km. </p></div>
+        <div class="jumbotron text-center">
+            <div style="display: flex; width: 100%; height: 100%; color:  #258baf">
+                <h2>Commune de Mont Rolland<span> </span></h2></div></div><div class="col-sm-6">
+                    <p class="para" style="font-size: 16px">
+La commune de Mont-Rolland, d’une superficie de 172 km², est située au nord-ouest de la
+ville de Thiès, dans les parties basses du plateau de Thiès. Le lac Tanma borde la commune à
+l’ouest. Mont-Rolland est, sur le plan administratif, rattaché au département de Tivaoune, et
+à l&#39;arrondissement de Pambal. Toutefois, dans son fonctionnement, Mont-Rolland subit
+fortement l’influence de sa proximité avec la ville de Thiès. Sa position dans le triangle
+métropolitain Daka-Thiès-Mbour l’inscrit dans des dynamiques territoriales multiformes.
+Le caractère semi-rural de Mont-Rolland est dû à une dynamique d’urbanisation favorisée
+par l’extension de la ville de Thiès sur le périmètre communal au sud-est. Le développement
+récent du maraîchage dans le lit majeur et les bordures du lac Tanma et de l’agrobusiness
+sur le bas plateau à côté des cultures pluviales et de l’élevage extensif a rendu la commune
+attractive. Jadis, foyer d’émigration en direction de la capitale et des autres régions du pays
+voire de l’étranger, Mont-Rolland est en voie de devenir un bassin d’emplois agricoles pour
+l’essentiel des actifs de la commune et des localités environnantes dans les activités
+champêtres, de tri et de conditionnement de la production maraichère et arboricole.
+La population communale, estimée à 17 074 habitants en 2020 l’Agence Nationale de la
+Statistique et de la Démographique, est très concentrée dans la moitié nord de la commune.
+La population est à 70 % composé de Sérères, suivis des Wolofs (25%) et des autres groupes
+ethniques (5%), Peul et Diola. Mont-Rolland a la particularité que ses villages les plus
+peuplés, Fouloume, Ndiaye Bop, Loukhouss, Thiaye et Nguinck Fall, sont excentrés et non
+desservis par un axe routier bitumé. La route départementale Thiès-Notto, principal axe de
+liaison avec l’extérieur, dessert la commune sur un axe nord-sud. La plupart des villages de la
+commune sont connectés à cet axe majeur par des pistes latéritiques qui subissent les effets
+de l&#39;érosion hydrique et du ravinement durant la saison des pluies en raison de la
+topographie accidentée. Les coupures y sont fréquentes durant cette période, accentuant
+ainsi les contraintes de mobilité surtout en direction du chef-lieu communal, Tivigne
+Tanghor, qui polarise toutes les infrastructures sanitaires, éducatives, administratives et
+marchandes. Les populations des villages excentrés ont des difficultés à se déplacer vers les
+structures sanitaires et éducatives les plus proches, faute d’un service de transport régulier
+et de l’éloignement de ces services. Le rayon d’action moyen pour atteindre un poste de
+santé est de 9 km.</p></div>
                         <div class="col-sm-6">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3139.205168625127!2d-16.93662802598676!3d14.79968277217374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1bf97b4855d8f%3A0xb62e6cb8105c9ab2!2sGarage%20Mont%20Roland!5e1!3m2!1sfr!2ssn!4v1680745398309!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></div>
+                            	<img src="{% static '/imge/Localisation Mont Rolland.png'%}" class="" width="100%" height="100%" alt="About Images">
+
+                          	</div></div></div>
 
 
 
-       
-<div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 container">
 
-    
-    </p></div></div></div>
+</div>
 
 
-    <div class="row justify-content-center patenaires">
-	<h1 style=" color: #258baf;text-align: center;">Nos Partenaires !</h1>
-	<div class="col-sm-2 text-center">
-		<div class="card patenaire-item">
-		  <a target="_blank" href=""><img src="{% static 'as/partenaire/igt.png'%}" class="card-img-top" alt=""><br><b></b></a>
-		</div>
-	</div>
-	<div class="col-sm-2 text-center">
-		<div class="card patenaire-item">
-		  <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/aphrc.png'%}" alt="APHRC"><br> <b></b></a>
-		</div>
-	</div>
-
-	<div class="col-sm-2 text-center">
-		<div class="card patenaire-item">
-		  <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/ensa.jpg'%}" alt=""><br> <b></b></a>
-		</div>
-	</div>
-	
-	
-	
-	
-</div>  
-
-	
-
- {% include 'layout/chart.html'%}
 {% endblock %}
 </div>
 
 </body>
 </html>
-<style>
-	/* Media query for devices with a screen width of 768px or more */
-	@media screen and (min-width: 768px) {
-		.col1 {
-			flex: 0 0 33.33333%;
-			max-width: 33.33333%;
-		}
-		.col2 {
-			flex: 0 0 66.66667%;
-			max-width: 66.66667%;
-		}
-	}
-	
-	/* Media query for devices with a screen width of less than 768px */
-	@media screen and (max-width: 767px) {
-		.col1, .col2 {
-			flex: 0 0 100%;
-			max-width: 100%;
-		}
-		.info-flottan-text {
-			padding: 20px;
-		}
-	}
-	</style>
-	

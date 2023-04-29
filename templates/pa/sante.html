@@ -1,0 +1,81 @@
+{% extends 'layout/base.html'%}
+
+{% load static %}
+
+
+
+    <title>{% block title%}sante{%endblock%}</title>
+ </script>
+</head>
+
+
+<body >
+    <header>
+        {% include 'layout/partial/header.html' %}
+    </header>
+
+    {% block body  %}
+
+ 	<div class=" px-2 my-3 row row-cols-sm-12" style="padding-right: 0rem !important;
+	padding-left: 0rem !important;">
+
+		<div class="col-sm-6">
+			<img src="{% static '/imge/abt.png' %}" class="" width="100%" height="100%" alt="About Images">
+		</div>
+
+		<div class="col-sm-6">
+
+		<img src="{% static '/imge/CARTE SANITAIRE Mont-Rolland.png' %}" class="" width="100%" height="100%" alt="About Images">  </div>
+
+	</div>
+
+
+ <!-- Content Start -->
+
+                <div class="text-center my-5" style=" color: #258baf">
+
+                </div>
+            </div>
+
+
+
+
+            <!-- Footer End -->
+        </div>
+
+    </div>
+
+    <!-- JavaScript Libraries -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src=" {% static 'lib/easing/easing.min.js '%}"></script>
+    <script src=" {% static 'lib/waypoints/waypoints.min.js '%}"></script>
+    <script src=" {% static 'lib/owlcarousel/owl.carousel.min.js '%}"></script>
+    <script src=" {% static 'lib/tempusdominus/js/moment.min.js '%}"></script>
+    <script src=" {% static 'lib/tempusdominus/js/moment-timezone.min.js '%}"></script>
+    <script src=" {% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js '%}"></script>
+
+    <!-- Template Javascript -->
+    <!-- script src=" {% static 'js/main.js '%}"></script-->
+
+<!-- diagramme-->
+
+
+
+
+</html>
+<div class="col-sm-12"><div style="width: 100%; height: 100%; display: flex; justify-items: center;margin: 40px;">
+<iframe title="SanntePrecvadi" src="https://app.powerbi.com/view?r=eyJrIjoiNmMwMTNlZTUtNDM5Yi00NzM1LWI1YTgtNTU2NjE2NzFhYzg0IiwidCI6ImJmZTY0YzY0LWIwY2UtNDJiZC04MDlhLWE4ODlhMjJhZGQwOSJ9" allowfullscreen="" width="2000" height="650" frameborder="0"></iframe>
+
+</div>
+
+
+
+</body>
+
+
+{% endblock %}
+
+

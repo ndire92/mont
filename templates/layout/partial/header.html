@@ -22,49 +22,48 @@
                               <li class="nav-item">
                                   <a href="{% url 'acceueil' %}" class="nav-link active">
                                     Accueil
-                                      
+
                                   </a>
-                                
+
                               </li>
-                              
-                            
+  &nbsp;&nbsp;
+
                              <li class="nav-item">
                                 <a href="" class="nav-link">
-                                    Ressource 
+                                    Ressources
                                     <i class='bx bx-chevron-down'></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a href="{% url 'ressource' %}" class="nav-link">
-                                          Documents APHRC
+                                           Ressources Documentaires
                                         </a>
                                     </li>
                                 </ul>
                             </li>
 
-                        
+  &nbsp;&nbsp;
                               <li class="nav-item">
                                 <a href="{% url 'post' %}" class="nav-link">  Blog</a>
                                 </li>
-                              
-                
-                              
+
+                &nbsp;&nbsp;
+
                                     <button class="btn btn-primary me-md-2-flex justify-content-md-end"><a href="{% url 'login'%}"><span style="color: white;">Espace Personnel</span> </a></button>
-                                        
-                                  
+  &nbsp;&nbsp;
                                         <ul>
-                                   
+
                                           {% if request.user.is_authenticated %}
-                                          <span style="color: white;"> {{ request.user.username }}</span> 
+                                          <span style="color: white;"> {{ request.user.username }}</span>
                                           <li><a href="{% url 'new_post' %}"><span style="color: white;">nouveau poste</span> </a></li>
                                           <li><a href="{% url 'logout' %}"><span style="color: white;">deconnexion</span> </a></li>
                                           {% endif%}
-                            
+
                                         </ul>
-                               
+
                           </ul>
 
-                         
+
                       </div>
                   </nav>
               </div>
@@ -73,26 +72,14 @@
             <div class="container">
                 <div class="dot-menu">
                     <div>
-                        <div>
-                         
-                           <li><a href="#"><i class='bx bx-repost'>Admin</i></a></li>
-                                    
-                             
-                        </div>
-                        
+
+
                     </div>
                 </div>
-                
+
                 <div class="container">
                     <div class="side-nav-inner">
-                        <div class="side-nav justify-content-center align-items-center">
-                            <div class="side-nav-item">
-                                <ul class="nav-right-list">
-                                     <li><a href="#"><i class='bx bx-repost'>Admin</i></a></li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -100,5 +87,5 @@
       </div>
 
 
-      
+
       <!-- End Navbar Area -->
